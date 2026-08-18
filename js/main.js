@@ -1,0 +1,183 @@
+/* ============================================================
+   js/main.js — 全部交互（无依赖，兼容 file:// 协议）
+   1. 年份自动更新（data-year）
+   2. 移动端汉堡菜单
+   3. 灯箱：点击图片浮出完整大图，←/→ 切换、Esc 关闭、
+      放大/还原＋拖动画布、点击遮罩关闭、焦点圈定与归还
+   ============================================================ */
+(function () {
+  'use strict';
+
+  /* ---------- 1. 年份自动更新 ---------- */
+  var year = new Date().getFullYear();
+  Array.prototype.forEach.call(document.querySelectorAll('[data-year]'), function (el) {
+    el.textContent = String(year);
+  });
+
+  /* ---------- 2. 移动端汉堡菜单 ---------- */
+  var toggle = document.querySelector('.nav-toggle');
+  var navList = document.getElementById('site-nav');
+  if (toggle && navList) {
+    toggle.addEventListener('click', function () {
+      var open = navList.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navList.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        navList.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navList.classList.contains('is-open')) {
+        navList.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
+  }
+
+  /* ---------- 3. 灯箱 ---------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('a[data-lightbox]'));
+  if (!links.length) { return; }
+
+  var lb = null;
+  var group = [];
+  var index = 0;
+  var trigger = null;
+  var zoomed = false;
+  var panX = 0, panY = 0;
+  var dragging = false;
+  var startX = 0, startY = 0, baseX = 0, baseY = 0;
+
+  function build() {
+    lb = document.createElement('div');
+    lb.className = 'lightbox';
+    lb.setAttribute('role', 'dialog');
+    lb.setAttribute('aria-modal', 'true');
+    lb.setAttribute('aria-label', '图片查看器 IMAGE VIEWER');
+    lb.innerHTML =
+      '<p class="lightbox__caption" aria-live="polite"></p>' +
+      '<div class="lightbox__stage"><img class="lightbox__img" alt=""></div>' +
+      '<div class="lightbox__bar">' +
+      '  <button type="button" class="lightbox__btn" data-act="prev" aria-label="上一张 PREVIOUS">←</button>' +
+      '  <span class="lightbox__counter"></span>' +
+      '  <button type="button" class="lightbox__btn" data-act="next" aria-label="下一张 NEXT">→</button>' +
+      '  <button type="button" class="lightbox__btn" data-act="zoom" aria-label="放大或还原 ZOOM">＋</button>' +
+      '  <button type="button" class="lightbox__btn" data-act="close" aria-label="关闭 CLOSE (ESC)">✕</button>' +
+      '</div>';
+    document.body.appendChild(lb);
+
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target === lb.querySelector('.lightbox__stage')) { close(); }
+    });
+    lb.querySelector('[data-act="prev"]').addEventListener('click', function () { show(index - 1); });
+    lb.querySelector('[data-act="next"]').addEventListener('click', function () { show(index + 1); });
+    lb.querySelector('[data-act="zoom"]').addEventListener('click', toggleZoom);
+    lb.querySelector('[data-act="close"]').addEventListener('click', close);
+
+    var img = lb.querySelector('.lightbox__img');
+    img.addEventListener('mousedown', startDrag);
+    img.addEventListener('touchstart', startDrag, { passive: false });
+    img.addEventListener('dblclick', function (e) { e.preventDefault(); toggleZoom(); });
+    window.addEventListener('mousemove', onDrag);
+    window.addEventListener('touchmove', onDrag, { passive: false });
+    window.addEventListener('mouseup', endDrag);
+    window.addEventListener('touchend', endDrag);
+    window.addEventListener('touchcancel', endDrag);
+  }
+
+  function startDrag(e) {
+    if (!zoomed) { return; }
+    dragging = true;
+    var p = e.touches ? e.touches[0] : e;
+    startX = p.clientX; startY = p.clientY;
+    baseX = panX; baseY = panY;
+    if (e.cancelable) { e.preventDefault(); }
+  }
+
+  function onDrag(e) {
+    if (!dragging) { return; }
+    var p = e.touches ? e.touches[0] : e;
+    var img = lb.querySelector('.lightbox__img');
+    var maxX = img.offsetWidth * 0.5;
+    var maxY = img.offsetHeight * 0.5;
+    panX = Math.max(-maxX, Math.min(maxX, baseX + (p.clientX - startX)));
+    panY = Math.max(-maxY, Math.min(maxY, baseY + (p.clientY - startY)));
+    apply();
+    if (e.cancelable) { e.preventDefault(); }
+  }
+
+  function endDrag() { dragging = false; }
+
+  function apply() {
+    var img = lb.querySelector('.lightbox__img');
+    img.style.transform = 'translate(' + panX + 'px,' + panY + 'px) scale(' + (zoomed ? 2 : 1) + ')';
+    lb.classList.toggle('is-zoomed', zoomed);
+  }
+
+  function toggleZoom() {
+    zoomed = !zoomed;
+    if (!zoomed) { panX = 0; panY = 0; }
+    apply();
+    var btn = lb.querySelector('[data-act="zoom"]');
+    btn.textContent = zoomed ? '－' : '＋';
+    btn.setAttribute('aria-label', zoomed ? '还原 ORIGINAL SIZE' : '放大 ZOOM IN');
+  }
+
+  function preload(i) {
+    var n = group.length;
+    var next = group[(i + 1) % n], prev = group[(i - 1 + n) % n];
+    var img = new Image();
+    img.src = next.href;
+    if (prev !== next) { var img2 = new Image(); img2.src = prev.href; }
+  }
+
+  function show(i) {
+    var n = group.length;
+    index = ((i % n) + n) % n;
+    var link = group[index];
+    var img = lb.querySelector('.lightbox__img');
+    img.src = link.href;
+    var caption = link.getAttribute('data-caption') || '';
+    img.alt = caption;
+    lb.querySelector('.lightbox__caption').textContent = caption;
+    lb.querySelector('.lightbox__counter').textContent =
+      String(index + 1).replace(/^(\d)$/, '0$1') + ' / ' + String(n).replace(/^(\d)$/, '0$1');
+    zoomed = false; panX = 0; panY = 0;
+    apply();
+    preload(index);
+  }
+
+  function open(link) {
+    group = links.filter(function (l) { return l.getAttribute('data-lightbox') === link.getAttribute('data-lightbox'); });
+    index = group.indexOf(link);
+    if (!lb) { build(); }
+    show(index);
+    document.body.classList.add('lb-open');
+    lb.classList.add('is-open');
+    trigger = link;
+    lb.querySelector('[data-act="close"]').focus();
+  }
+
+  function close() {
+    if (!lb) { return; }
+    lb.classList.remove('is-open');
+    document.body.classList.remove('lb-open');
+    if (trigger) { trigger.focus(); }
+  }
+
+  links.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      open(link);
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (!lb || !lb.classList.contains('is-open')) { return; }
+    if (e.key === 'Escape') { close(); }
+    else if (e.key === 'ArrowLeft') { show(index - 1); }
+    else if (e.key === 'ArrowRight') { show(index + 1); }
+  });
+})();

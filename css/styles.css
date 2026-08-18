@@ -344,6 +344,7 @@ a:hover .img-newsprint, .img-newsprint:hover { filter: sepia(50%); }
   font-family: var(--f-display); font-weight: 900; font-size: var(--fs-h3);
   letter-spacing: .02em; margin-bottom: .35em;
 }
+.step h3 em { display: block; font-style: normal; font-size: .62em; letter-spacing: .18em; margin-top: .3em; }
 .step p { font-size: calc(var(--fs-body) - .0625rem); line-height: 1.8; color: var(--c-n400); }
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .6rem; }
 .chip {
