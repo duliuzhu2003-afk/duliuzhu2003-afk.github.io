@@ -347,7 +347,8 @@ ul, ol { list-style: none; }
 }
 .card-project__meta { margin-top: .3rem; }
 .card-project .btn-link { margin-top: .8rem; align-self: flex-start; }
-.card-project__img img { transition: transform var(--dur) var(--ease); }
+.card-project__img { overflow: hidden; border-bottom: var(--bd); }
+.card-project__img img { width: 100%; height: auto; transition: transform var(--dur) var(--ease); }
 .card-project:hover .card-project__img img { transform: scale(1.05); }
 .card-project:hover .card-project__title { text-decoration: underline;
   text-decoration-color: var(--c-accent); text-decoration-thickness: 2px; text-underline-offset: 4px; }
