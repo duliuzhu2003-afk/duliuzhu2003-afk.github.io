@@ -14,7 +14,17 @@
     el.textContent = String(year);
   });
 
-  /* ---------- 2. 移动端汉堡菜单 ---------- */
+  /* ---------- 2. 语言切换（中/EN） ---------- */
+  var langSwitch = document.querySelector('.lang-switch');
+  if (langSwitch) {
+    langSwitch.addEventListener('click', function () {
+      var en = document.documentElement.classList.toggle('lang-en');
+      langSwitch.setAttribute('aria-checked', en ? 'true' : 'false');
+      langSwitch.setAttribute('aria-label', en ? '切换至中文 SWITCH TO CHINESE' : '切换至英文 SWITCH TO ENGLISH');
+    });
+  }
+
+  /* ---------- 3. 移动端汉堡菜单 ---------- */
   var toggle = document.querySelector('.nav-toggle');
   var navList = document.getElementById('site-nav');
   if (toggle && navList) {
@@ -37,7 +47,7 @@
     });
   }
 
-  /* ---------- 3. 灯箱 ---------- */
+  /* ---------- 4. 灯箱 ---------- */
   var links = Array.prototype.slice.call(document.querySelectorAll('a[data-lightbox]'));
   if (!links.length) { return; }
 
@@ -140,6 +150,11 @@
     var img = lb.querySelector('.lightbox__img');
     img.src = link.href;
     var caption = link.getAttribute('data-caption') || '';
+    /* 英文模式下剔除图注中的中文（全角标点与汉字） */
+    if (document.documentElement.classList.contains('lang-en')) {
+      caption = caption.replace(/[　-〿一-鿿＀-￯]+/g, '')
+        .replace(/\s{2,}/g, ' ').replace(/\s+—/g, ' —').trim();
+    }
     img.alt = caption;
     lb.querySelector('.lightbox__caption').textContent = caption;
     lb.querySelector('.lightbox__counter').textContent =

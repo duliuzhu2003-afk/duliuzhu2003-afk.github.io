@@ -4,6 +4,9 @@
 # Claude Code 配置（无需发布）
 .claude/
 
+# AI 看图用的临时预览（不进版本库）
+tools/preview/
+
 # 系统杂项
 Thumbs.db
 Desktop.ini

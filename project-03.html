@@ -14,8 +14,15 @@
 <header class="masthead">
   <div class="masthead__top">
     <div class="container masthead__top-row">
-      <span class="label-mono">ARCHITECTURE PORTFOLIO · 建筑作品集</span>
-      <span class="label-mono">BEIJING · <span data-year>2026</span></span>
+      <span class="label-mono">ARCHITECTURE PORTFOLIO · <span class="zh">建筑作品集</span></span>
+      <div class="masthead__top-right">
+        <button class="lang-switch" type="button" role="switch" aria-checked="false" aria-label="切换至英文 SWITCH TO ENGLISH">
+          <span class="lang-switch__knob" aria-hidden="true"></span>
+          <span class="lang-switch__opt" data-lang="zh" aria-hidden="true">中</span>
+          <span class="lang-switch__opt" data-lang="en" aria-hidden="true">EN</span>
+        </button>
+        <span class="label-mono">BEIJING · <span data-year>2026</span></span>
+      </div>
     </div>
   </div>
   <div class="container masthead__brand">
@@ -28,10 +35,10 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
       <ul class="nav-list" id="site-nav">
-        <li><a href="index.html">首页 HOME</a></li>
-        <li><a href="index.html#works" aria-current="page">作品 WORKS</a></li>
-        <li><a href="index.html#about">关于 ABOUT</a></li>
-        <li><a href="index.html#contact">联系 CONTACT</a></li>
+        <li><a href="index.html"><span class="zh">首页</span> HOME</a></li>
+        <li><a href="index.html#works" aria-current="page"><span class="zh">作品</span> WORKS</a></li>
+        <li><a href="index.html#about"><span class="zh">关于</span> ABOUT</a></li>
+        <li><a href="index.html#contact"><span class="zh">联系</span> CONTACT</a></li>
       </ul>
       <span class="label-mono edition-meta">VOL. 1 | <span data-year>2026</span>.08 | NO. 01</span>
     </div>
@@ -40,17 +47,16 @@
 
 <main id="main">
   <div class="container article">
-    <a class="btn-link article__back" href="index.html#works">← 返回作品目录 BACK TO INDEX</a>
+    <a class="btn-link article__back" href="index.html#works">← <span class="zh">返回作品目录</span> BACK TO INDEX</a>
 
     <header class="article__head">
       <p class="kicker">PROJECT NO. 03 · FIG. 3</p>
-      <h1 class="article__title">浙东运河博物馆设计</h1>
-      <p class="article__title-en">GRAND CANAL MUSEUM</p>
+      <h1 class="article__title"><span class="zh">浙东运河博物馆设计</span><span class="en-title">GRAND CANAL MUSEUM</span></h1>
       <p class="byline">
-        <span>设计 DESIGN — <b>朱翰林 ZHU HANLIN</b></span>
-        <span>年份 YEAR — <b>2021</b></span>
-        <span>类型 TYPE — <b>文化建筑</b></span>
-        <span>地点 LOCATION — <b>浙东</b></span>
+        <span><span class="zh">设计</span> DESIGN — <b>朱翰林 ZHU HANLIN</b></span>
+        <span><span class="zh">年份</span> YEAR — <b>2021</b></span>
+        <span><span class="zh">类型</span> TYPE — <b><span class="zh">文化建筑</span> CULTURAL</b></span>
+        <span><span class="zh">地点</span> LOCATION — <b><span class="zh">浙东</span> EAST ZHEJIANG</b></span>
       </p>
     </header>
 
@@ -58,35 +64,130 @@
       <div class="c8 article__main">
 
         <section id="abstract">
-          <h3>设计说明 <span class="h3__en">DESIGN STATEMENT</span></h3>
-          <p class="drop-cap">运河是流动的历史。博物馆以"水"为线索组织空间序列：沿河展开的体量如一段凝固的河道，参观者溯流而上，在明暗交替中重走千年航路。（示例占位文案，待替换为真实设计说明）</p>
+          <h3><span class="zh">设计说明</span> <span class="h3__en">DESIGN STATEMENT</span></h3>
+          <p class="drop-cap zh">运河是流动的历史。博物馆以"水"为线索组织空间序列：沿河展开的体量如一段凝固的河道，参观者溯流而上，在明暗交替中重走千年航路。（示例占位文案，待替换为真实设计说明）</p>
           <p class="cols-2" lang="en">The canal is flowing history. The museum organises its spatial sequence around water: the riverside volume reads as a frozen channel, and visitors walk upstream through alternating light and shade, retracing a thousand-year waterway. (Placeholder text.)</p>
         </section>
 
         <section id="rendering">
-          <h3>主效果图 <span class="h3__en">MAIN RENDERING</span></h3>
+          <h3><span class="zh">主效果图</span> <span class="h3__en">MAIN RENDERING</span></h3>
+          <p class="zh">博物馆整体沿河岸展开，以水平体量与水面对话。（示例占位文案）</p>
           <figure class="fig">
-            <a href="images/project-03/01.jpg" data-lightbox="project-03" data-caption="FIG. 3.1 — 主效果图 MAIN RENDERING">
-              <img src="images/project-03/01.jpg" alt="浙东运河博物馆设计主效果图" loading="lazy" class="img-newsprint">
+            <a href="images/project-03/pan-01.jpg" data-lightbox="project-03" data-caption="FIG. 3.1 — 主效果图 MAIN RENDERING">
+              <img src="images/project-03/pan-01.jpg" alt="浙东运河博物馆主效果图" loading="lazy" class="img-newsprint">
             </a>
-            <figcaption class="fig-caption">FIG. 3.1 — 主效果图 MAIN RENDERING</figcaption>
+            <figcaption class="fig-caption">FIG. 3.1 — <span class="zh">主效果图</span> MAIN RENDERING</figcaption>
           </figure>
         </section>
 
-        <section id="plans">
-          <h3>平面与表现 <span class="h3__en">PLANS &amp; DRAWINGS</span></h3>
-          <div class="article__figs-2">
+        <section id="design-logic">
+          <h3><span class="zh">设计逻辑</span> <span class="h3__en">DESIGN LOGIC</span></h3>
+          <div class="article__split">
+            <div>
+              <p class="zh">从"漕运"到"文化"：设计将运河的线性逻辑转化为空间序列——入口、展厅、观景平台沿一条"水路"依次展开，水流、人流与展线三者并行。（示例占位文案，待替换）</p>
+              <p lang="en">From transport to culture: the linear logic of the canal becomes a spatial sequence, with entrance, galleries and viewing platforms unfolding along one "waterway" where flow, movement and exhibition run in parallel. (Placeholder text.)</p>
+            </div>
             <figure class="fig">
-              <a href="images/project-03/02.jpg" data-lightbox="project-03" data-caption="FIG. 3.2 — 平面图 PLANS">
-                <img src="images/project-03/02.jpg" alt="平面图" loading="lazy" class="img-newsprint">
+              <a href="images/project-03/pan-02.jpg" data-lightbox="project-03" data-caption="FIG. 3.2 — 设计逻辑 DESIGN LOGIC">
+                <img src="images/project-03/pan-02.jpg" alt="设计逻辑图" loading="lazy" class="img-newsprint">
               </a>
-              <figcaption class="fig-caption">FIG. 3.2 — 平面图 PLANS</figcaption>
+              <figcaption class="fig-caption">FIG. 3.2 — <span class="zh">设计逻辑</span> DESIGN LOGIC</figcaption>
             </figure>
+          </div>
+        </section>
+
+        <section id="general-layout">
+          <h3><span class="zh">总体布局</span> <span class="h3__en">GENERAL LAYOUT</span></h3>
+          <div class="article__split article__split--rev">
             <figure class="fig">
-              <a href="images/project-03/03.jpg" data-lightbox="project-03" data-caption="FIG. 3.3 — 表现图 DRAWING">
-                <img src="images/project-03/03.jpg" alt="表现图" loading="lazy" class="img-newsprint">
+              <a href="images/project-03/pan-03.jpg" data-lightbox="project-03" data-caption="FIG. 3.3 — 总体布局 GENERAL LAYOUT">
+                <img src="images/project-03/pan-03.jpg" alt="总体布局图" loading="lazy" class="img-newsprint">
               </a>
-              <figcaption class="fig-caption">FIG. 3.3 — 表现图 DRAWING</figcaption>
+              <figcaption class="fig-caption">FIG. 3.3 — <span class="zh">总体布局</span> GENERAL LAYOUT</figcaption>
+            </figure>
+            <div>
+              <p class="zh">总平面顺应河道走向布置建筑群，主入口面向水岸广场，后勤与展陈流线严格分离。（示例占位文案，待替换）</p>
+              <p lang="en">The plan follows the course of the canal; the main entrance faces the waterfront plaza, and service and exhibition routes are strictly separated. (Placeholder text.)</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="exploded-view">
+          <h3><span class="zh">爆炸图</span> <span class="h3__en">EXPLODED VIEW</span></h3>
+          <div class="article__split">
+            <div>
+              <p class="zh">建筑以"基座—展厅—屋顶"三段式分解：基座承托公共活动，展厅容纳核心展陈，屋顶之下是面向运河的连续观景面。（示例占位文案，待替换）</p>
+              <p lang="en">The building is decomposed into base, galleries and roof: the base carries public life, the galleries hold the core exhibition, and beneath the roof runs a continuous viewing front towards the canal. (Placeholder text.)</p>
+            </div>
+            <figure class="fig">
+              <a href="images/project-03/pan-04.jpg" data-lightbox="project-03" data-caption="FIG. 3.4 — 爆炸图 EXPLODED VIEW">
+                <img src="images/project-03/pan-04.jpg" alt="爆炸图" loading="lazy" class="img-newsprint">
+              </a>
+              <figcaption class="fig-caption">FIG. 3.4 — <span class="zh">爆炸图</span> EXPLODED VIEW</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="sections">
+          <h3><span class="zh">剖面</span> <span class="h3__en">SECTIONS</span></h3>
+          <div class="article__split article__split--rev">
+            <figure class="fig">
+              <a href="images/project-03/pan-05.jpg" data-lightbox="project-03" data-caption="FIG. 3.5 — 剖面 SECTIONS">
+                <img src="images/project-03/pan-05.jpg" alt="剖面图" loading="lazy" class="img-newsprint">
+              </a>
+              <figcaption class="fig-caption">FIG. 3.5 — <span class="zh">剖面</span> SECTIONS</figcaption>
+            </figure>
+            <div>
+              <p class="zh">剖面展示从河面到屋顶的垂直序列：滨水步道、架空层、展厅空间与天窗逐级抬升，光线沿剖面落下。（示例占位文案，待替换）</p>
+              <p lang="en">The section reveals a vertical sequence from water level to roof: waterfront walk, elevated floor, galleries and skylights rise step by step, letting light fall along the cut. (Placeholder text.)</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="plans">
+          <h3><span class="zh">平面</span> <span class="h3__en">PLANS</span></h3>
+          <div class="article__split">
+            <div>
+              <p class="zh">展厅采用串联式布局，参观流线单向展开，避免折返；公共服务区与展陈区分层设置。（示例占位文案，待替换）</p>
+              <p lang="en">Galleries are arranged enfilade: the route unfolds in one direction without doubling back, while public services and exhibition zones sit on separate levels. (Placeholder text.)</p>
+            </div>
+            <figure class="fig">
+              <a href="images/project-03/pan-06.jpg" data-lightbox="project-03" data-caption="FIG. 3.6 — 平面 PLANS">
+                <img src="images/project-03/pan-06.jpg" alt="平面图" loading="lazy" class="img-newsprint">
+              </a>
+              <figcaption class="fig-caption">FIG. 3.6 — <span class="zh">平面</span> PLANS</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="renderings">
+          <h3><span class="zh">表现图</span> <span class="h3__en">RENDERINGS</span></h3>
+          <div class="article__split article__split--rev">
+            <figure class="fig">
+              <a href="images/project-03/pan-07.jpg" data-lightbox="project-03" data-caption="FIG. 3.7 — 表现图 RENDERINGS">
+                <img src="images/project-03/pan-07.jpg" alt="表现图" loading="lazy" class="img-newsprint">
+              </a>
+              <figcaption class="fig-caption">FIG. 3.7 — <span class="zh">表现图</span> RENDERINGS</figcaption>
+            </figure>
+            <div>
+              <p class="zh">以傍晚与白昼两组视角呈现建筑与运河的关系：水平延展的体量、亲水的界面与远山的轮廓。（示例占位文案，待替换）</p>
+              <p lang="en">Dusk and daylight views present the building's relation to the canal: a horizontal volume, a waterside interface and the outline of distant hills. (Placeholder text.)</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="details">
+          <h3><span class="zh">细节</span> <span class="h3__en">DETAILS</span></h3>
+          <div class="article__split">
+            <div>
+              <p class="zh">屋顶、栏板与铺地的细部构造：以简洁的节点语言回应水乡的温润气质。（示例占位文案，待替换）</p>
+              <p lang="en">Details of roof, parapet and paving: a restrained tectonic language answering the gentle character of the water town. (Placeholder text.)</p>
+            </div>
+            <figure class="fig">
+              <a href="images/project-03/pan-08.jpg" data-lightbox="project-03" data-caption="FIG. 3.8 — 细节 DETAILS">
+                <img src="images/project-03/pan-08.jpg" alt="细节图" loading="lazy" class="img-newsprint">
+              </a>
+              <figcaption class="fig-caption">FIG. 3.8 — <span class="zh">细节</span> DETAILS</figcaption>
             </figure>
           </div>
         </section>
@@ -97,29 +198,35 @@
         <div class="side-box">
           <p class="side-box__title">项目信息 INFO</p>
           <dl class="table-mono">
-            <div><dt>地点 LOCATION</dt><dd>浙东</dd></div>
-            <div><dt>年份 YEAR</dt><dd>2021</dd></div>
-            <div><dt>类型 TYPE</dt><dd>文化建筑</dd></div>
-            <div><dt>状态 STATUS</dt><dd>课程设计</dd></div>
+            <div><dt><span class="zh">地点</span> LOCATION</dt><dd><span class="zh">浙东</span> EAST ZHEJIANG</dd></div>
+            <div><dt><span class="zh">年份</span> YEAR</dt><dd>2021</dd></div>
+            <div><dt><span class="zh">类型</span> TYPE</dt><dd><span class="zh">文化建筑</span> CULTURAL</dd></div>
+            <div><dt><span class="zh">状态</span> STATUS</dt><dd><span class="zh">课程设计</span> STUDIO</dd></div>
           </dl>
         </div>
         <div class="side-box">
           <p class="side-box__title">目录 CONTENTS</p>
           <ol class="toc">
-            <li><a href="#abstract"><span class="toc__num">01</span> 设计说明 STATEMENT</a></li>
-            <li><a href="#rendering"><span class="toc__num">02</span> 主效果图 RENDERING</a></li>
-            <li><a href="#plans"><span class="toc__num">03</span> 平面与表现 PLANS</a></li>
+            <li><a href="#abstract"><span class="toc__num">01</span> <span class="zh">设计说明</span> STATEMENT</a></li>
+            <li><a href="#rendering"><span class="toc__num">02</span> <span class="zh">主效果图</span> RENDERING</a></li>
+            <li><a href="#design-logic"><span class="toc__num">03</span> <span class="zh">设计逻辑</span> DESIGN LOGIC</a></li>
+            <li><a href="#general-layout"><span class="toc__num">04</span> <span class="zh">总体布局</span> GENERAL LAYOUT</a></li>
+            <li><a href="#exploded-view"><span class="toc__num">05</span> <span class="zh">爆炸图</span> EXPLODED VIEW</a></li>
+            <li><a href="#sections"><span class="toc__num">06</span> <span class="zh">剖面</span> SECTIONS</a></li>
+            <li><a href="#plans"><span class="toc__num">07</span> <span class="zh">平面</span> PLANS</a></li>
+            <li><a href="#renderings"><span class="toc__num">08</span> <span class="zh">表现图</span> RENDERINGS</a></li>
+            <li><a href="#details"><span class="toc__num">09</span> <span class="zh">细节</span> DETAILS</a></li>
           </ol>
         </div>
         <div class="side-box">
           <p class="side-box__title">相关作品 RELATED</p>
           <a class="mini-card" href="project-02.html">
             <img src="images/project-02/cover-01.jpg" alt="大学生活动中心设计封面" loading="lazy">
-            <p>大学生活动中心 STUDENT CENTRE</p>
+            <p><span class="zh">大学生活动中心</span> STUDENT CENTRE</p>
           </a>
           <a class="mini-card" href="project-04.html">
             <img src="images/project-04/cover-01.jpg" alt="多功能剧场设计封面" loading="lazy">
-            <p>多功能剧场 THEATRE</p>
+            <p><span class="zh">多功能剧场</span> THEATRE</p>
           </a>
         </div>
       </aside>
@@ -127,12 +234,12 @@
 
     <nav class="g12 pager" aria-label="上下篇导航 PAGER">
       <a class="c6 pager__card hard-shadow-hover" href="project-02.html">
-        <span class="pager__label">← PREVIOUS 上一篇</span>
-        <span class="pager__title">大学生活动中心设计</span>
+        <span class="pager__label">← PREVIOUS <span class="zh">上一篇</span></span>
+        <span class="pager__title"><span class="zh">大学生活动中心设计</span><span class="pager__title-en">STUDENT CENTRE</span></span>
       </a>
       <a class="c6 pager__card pager__card--next hard-shadow-hover" href="project-04.html">
-        <span class="pager__label">NEXT 下一篇 →</span>
-        <span class="pager__title">多功能剧场设计</span>
+        <span class="pager__label">NEXT <span class="zh">下一篇</span> →</span>
+        <span class="pager__title"><span class="zh">多功能剧场设计</span><span class="pager__title-en">THEATRE</span></span>
       </a>
     </nav>
   </div>
@@ -143,12 +250,12 @@
     <div class="sep-stars" aria-hidden="true">✦ ✦ ✦</div>
     <div class="footer__grid">
       <nav class="footer__nav" aria-label="页脚导航 FOOTER NAVIGATION">
-        <a href="index.html">首页 HOME</a>
-        <a href="index.html#works">作品 WORKS</a>
-        <a href="index.html#about">关于 ABOUT</a>
-        <a href="index.html#contact">联系 CONTACT</a>
+        <a href="index.html"><span class="zh">首页</span> HOME</a>
+        <a href="index.html#works"><span class="zh">作品</span> WORKS</a>
+        <a href="index.html#about"><span class="zh">关于</span> ABOUT</a>
+        <a href="index.html#contact"><span class="zh">联系</span> CONTACT</a>
       </nav>
-      <a class="btn-link" href="#top">↑ 回到顶部 BACK TO TOP</a>
+      <a class="btn-link" href="#top">↑ <span class="zh">回到顶部</span> BACK TO TOP</a>
       <div class="footer__meta edition-meta">
         <p>EDITION: VOL 1.0 | PRINTED IN BEIJING</p>
         <p>© <span data-year>2026</span> 朱翰林 ZHU HANLIN · LAST UPDATED 2026.08</p>
