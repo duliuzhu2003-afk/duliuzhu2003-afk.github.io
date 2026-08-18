@@ -221,10 +221,10 @@ ul, ol { list-style: none; }
   display: flex; justify-content: space-between; align-items: center;
   padding-block: .5rem;
 }
-.masthead__brand { text-align: center; padding-block: var(--sp-2) var(--sp-2); }
+.masthead__brand { text-align: left; padding-block: var(--sp-2) var(--sp-2); }
 .masthead__name {
   font-family: var(--f-display); font-weight: 900;
-  font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.1;
+  font-size: 1.875rem; line-height: 1.15;
 }
 .masthead__sub {
   font-family: var(--f-display); font-weight: 900; text-transform: uppercase;
