@@ -1,0 +1,10 @@
+# 用户原始素材（只读来源，绝不进版本库）
+朱翰林的建筑作品/
+
+# Claude Code 配置（无需发布）
+.claude/
+
+# 系统杂项
+Thumbs.db
+Desktop.ini
+.DS_Store
