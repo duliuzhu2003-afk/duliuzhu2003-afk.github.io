@@ -6,6 +6,7 @@ param(
   [Parameter(Mandatory=$true)][string]$File,
   [Parameter(Mandatory=$true)][string]$OutPath,
   [int]$LongEdge = 1200,
+  [int]$Quality = 85,
   [switch]$NoCrop
 )
 Add-Type -AssemblyName System.Drawing
@@ -43,7 +44,7 @@ if ($NoCrop) {
 $src.Dispose()
 $jpeg = [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() | Where-Object { $_.MimeType -eq 'image/jpeg' }
 $ep = New-Object System.Drawing.Imaging.EncoderParameters(1)
-$ep.Param[0] = New-Object System.Drawing.Imaging.EncoderParameter([System.Drawing.Imaging.Encoder]::Quality, [long]85)
+$ep.Param[0] = New-Object System.Drawing.Imaging.EncoderParameter([System.Drawing.Imaging.Encoder]::Quality, [long]$Quality)
 $bmp.Save($OutPath, $jpeg, $ep)
 $ep.Dispose()
 Write-Host ("cover done: {0} ({1}x{2})" -f $OutPath, $bmp.Width, $bmp.Height)
