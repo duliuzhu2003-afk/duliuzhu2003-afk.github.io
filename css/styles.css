@@ -221,14 +221,14 @@ ul, ol { list-style: none; }
   display: flex; justify-content: space-between; align-items: center;
   padding-block: .5rem;
 }
-.masthead__brand { text-align: center; padding-block: var(--sp-4) var(--sp-3); }
+.masthead__brand { text-align: center; padding-block: var(--sp-2) var(--sp-2); }
 .masthead__name {
   font-family: var(--f-display); font-weight: 900;
-  font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.05;
+  font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.1;
 }
 .masthead__sub {
   font-family: var(--f-display); font-weight: 900; text-transform: uppercase;
-  letter-spacing: .3em; font-size: var(--fs-label); color: var(--c-n500); margin-top: .4em;
+  letter-spacing: .22em; font-size: var(--fs-label); color: var(--c-n500); margin-top: .3em;
 }
 .masthead__nav-wrap {
   position: sticky; top: 0; z-index: 40;
