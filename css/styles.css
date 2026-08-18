@@ -334,12 +334,14 @@ ul, ol { list-style: none; }
 .sec-head__meta { flex: none; padding-bottom: .35em; }
 
 /* ---------- 13. 作品目录卡片 ---------- */
-.works { margin-top: var(--sp-2); }
-.works > *:nth-child(2n) { border-right: none; }  /* 每行末列去右线 */
-.works .card-project--full { border-right: none; }  /* 独占一页的整宽卡片 */
+.works { margin-top: var(--sp-2); gap: 12px; border-top: none; border-left: none; } /* 卡片间留小空隙（用户要求） */
+.works > * { border: var(--bd); } /* 分离式卡片：四边完整边框 */
 .card-project--full .card-project__img img {
   width: auto; max-width: 100%; max-height: 520px; margin-inline: auto;
 }  /* 整宽卡片完整显示图片，超高时封顶不裁剪 */
+.card-project.hard-shadow-hover:hover {
+  box-shadow: -3px -3px 0 0 var(--c-ink), 6px 6px 0 0 var(--c-ink);
+}  /* 封面悬停：上/左 3px 细影＋右/下 6px 重影（用户要求） */
 .card-project { display: flex; flex-direction: column; background: var(--c-paper); }
 .card-project__info { padding: var(--sp-3); display: flex; flex-direction: column; gap: .4rem; }
 .card-project__title {
@@ -563,7 +565,7 @@ body.lb-open { overflow: hidden; }
   .c4, .c5, .c6, .c7, .c8 { grid-column: span 12; }
   .hero__aside { border-left: none; border-top: var(--bd); padding-left: 0; padding-top: var(--sp-3); }
   .rules > * { border-right: none; }
-  .works > *:nth-child(2n) { border-right: none; }
+  .works > * { border: var(--bd); } /* 移动端卡片保持完整边框 */
   .steps { border-left: none; padding-left: 0; border-top: 1px solid var(--c-invert-line); padding-top: var(--sp-2); }
   .article__side { position: static; }
   .contact__social { border-left: none; padding-left: 0; border-top: var(--bd); padding-top: var(--sp-3); }
