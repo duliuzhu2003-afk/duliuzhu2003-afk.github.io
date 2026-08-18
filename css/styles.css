@@ -451,8 +451,9 @@ html.lang-en .pager__title-en { display: block; }
   color: var(--c-n700); margin-bottom: .3em;
 }
 .article p { text-align: justify; margin-bottom: var(--sp-2); }
-.article__split { display: grid; grid-template-columns: 5fr 7fr; gap: var(--sp-4); align-items: start; }
-.article__split--rev { grid-template-columns: 7fr 5fr; }
+/* 图文分栏：图片列更大（用户 2026-08-19 要求放大图片） */
+.article__split { display: grid; grid-template-columns: 2fr 3fr; gap: var(--sp-4); align-items: start; }
+.article__split--rev { grid-template-columns: 3fr 2fr; }
 .article__figs-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4); }
 .article__figs-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--sp-4); }
 .fig { margin-top: var(--sp-3); }
