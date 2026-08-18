@@ -189,6 +189,7 @@ ul, ol { list-style: none; }
 /* 图片原色保留（用户 2026-08-19 决定：不加灰度/sepia 滤镜） */
 .img-newsprint { transition: transform var(--dur) var(--ease); }
 .aspect-4x3 { aspect-ratio: 4 / 3; overflow: hidden; }
+.aspect-1x1 { aspect-ratio: 1 / 1; overflow: hidden; }
 .aspect-16x10 { aspect-ratio: 16 / 10; overflow: hidden; }
 .aspect-4x3 img, .aspect-16x10 img { width: 100%; height: 100%; object-fit: cover; }
 .frame-img { border: var(--bd); overflow: hidden; }
