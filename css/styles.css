@@ -284,9 +284,14 @@ ul, ol { list-style: none; }
   -webkit-text-fill-color: transparent; color: transparent;
   animation: hero-light 7s ease-in-out infinite;
 }
-/* 标题的莫比乌斯环双层画布（用户 2026-08-20 定稿：后层 z1 在文字下、前层 z3 在文字上 → 穿过文案） */
-.hero__mobius, .hero__mobius-front { position: absolute; inset: -60% 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; }
-.hero__mobius-front { z-index: 3; }
+/* 标题背景：横向移动的线条（用户 2026-08-20 定稿：Canvas 绘制，JS 驱动） */
+.hero__mobius { position: absolute; inset: -60% 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; }
+/* 主标题关键词：悬停/聚焦红下划线（联动下方简介对应段落放大） */
+.hero__kw { cursor: pointer; }
+.hero__kw:hover, .hero__kw:focus-visible { text-decoration: underline; text-decoration-color: var(--c-accent); text-decoration-thickness: 3px; text-underline-offset: .14em; }
+/* 简介中与关键词对应的段落：高亮时放大 */
+.intro-kw { transition: font-size var(--dur) var(--ease); }
+.intro-kw.is-hl { font-size: 1.16em; }
 @keyframes hero-light {
   0%, 100% { background-position: 120% 0; }
   50% { background-position: -20% 0; }

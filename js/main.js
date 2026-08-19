@@ -199,66 +199,61 @@
   });
 })();
 
-/* ---------- 5. 主标题的莫比乌斯环（双层画布：后半环在文字下、前半环在文字上 → 穿过文案；用户 2026-08-20 定稿） ---------- */
+/* ---------- 5. 主标题背景的横向移动线条（用户 2026-08-20 定稿） ---------- */
 (function () {
-  var backCv = document.querySelector('.hero__mobius');
-  var frontCv = document.querySelector('.hero__mobius-front');
-  if (!backCv || !frontCv || !backCv.getContext || !frontCv.getContext) { return; }
-  var back = backCv.getContext('2d');
-  var front = frontCv.getContext('2d');
+  var canvas = document.querySelector('.hero__mobius');
+  if (!canvas || !canvas.getContext) { return; }
+  var ctx = canvas.getContext('2d');
   var t = 0, last = 0; /* 动画始终运行 */
+  var segs1 = [], segs2 = [];
 
   function size() {
     var dpr = window.devicePixelRatio || 1;
-    [[backCv, back], [frontCv, front]].forEach(function (pair) {
-      var cv = pair[0], ctx = pair[1];
-      var w = cv.clientWidth, h = cv.clientHeight;
-      if (!w || !h) { return; }
-      cv.width = Math.round(w * dpr);
-      cv.height = Math.round(h * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    });
+    var w = canvas.clientWidth, h = canvas.clientHeight;
+    if (!w || !h) { return; }
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    segs1 = makeSegs(30, 36, 26, 70);
+    segs2 = makeSegs(18, 56, 40, 110);
+  }
+
+  /* 预生成横向短线段：行位置/初始偏移/长度（避免逐帧随机抖动） */
+  function makeSegs(count, rowH, lenMin, lenMax) {
+    var h = canvas.clientHeight, w = canvas.clientWidth;
+    var span = w + 140;
+    var arr = [];
+    var rows = Math.max(3, Math.floor(h / rowH));
+    for (var i = 0; i < rows && arr.length < count; i++) {
+      var y = rowH / 2 + i * rowH;
+      var m = 1 + Math.floor(Math.random() * 2);
+      for (var j = 0; j < m && arr.length < count; j++) {
+        arr.push({ y: y, x0: Math.random() * span, len: lenMin + Math.random() * (lenMax - lenMin) });
+      }
+    }
+    return arr;
+  }
+
+  function drawLayer(segs, speed, color, lw) {
+    var w = canvas.clientWidth;
+    var span = w + 140;
+    ctx.strokeStyle = color;
+    ctx.lineWidth = lw;
+    ctx.beginPath();
+    for (var i = 0; i < segs.length; i++) {
+      var s = segs[i];
+      var x = ((s.x0 + t * speed) % span + span) % span - 80;
+      if (x > w + 20 || x + s.len < -20) { continue; }
+      ctx.moveTo(x, s.y);
+      ctx.lineTo(x + s.len, s.y);
+    }
+    ctx.stroke();
   }
 
   function draw() {
-    var w = backCv.clientWidth, h = backCv.clientHeight;
-    if (!w || !h) { return; }
-    back.clearRect(0, 0, w, h);
-    front.clearRect(0, 0, w, h);
-
-    var R = Math.min(w, h) * 0.40;                 /* 环半径 */
-    var band = R * 0.42;                           /* 条带宽 */
-    var scale = Math.min(w, h) / (2 * (R + band)) * 0.92;
-    var cx = w / 2, cy = h / 2;
-    var spin = t * 2.09;                           /* 自转：3 秒一圈 */
-    var tilt = 0.55 + 0.10 * Math.sin(t * 0.5);    /* 俯视角度微摆 */
-    var ct = Math.cos(tilt), st = Math.sin(tilt);
-
-    back.lineWidth = front.lineWidth = 1.6;
-    back.strokeStyle = front.strokeStyle = 'rgba(17, 17, 17, 0.28)';
-    back.beginPath();
-    front.beginPath();
-    var SEG = 56;
-    for (var i = 0; i < SEG; i++) {
-      var v = (i / SEG) * Math.PI * 2 + spin;
-      var cv = Math.cos(v), sv = Math.sin(v);
-      var ch = Math.cos(v / 2), sh = Math.sin(v / 2);
-      var ax, ay, az, bx, by, bz;
-      for (var s = -1; s <= 1; s += 2) {
-        var x = R * cv + s * band * sh * cv;
-        var y = s * band * ch;
-        var z = R * sv + s * band * sh * sv;
-        if (s === -1) { ax = x; ay = y; az = z; } else { bx = x; by = y; bz = z; }
-      }
-      /* 投影（俯视）：py = y·ct + z·st；视深 pz = -y·st + z·ct（越大越靠前） */
-      var pax = ax, pay = ay * ct + az * st, paz = -ay * st + az * ct;
-      var pbx = bx, pby = by * ct + bz * st, pbz = -by * st + bz * ct;
-      var ctx = ((paz + pbz) / 2 >= 0) ? front : back;  /* 前半环画在文字上层 */
-      ctx.moveTo(cx + pax * scale, cy + pay * scale);
-      ctx.lineTo(cx + pbx * scale, cy + pby * scale);
-    }
-    back.stroke();
-    front.stroke();
+    ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+    drawLayer(segs1, 60, 'rgba(17, 17, 17, 0.22)', 1.6);
+    drawLayer(segs2, -36, 'rgba(17, 17, 17, 0.12)', 1.3);
   }
 
   function loop(ts) {
@@ -273,4 +268,22 @@
   draw();
   window.requestAnimationFrame(loop);
   window.addEventListener('resize', function () { size(); draw(); });
+})();
+
+/* ---------- 6. 主标题关键词悬停 → 下方简介对应段落放大（用户 2026-08-20） ---------- */
+(function () {
+  var kws = Array.prototype.slice.call(document.querySelectorAll('.hero__kw'));
+  if (!kws.length) { return; }
+  kws.forEach(function (kw) {
+    function set(on) {
+      var key = kw.getAttribute('data-kw');
+      Array.prototype.forEach.call(document.querySelectorAll('.intro-kw[data-kw="' + key + '"]'), function (el) {
+        el.classList.toggle('is-hl', on);
+      });
+    }
+    kw.addEventListener('mouseenter', function () { set(true); });
+    kw.addEventListener('mouseleave', function () { set(false); });
+    kw.addEventListener('focus', function () { set(true); });
+    kw.addEventListener('blur', function () { set(false); });
+  });
 })();
