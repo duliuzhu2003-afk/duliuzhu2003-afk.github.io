@@ -284,21 +284,8 @@ ul, ol { list-style: none; }
   -webkit-text-fill-color: transparent; color: transparent;
   animation: hero-light 7s ease-in-out infinite;
 }
-/* 标题背后的莫比乌斯式旋转直线（用户 2026-08-20 新增：黑色直线层不断旋转，类似直纹面） */
-.hero__lines { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
-.hero__lines span {
-  position: absolute; left: 50%; top: 50%; width: 200%; height: 200%;
-  background: repeating-linear-gradient(0deg, transparent 0 17px, rgba(17, 17, 17, .22) 17px 19px);
-  animation: hero-mobius 24s linear infinite;
-}
-.hero__lines span:last-child {
-  background: repeating-linear-gradient(0deg, transparent 0 27px, rgba(17, 17, 17, .13) 27px 29px);
-  animation-direction: reverse; animation-duration: 17s;
-}
-@keyframes hero-mobius {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
+/* 标题背后的莫比乌斯环旋转线框（用户 2026-08-20 新增：Canvas 绘制，JS 驱动） */
+.hero__mobius { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; }
 @keyframes hero-light {
   0%, 100% { background-position: 120% 0; }
   50% { background-position: -20% 0; }
@@ -631,7 +618,6 @@ body.lb-open { overflow: hidden; }
   html { scroll-behavior: auto; }
   .ticker__track { animation: none; }
   .hero__title, .hero__title-wrap::before, .hero__title .hero__en { animation: none; }
-  .hero__lines span { animation: none; }
   * { transition-duration: .01ms !important; }
 }
 

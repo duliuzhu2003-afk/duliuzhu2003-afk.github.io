@@ -198,3 +198,65 @@
     else if (e.key === 'ArrowRight') { show(index + 1); }
   });
 })();
+
+/* ---------- 5. 主标题背后的莫比乌斯环旋转线框（用户 2026-08-20） ---------- */
+(function () {
+  var canvas = document.querySelector('.hero__mobius');
+  if (!canvas || !canvas.getContext) { return; }
+  var ctx = canvas.getContext('2d');
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var t = 0, last = 0;
+
+  function size() {
+    var dpr = window.devicePixelRatio || 1;
+    var w = canvas.clientWidth, h = canvas.clientHeight;
+    if (!w || !h) { return; }
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function draw() {
+    var w = canvas.clientWidth, h = canvas.clientHeight;
+    if (!w || !h) { return; }
+    ctx.clearRect(0, 0, w, h);
+    var R = Math.min(w, h) * 0.34;                 /* 环半径 */
+    var band = R * 0.42;                           /* 条带宽 */
+    var scale = Math.min(w, h) / (2 * (R + band)) * 0.84;
+    var cx = w / 2, cy = h / 2;
+    var spin = t * 0.30;                           /* 自转：约 21 秒一圈 */
+    var tilt = 1.15 + 0.14 * Math.sin(t * 0.21);   /* 俯仰角微摆 */
+    var ct = Math.cos(tilt), st = Math.sin(tilt);
+    ctx.lineWidth = 1.6;
+    ctx.strokeStyle = 'rgba(17, 17, 17, 0.28)';
+    ctx.beginPath();
+    var SEG = 56;
+    for (var i = 0; i < SEG; i++) {
+      var v = (i / SEG) * Math.PI * 2 + spin;
+      var cv = Math.cos(v), sv = Math.sin(v);
+      var ch = Math.cos(v / 2), sh = Math.sin(v / 2);
+      /* 端点 = 中心 ± 带宽 × 法向 n（n 随 v/2 扭转 = 莫比乌斯带） */
+      for (var s = -1; s <= 1; s += 2) {
+        var x = R * cv + s * band * sh * cv;
+        var y = R * sv + s * band * sh * sv;
+        var z = s * band * ch;
+        var py = y * ct - z * st;                  /* 绕 x 轴俯仰投影 */
+        if (s === -1) { ctx.moveTo(cx + x * scale, cy + py * scale); }
+        else { ctx.lineTo(cx + x * scale, cy + py * scale); }
+      }
+    }
+    ctx.stroke();
+  }
+
+  function loop(ts) {
+    if (!last) { last = ts; }
+    t += Math.min(0.05, (ts - last) / 1000);
+    last = ts;
+    draw();
+    window.requestAnimationFrame(loop);
+  }
+
+  size();
+  if (reduced) { draw(); } else { window.requestAnimationFrame(loop); }
+  window.addEventListener('resize', function () { size(); draw(); });
+})();
