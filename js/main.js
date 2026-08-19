@@ -288,7 +288,7 @@
   });
 })();
 
-/* ---------- 7. 作品目录封面悬停幻灯（用户 2026-08-20：悬停 0.5s 后开始卡片模式，每 1s 闪出一张该项目小图） ---------- */
+/* ---------- 7. 作品目录封面悬停幻灯（用户 2026-08-20：悬停 1s 后开始，每 2s 一张，淡出淡入切换） ---------- */
 (function () {
   var cards = Array.prototype.slice.call(document.querySelectorAll('.card-project'));
   if (!cards.length) { return; }
@@ -298,23 +298,39 @@
     if (!img || !slides.length) { return; }
     var cover = img.src;
     var timer = null, interval = null, i = 0;
+    var fading = false;
+
+    function swap(next) {
+      if (fading) { return; }
+      fading = true;
+      img.style.opacity = '0';                       /* 上一张淡出 */
+      setTimeout(function () {
+        img.src = next;
+        setTimeout(function () {
+          img.style.opacity = '1';                   /* 下一张渐入 */
+          setTimeout(function () { fading = false; }, 400);
+        }, 40);
+      }, 350);
+    }
 
     function stop() {
       if (timer) { clearTimeout(timer); timer = null; }
       if (interval) { clearInterval(interval); interval = null; }
+      img.style.opacity = '';
       img.src = cover;
       i = 0;
+      fading = false;
     }
 
     card.addEventListener('mouseenter', function () {
       timer = setTimeout(function () {
-        /* 预热剩余图片，保证闪图节奏 */
+        /* 预热剩余图片，保证切换节奏 */
         slides.forEach(function (s) { var p = new Image(); p.src = s; });
         interval = setInterval(function () {
-          img.src = slides[i % slides.length];
+          swap(slides[i % slides.length]);
           i++;
-        }, 1000);
-      }, 500);
+        }, 2000);
+      }, 1000);
     });
     card.addEventListener('mouseleave', stop);
     card.addEventListener('focusin', stop);
