@@ -487,6 +487,7 @@ html.lang-en .pager__title-en { display: block; }
 /* 图文分栏：图片列更大（用户 2026-08-19 要求放大图片） */
 .fig-stack { display: flex; flex-direction: column; gap: var(--sp-3); } /* 一组多张配图（用户 2026-08-20 小标题配图） */
 figure.fig--cap img { width: auto; height: auto; max-width: 100%; max-height: 450px; margin-right: auto; } /* 竖图等比例限高、左对齐、不拉伸（用户 2026-08-20） */
+figure.fig--half img { width: 50%; } /* 半宽显示（用户 2026-08-20：03 场地放大图） */
 .article__split { display: grid; grid-template-columns: 2fr 3fr; gap: var(--sp-4); align-items: start; }
 .article__split--rev { grid-template-columns: 3fr 2fr; }
 .article__figs-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4); }
