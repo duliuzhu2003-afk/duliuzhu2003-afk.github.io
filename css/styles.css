@@ -289,9 +289,13 @@ ul, ol { list-style: none; }
 /* 主标题关键词：悬停/聚焦红下划线（联动下方简介对应段落放大） */
 .hero__kw { cursor: pointer; }
 .hero__kw:hover, .hero__kw:focus-visible { text-decoration: underline; text-decoration-color: var(--c-accent); text-decoration-thickness: 3px; text-underline-offset: .14em; }
-/* 简介中与关键词对应的段落：高亮时放大 */
+/* 简介中与关键词对应的段落：高亮时放大 1.3 倍＋红色下划线（用户 2026-08-20） */
 .intro-kw { transition: font-size var(--dur) var(--ease); }
-.intro-kw.is-hl { font-size: 1.16em; }
+.intro-kw.is-hl {
+  font-size: 1.3em;
+  text-decoration: underline; text-decoration-color: var(--c-accent);
+  text-decoration-thickness: 3px; text-underline-offset: .12em;
+}
 @keyframes hero-light {
   0%, 100% { background-position: 120% 0; }
   50% { background-position: -20% 0; }
