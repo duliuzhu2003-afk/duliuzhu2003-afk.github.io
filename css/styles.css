@@ -287,13 +287,13 @@ ul, ol { list-style: none; }
 /* 标题背后的莫比乌斯式旋转直线（用户 2026-08-20 新增：黑色直线层不断旋转，类似直纹面） */
 .hero__lines { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
 .hero__lines span {
-  position: absolute; left: 50%; top: 50%; width: 250%; aspect-ratio: 1;
-  background: repeating-linear-gradient(0deg, transparent 0 13px, rgba(17, 17, 17, .12) 13px 14px);
-  animation: hero-mobius 36s linear infinite;
+  position: absolute; left: 50%; top: 50%; width: 200%; height: 200%;
+  background: repeating-linear-gradient(0deg, transparent 0 17px, rgba(17, 17, 17, .22) 17px 19px);
+  animation: hero-mobius 24s linear infinite;
 }
 .hero__lines span:last-child {
-  background: repeating-linear-gradient(0deg, transparent 0 19px, rgba(17, 17, 17, .08) 19px 20px);
-  animation-direction: reverse; animation-duration: 26s;
+  background: repeating-linear-gradient(0deg, transparent 0 27px, rgba(17, 17, 17, .13) 27px 29px);
+  animation-direction: reverse; animation-duration: 17s;
 }
 @keyframes hero-mobius {
   from { transform: translate(-50%, -50%) rotate(0deg); }
