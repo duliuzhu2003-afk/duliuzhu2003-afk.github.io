@@ -286,15 +286,15 @@ ul, ol { list-style: none; }
 }
 /* 标题背景：横向移动的线条（用户 2026-08-20 定稿：Canvas 绘制，JS 驱动） */
 .hero__mobius { position: absolute; inset: -60% 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; }
-/* 主标题关键词：悬停/聚焦红下划线（联动下方简介对应段落放大） */
+/* 主标题关键词：悬停/聚焦红下划线（联动下方简介对应段落放大；下划线与文字留出间距） */
 .hero__kw { cursor: pointer; }
-.hero__kw:hover, .hero__kw:focus-visible { text-decoration: underline; text-decoration-color: var(--c-accent); text-decoration-thickness: 3px; text-underline-offset: .14em; }
+.hero__kw:hover, .hero__kw:focus-visible { text-decoration: underline; text-decoration-color: var(--c-accent); text-decoration-thickness: 3px; text-underline-offset: .3em; }
 /* 简介中与关键词对应的段落：高亮时放大 1.3 倍＋红色下划线（用户 2026-08-20） */
 .intro-kw { transition: font-size var(--dur) var(--ease); }
 .intro-kw.is-hl {
   font-size: 1.3em;
   text-decoration: underline; text-decoration-color: var(--c-accent);
-  text-decoration-thickness: 3px; text-underline-offset: .12em;
+  text-decoration-thickness: 3px; text-underline-offset: .3em;
 }
 @keyframes hero-light {
   0%, 100% { background-position: 120% 0; }

@@ -214,8 +214,8 @@
     canvas.width = Math.round(w * dpr);
     canvas.height = Math.round(h * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    segs1 = makeSegs(30, 36, 26, 70);
-    segs2 = makeSegs(18, 56, 40, 110);
+    segs1 = makeSegs(32, 36, 34, 90);
+    segs2 = makeSegs(20, 56, 50, 130);
   }
 
   /* 预生成横向短线段：行位置/初始偏移/长度（避免逐帧随机抖动） */
