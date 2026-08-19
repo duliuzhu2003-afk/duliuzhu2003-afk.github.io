@@ -252,8 +252,8 @@
 
   function draw() {
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
-    drawLayer(segs1, 60, 'rgba(17, 17, 17, 0.22)', 1.6);
-    drawLayer(segs2, -36, 'rgba(17, 17, 17, 0.12)', 1.3);
+    drawLayer(segs1, 60, 'rgba(17, 17, 17, 0.32)', 1.6);
+    drawLayer(segs2, -36, 'rgba(17, 17, 17, 0.20)', 1.3);
   }
 
   function loop(ts) {
