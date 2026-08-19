@@ -304,7 +304,7 @@ ul, ol { list-style: none; }
   }
 }
 .hero__intro { margin-top: var(--sp-4); max-width: 46em; text-align: justify; }
-.hero__intro-en { margin-top: var(--sp-3); max-width: 46em; font-size: .875em; } /* 英文简介缩小字号，作报纸式次级文案（用户 2026-08-20） */
+.hero__intro-en { margin-top: var(--sp-3); max-width: 46em; font-size: .875em; color: var(--c-n700); } /* 英文简介缩小字号＋灰色调，作报纸式次级文案（用户 2026-08-20） */
 .hero__aside { border-left: var(--bd); padding-left: var(--sp-3); position: relative; z-index: 1; } /* 头像置顶于背景网格线之上 */
 .hero__facts { margin-top: var(--sp-3); }
 .hero__facts dd { font-family: var(--f-mono); font-weight: 700; }
