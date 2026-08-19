@@ -220,12 +220,12 @@
     var w = canvas.clientWidth, h = canvas.clientHeight;
     if (!w || !h) { return; }
     ctx.clearRect(0, 0, w, h);
-    var R = Math.min(w, h) * 0.34;                 /* 环半径 */
+    var R = Math.min(w, h) * 0.40;                 /* 环半径（用户要求放大） */
     var band = R * 0.42;                           /* 条带宽 */
-    var scale = Math.min(w, h) / (2 * (R + band)) * 0.84;
+    var scale = Math.min(w, h) / (2 * (R + band)) * 0.92;
     var cx = w / 2, cy = h / 2;
-    var spin = t * 0.30;                           /* 自转：约 21 秒一圈 */
-    var tilt = 1.15 + 0.14 * Math.sin(t * 0.21);   /* 俯仰角微摆 */
+    var spin = t * 0.90;                           /* 自转：约 7 秒一圈（用户要求 3 倍速） */
+    var tilt = 1.15 + 0.14 * Math.sin(t * 0.63);   /* 俯仰角微摆（同步 3 倍速） */
     var ct = Math.cos(tilt), st = Math.sin(tilt);
     ctx.lineWidth = 1.6;
     ctx.strokeStyle = 'rgba(17, 17, 17, 0.28)';

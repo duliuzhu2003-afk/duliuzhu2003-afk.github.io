@@ -284,8 +284,8 @@ ul, ol { list-style: none; }
   -webkit-text-fill-color: transparent; color: transparent;
   animation: hero-light 7s ease-in-out infinite;
 }
-/* 标题背后的莫比乌斯环旋转线框（用户 2026-08-20 新增：Canvas 绘制，JS 驱动） */
-.hero__mobius { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; }
+/* 标题背后的莫比乌斯环旋转线框（用户 2026-08-20 新增：Canvas 绘制，JS 驱动；画布上下扩展放大环体） */
+.hero__mobius { position: absolute; inset: -60% 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; }
 @keyframes hero-light {
   0%, 100% { background-position: 120% 0; }
   50% { background-position: -20% 0; }
