@@ -284,8 +284,9 @@ ul, ol { list-style: none; }
   -webkit-text-fill-color: transparent; color: transparent;
   animation: hero-light 7s ease-in-out infinite;
 }
-/* 标题背后的横向流动线条（用户 2026-08-20 定稿：Canvas 绘制，JS 驱动） */
-.hero__mobius { position: absolute; inset: -60% 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; }
+/* 标题的莫比乌斯环双层画布（用户 2026-08-20 定稿：后层 z1 在文字下、前层 z3 在文字上 → 穿过文案） */
+.hero__mobius, .hero__mobius-front { position: absolute; inset: -60% 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; }
+.hero__mobius-front { z-index: 3; }
 @keyframes hero-light {
   0%, 100% { background-position: 120% 0; }
   50% { background-position: -20% 0; }

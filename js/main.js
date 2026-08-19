@@ -199,44 +199,66 @@
   });
 })();
 
-/* ---------- 5. 主标题背后的横向移动线条（用户 2026-08-20 定稿） ---------- */
+/* ---------- 5. 主标题的莫比乌斯环（双层画布：后半环在文字下、前半环在文字上 → 穿过文案；用户 2026-08-20 定稿） ---------- */
 (function () {
-  var canvas = document.querySelector('.hero__mobius');
-  if (!canvas || !canvas.getContext) { return; }
-  var ctx = canvas.getContext('2d');
-  var t = 0, last = 0; /* 动画始终运行：此前因系统"减少动态效果"设置被停用，用户确认其电脑开启动效偏好 */
+  var backCv = document.querySelector('.hero__mobius');
+  var frontCv = document.querySelector('.hero__mobius-front');
+  if (!backCv || !frontCv || !backCv.getContext || !frontCv.getContext) { return; }
+  var back = backCv.getContext('2d');
+  var front = frontCv.getContext('2d');
+  var t = 0, last = 0; /* 动画始终运行 */
 
   function size() {
     var dpr = window.devicePixelRatio || 1;
-    var w = canvas.clientWidth, h = canvas.clientHeight;
-    if (!w || !h) { return; }
-    canvas.width = Math.round(w * dpr);
-    canvas.height = Math.round(h * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    [[backCv, back], [frontCv, front]].forEach(function (pair) {
+      var cv = pair[0], ctx = pair[1];
+      var w = cv.clientWidth, h = cv.clientHeight;
+      if (!w || !h) { return; }
+      cv.width = Math.round(w * dpr);
+      cv.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    });
   }
 
   function draw() {
-    var w = canvas.clientWidth, h = canvas.clientHeight;
+    var w = backCv.clientWidth, h = backCv.clientHeight;
     if (!w || !h) { return; }
-    ctx.clearRect(0, 0, w, h);
-    /* 两层斜直线横向流动：密而深一层＋疏而浅一层，反向移动 */
-    drawLineLayer(26, 72, 'rgba(17, 17, 17, 0.24)', 1.6, 0.30);
-    drawLineLayer(64, -42, 'rgba(17, 17, 17, 0.15)', 1.3, -0.24);
-  }
+    back.clearRect(0, 0, w, h);
+    front.clearRect(0, 0, w, h);
 
-  function drawLineLayer(gap, speed, color, lw, slant) {
-    var w = canvas.clientWidth, h = canvas.clientHeight;
-    var drift = ((t * speed) % gap + gap) % gap;  /* 按周期取模 → 无缝循环 */
-    var slope = Math.tan(slant);
-    var margin = Math.abs(slope) * h + gap;
-    ctx.strokeStyle = color;
-    ctx.lineWidth = lw;
-    ctx.beginPath();
-    for (var x = -margin + drift - gap; x < w + margin; x += gap) {
-      ctx.moveTo(x, 0);
-      ctx.lineTo(x + slope * h, h);
+    var R = Math.min(w, h) * 0.40;                 /* 环半径 */
+    var band = R * 0.42;                           /* 条带宽 */
+    var scale = Math.min(w, h) / (2 * (R + band)) * 0.92;
+    var cx = w / 2, cy = h / 2;
+    var spin = t * 2.09;                           /* 自转：3 秒一圈 */
+    var tilt = 0.55 + 0.10 * Math.sin(t * 0.5);    /* 俯视角度微摆 */
+    var ct = Math.cos(tilt), st = Math.sin(tilt);
+
+    back.lineWidth = front.lineWidth = 1.6;
+    back.strokeStyle = front.strokeStyle = 'rgba(17, 17, 17, 0.28)';
+    back.beginPath();
+    front.beginPath();
+    var SEG = 56;
+    for (var i = 0; i < SEG; i++) {
+      var v = (i / SEG) * Math.PI * 2 + spin;
+      var cv = Math.cos(v), sv = Math.sin(v);
+      var ch = Math.cos(v / 2), sh = Math.sin(v / 2);
+      var ax, ay, az, bx, by, bz;
+      for (var s = -1; s <= 1; s += 2) {
+        var x = R * cv + s * band * sh * cv;
+        var y = s * band * ch;
+        var z = R * sv + s * band * sh * sv;
+        if (s === -1) { ax = x; ay = y; az = z; } else { bx = x; by = y; bz = z; }
+      }
+      /* 投影（俯视）：py = y·ct + z·st；视深 pz = -y·st + z·ct（越大越靠前） */
+      var pax = ax, pay = ay * ct + az * st, paz = -ay * st + az * ct;
+      var pbx = bx, pby = by * ct + bz * st, pbz = -by * st + bz * ct;
+      var ctx = ((paz + pbz) / 2 >= 0) ? front : back;  /* 前半环画在文字上层 */
+      ctx.moveTo(cx + pax * scale, cy + pay * scale);
+      ctx.lineTo(cx + pbx * scale, cy + pby * scale);
     }
-    ctx.stroke();
+    back.stroke();
+    front.stroke();
   }
 
   function loop(ts) {
