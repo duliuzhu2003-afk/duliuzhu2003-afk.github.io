@@ -220,12 +220,12 @@
     var w = canvas.clientWidth, h = canvas.clientHeight;
     if (!w || !h) { return; }
     ctx.clearRect(0, 0, w, h);
-    var R = Math.min(w, h) * 0.40;                 /* 环半径（用户要求放大） */
+    var R = Math.min(w, h) * 0.40;                 /* 环半径 */
     var band = R * 0.42;                           /* 条带宽 */
     var scale = Math.min(w, h) / (2 * (R + band)) * 0.92;
     var cx = w / 2, cy = h / 2;
-    var spin = t * 0.90;                           /* 自转：约 7 秒一圈（用户要求 3 倍速） */
-    var tilt = 1.15 + 0.14 * Math.sin(t * 0.63);   /* 俯仰角微摆（同步 3 倍速） */
+    var spin = t * 2.09;                           /* 自转：3 秒一圈（用户要求） */
+    var tilt = 0.55 + 0.10 * Math.sin(t * 0.5);    /* 俯视角度微摆（环横放，从上方约 32° 看） */
     var ct = Math.cos(tilt), st = Math.sin(tilt);
     ctx.lineWidth = 1.6;
     ctx.strokeStyle = 'rgba(17, 17, 17, 0.28)';
@@ -235,12 +235,12 @@
       var v = (i / SEG) * Math.PI * 2 + spin;
       var cv = Math.cos(v), sv = Math.sin(v);
       var ch = Math.cos(v / 2), sh = Math.sin(v / 2);
-      /* 端点 = 中心 ± 带宽 × 法向 n（n 随 v/2 扭转 = 莫比乌斯带） */
+      /* 环平放于 XZ 平面：端点 = 中心 ± 带宽 × 法向 n（n 随 v/2 扭转 = 莫比乌斯带） */
       for (var s = -1; s <= 1; s += 2) {
         var x = R * cv + s * band * sh * cv;
-        var y = R * sv + s * band * sh * sv;
-        var z = s * band * ch;
-        var py = y * ct - z * st;                  /* 绕 x 轴俯仰投影 */
+        var y = s * band * ch;
+        var z = R * sv + s * band * sh * sv;
+        var py = y * ct - z * st;                  /* 绕 x 轴俯视投影 → 横向椭圆 */
         if (s === -1) { ctx.moveTo(cx + x * scale, cy + py * scale); }
         else { ctx.lineTo(cx + x * scale, cy + py * scale); }
       }
