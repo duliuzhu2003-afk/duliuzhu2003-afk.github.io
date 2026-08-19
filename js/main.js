@@ -288,26 +288,32 @@
   });
 })();
 
-/* ---------- 7. 作品目录封面悬停幻灯（用户 2026-08-20：悬停 1s 后开始，每 2s 一张，淡出淡入切换） ---------- */
+/* ---------- 7. 作品目录封面悬停幻灯（用户 2026-08-20 修复版：叠层交叉淡入淡出 2s，不换主图、卡片不跳动） ---------- */
 (function () {
   var cards = Array.prototype.slice.call(document.querySelectorAll('.card-project'));
   if (!cards.length) { return; }
   cards.forEach(function (card) {
-    var img = card.querySelector('.card-project__img img');
+    var box = card.querySelector('.card-project__img');
+    var base = box ? box.querySelector('img') : null;
     var slides = (card.getAttribute('data-slides') || '').split(',').filter(Boolean);
-    if (!img || !slides.length) { return; }
-    var cover = img.src;
+    if (!box || !base || !slides.length) { return; }
+    /* 叠层：绝对定位盖在封面上，object-fit: contain 完整显示、不变形不裁剪 */
+    var over = document.createElement('img');
+    over.className = 'card-project__img--over';
+    over.alt = '';
+    box.appendChild(over);
+
     var timer = null, interval = null, i = 0;
     var fading = false;
 
     function swap(next) {
       if (fading) { return; }
       fading = true;
-      img.style.opacity = '0';                       /* 上一张淡出 2s（100% → 0%） */
+      over.style.opacity = '0';                      /* 当前小图淡出 2s（露出封面） */
       setTimeout(function () {
-        img.src = next;
+        over.src = next;
         setTimeout(function () {
-          img.style.opacity = '1';                   /* 下一张渐入 2s（0% → 100%） */
+          over.style.opacity = '1';                  /* 下一张小图渐入 2s */
           setTimeout(function () { fading = false; }, 2050);
         }, 40);
       }, 2000);
@@ -316,16 +322,19 @@
     function stop() {
       if (timer) { clearTimeout(timer); timer = null; }
       if (interval) { clearInterval(interval); interval = null; }
-      img.style.opacity = '';
-      img.src = cover;
+      over.style.opacity = '0';
+      over.removeAttribute('src');
       i = 0;
       fading = false;
     }
 
     card.addEventListener('mouseenter', function () {
       timer = setTimeout(function () {
-        /* 预热剩余图片，保证切换节奏 */
+        /* 预热全部小图，保证切换节奏 */
         slides.forEach(function (s) { var p = new Image(); p.src = s; });
+        over.src = slides[0];                        /* 第一张直接渐入 */
+        over.style.opacity = '1';
+        i = 1;
         interval = setInterval(function () {
           swap(slides[i % slides.length]);
           i++;
