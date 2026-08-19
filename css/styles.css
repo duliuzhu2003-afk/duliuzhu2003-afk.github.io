@@ -304,7 +304,7 @@ ul, ol { list-style: none; }
   }
 }
 .hero__intro { margin-top: var(--sp-4); max-width: 46em; text-align: justify; }
-.hero__intro-en { margin-top: var(--sp-3); max-width: 46em; }
+.hero__intro-en { margin-top: var(--sp-3); max-width: 46em; font-size: .875em; } /* 英文简介缩小字号，作报纸式次级文案（用户 2026-08-20） */
 .hero__aside { border-left: var(--bd); padding-left: var(--sp-3); position: relative; z-index: 1; } /* 头像置顶于背景网格线之上 */
 .hero__facts { margin-top: var(--sp-3); }
 .hero__facts dd { font-family: var(--f-mono); font-weight: 700; }
@@ -406,6 +406,9 @@ ul, ol { list-style: none; }
 /* ---------- 15. 联系 ---------- */
 .contact__table { margin-bottom: var(--sp-4); }
 .contact__table dd { font-family: var(--f-mono); }
+/* 联系方式值左对齐，不顶到右侧分界线（用户 2026-08-20） */
+.contact__table > div { justify-content: flex-start; }
+.contact__table dd { text-align: left; margin-left: var(--sp-3); }
 .contact__social {
   border-left: var(--bd); padding-left: var(--sp-3);
   display: flex; flex-direction: column; gap: var(--sp-2);
