@@ -273,6 +273,7 @@ ul, ol { list-style: none; }
   55%, 100% { transform: translateX(130%) skewX(-12deg); }
 }
 .hero__title {
+  position: relative; z-index: 2; /* 标题盖在旋转线层之上 */
   font-family: var(--f-display); font-weight: 900;
   font-size: var(--fs-hero); line-height: 1.05; letter-spacing: -.01em;
   white-space: nowrap; /* 中文主标题强制一行（用户要求） */
@@ -282,6 +283,21 @@ ul, ol { list-style: none; }
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
   animation: hero-light 7s ease-in-out infinite;
+}
+/* 标题背后的莫比乌斯式旋转直线（用户 2026-08-20 新增：黑色直线层不断旋转，类似直纹面） */
+.hero__lines { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.hero__lines span {
+  position: absolute; left: 50%; top: 50%; width: 250%; aspect-ratio: 1;
+  background: repeating-linear-gradient(0deg, transparent 0 13px, rgba(17, 17, 17, .12) 13px 14px);
+  animation: hero-mobius 36s linear infinite;
+}
+.hero__lines span:last-child {
+  background: repeating-linear-gradient(0deg, transparent 0 19px, rgba(17, 17, 17, .08) 19px 20px);
+  animation-direction: reverse; animation-duration: 26s;
+}
+@keyframes hero-mobius {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 @keyframes hero-light {
   0%, 100% { background-position: 120% 0; }
@@ -615,6 +631,7 @@ body.lb-open { overflow: hidden; }
   html { scroll-behavior: auto; }
   .ticker__track { animation: none; }
   .hero__title, .hero__title-wrap::before, .hero__title .hero__en { animation: none; }
+  .hero__lines span { animation: none; }
   * { transition-duration: .01ms !important; }
 }
 
