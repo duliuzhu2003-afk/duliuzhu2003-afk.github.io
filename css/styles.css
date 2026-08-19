@@ -371,6 +371,8 @@ ul, ol { list-style: none; }
 .card-project .btn-link { margin-top: .8rem; align-self: flex-start; }
 .card-project__img { position: relative; display: block; overflow: hidden; border-bottom: var(--bd); transition: transform .3s var(--ease); }
 .card-project__img img { width: 100%; height: auto; }
+/* 幻灯期间封面隐藏（淡出），小图四周不露出封面背景（用户 2026-08-20） */
+.card-project__img img:not(.card-project__img--over) { transition: opacity 2s ease; }
 .card-project:hover .card-project__img { transform: scale(1.07); } /* 悬停放大、移开缩小（用户 2026-08-20 卡片模式） */
 /* 幻灯叠层：在封面上方交叉淡入淡出，完整显示不裁剪、不改变卡片高度（修复版，用户 2026-08-20） */
 .card-project__img--over {

@@ -324,6 +324,7 @@
       if (interval) { clearInterval(interval); interval = null; }
       over.style.opacity = '0';
       over.removeAttribute('src');
+      base.style.opacity = '';                       /* 封面淡回 */
       i = 0;
       fading = false;
     }
@@ -332,7 +333,8 @@
       timer = setTimeout(function () {
         /* 预热全部小图，保证切换节奏 */
         slides.forEach(function (s) { var p = new Image(); p.src = s; });
-        over.src = slides[0];                        /* 第一张直接渐入 */
+        base.style.opacity = '0';                    /* 封面淡出，不再作为背景残留 */
+        over.src = slides[0];                        /* 第一张渐入 */
         over.style.opacity = '1';
         i = 1;
         interval = setInterval(function () {
