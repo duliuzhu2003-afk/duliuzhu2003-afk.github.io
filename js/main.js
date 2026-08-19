@@ -21,6 +21,8 @@
       var en = document.documentElement.classList.toggle('lang-en');
       langSwitch.setAttribute('aria-checked', en ? 'true' : 'false');
       langSwitch.setAttribute('aria-label', en ? '切换至中文 SWITCH TO CHINESE' : '切换至英文 SWITCH TO ENGLISH');
+      var resumeLink = document.querySelector('[data-resume]');
+      if (resumeLink) { resumeLink.setAttribute('href', en ? 'resume-en.pdf' : 'resume-zh.pdf'); }
     });
   }
 

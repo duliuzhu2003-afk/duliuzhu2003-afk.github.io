@@ -118,11 +118,11 @@ ul, ol { list-style: none; }
   text-transform: uppercase; color: var(--c-n700); margin-top: .35em;
 }
 .kicker {
-  font-family: var(--f-mono); font-size: var(--fs-label);
+  font-family: var(--f-mono); font-size: 1.25rem; /* 用户 2026-08-20：眉题字号放大 12→20 */
   letter-spacing: .25em; text-transform: uppercase; color: var(--c-ink);
   display: flex; align-items: center; gap: var(--sp-2); margin-bottom: var(--sp-3);
 }
-.kicker::before { content: ""; width: 2.5rem; height: 2px; background: var(--c-accent); flex: none; }
+.kicker::before { content: ""; width: 2.5rem; height: 4px; background: var(--c-accent); flex: none; } /* 红线加粗 2→4px（用户 2026-08-20） */
 .kicker--red { color: var(--c-accent); }
 .label-mono {
   font-family: var(--f-mono); font-size: var(--fs-label);
@@ -248,6 +248,8 @@ ul, ol { list-style: none; }
 }
 .nav-list a:hover { text-decoration: underline; text-decoration-thickness: 2px;
   text-decoration-color: var(--c-accent); text-underline-offset: 6px; }
+/* 中英文标签间隙统一（用户 2026-08-20：中英不要挨着，间隙保持一致） */
+.nav-list a .zh, .footer__nav a .zh { margin-right: .5em; }
 .nav-list a[aria-current="page"] { color: var(--c-accent); }
 .nav-toggle {
   display: none; min-width: 44px; min-height: 44px;
@@ -371,6 +373,11 @@ ul, ol { list-style: none; }
 .invert-block .cols-2 { color: var(--c-invert-fg); }
 
 .steps { border-left: 1px solid var(--c-invert-line); padding-left: var(--sp-4); }
+/* 竖线隔断与左侧文案保持间距（用户 2026-08-20） */
+.invert-block .c5 { padding-right: var(--sp-4); }
+/* ABOUT ME 标题与文案保持适度间距（用户 2026-08-20） */
+.invert-block .c5 .h2 { margin-bottom: var(--sp-2); }
+.invert-block .c5 p + p { margin-top: var(--sp-1); }
 .step {
   display: grid; grid-template-columns: 5.5rem 1fr; gap: var(--sp-3);
   padding-block: var(--sp-3);
@@ -567,6 +574,7 @@ body.lb-open { overflow: hidden; }
   .rules > * { border-right: none; }
   .works > * { border: var(--bd); } /* 移动端卡片保持完整边框 */
   .steps { border-left: none; padding-left: 0; border-top: 1px solid var(--c-invert-line); padding-top: var(--sp-2); }
+  .invert-block .c5 { padding-right: 0; }
   .article__side { position: static; }
   .contact__social { border-left: none; padding-left: 0; border-top: var(--bd); padding-top: var(--sp-3); }
   .cols-2 { column-count: 1; }
