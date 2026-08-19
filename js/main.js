@@ -287,3 +287,36 @@
     kw.addEventListener('blur', function () { set(false); });
   });
 })();
+
+/* ---------- 7. 作品目录封面悬停幻灯（用户 2026-08-20：悬停 1s 后每 0.5s 闪出一张该项目小图） ---------- */
+(function () {
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card-project'));
+  if (!cards.length) { return; }
+  cards.forEach(function (card) {
+    var img = card.querySelector('.card-project__img img');
+    var slides = (card.getAttribute('data-slides') || '').split(',').filter(Boolean);
+    if (!img || !slides.length) { return; }
+    var cover = img.src;
+    var timer = null, interval = null, i = 0;
+
+    function stop() {
+      if (timer) { clearTimeout(timer); timer = null; }
+      if (interval) { clearInterval(interval); interval = null; }
+      img.src = cover;
+      i = 0;
+    }
+
+    card.addEventListener('mouseenter', function () {
+      timer = setTimeout(function () {
+        /* 预热剩余图片，保证闪图节奏 */
+        slides.forEach(function (s) { var p = new Image(); p.src = s; });
+        interval = setInterval(function () {
+          img.src = slides[i % slides.length];
+          i++;
+        }, 500);
+      }, 1000);
+    });
+    card.addEventListener('mouseleave', stop);
+    card.addEventListener('focusin', stop);
+  });
+})();
