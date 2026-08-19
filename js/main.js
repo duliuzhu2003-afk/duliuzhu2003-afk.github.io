@@ -303,14 +303,14 @@
     function swap(next) {
       if (fading) { return; }
       fading = true;
-      img.style.opacity = '0';                       /* 上一张淡出 */
+      img.style.opacity = '0';                       /* 上一张淡出 0.5s（100% → 0%） */
       setTimeout(function () {
         img.src = next;
         setTimeout(function () {
-          img.style.opacity = '1';                   /* 下一张渐入 */
-          setTimeout(function () { fading = false; }, 400);
+          img.style.opacity = '1';                   /* 下一张渐入 0.5s（0% → 100%） */
+          setTimeout(function () { fading = false; }, 550);
         }, 40);
-      }, 350);
+      }, 500);
     }
 
     function stop() {
