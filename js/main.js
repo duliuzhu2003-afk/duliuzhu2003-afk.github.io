@@ -204,8 +204,7 @@
   var canvas = document.querySelector('.hero__mobius');
   if (!canvas || !canvas.getContext) { return; }
   var ctx = canvas.getContext('2d');
-  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var t = 0, last = 0;
+  var t = 0, last = 0; /* 动画始终运行：此前因系统"减少动态效果"设置被停用，用户确认其电脑开启动效偏好 */
 
   function size() {
     var dpr = window.devicePixelRatio || 1;
@@ -221,8 +220,8 @@
     if (!w || !h) { return; }
     ctx.clearRect(0, 0, w, h);
     /* 两层斜直线横向流动：密而深一层＋疏而浅一层，反向移动 */
-    drawLineLayer(26, 46, 'rgba(17, 17, 17, 0.20)', 1.4, 0.30);
-    drawLineLayer(64, -28, 'rgba(17, 17, 17, 0.12)', 1.2, -0.24);
+    drawLineLayer(26, 72, 'rgba(17, 17, 17, 0.24)', 1.6, 0.30);
+    drawLineLayer(64, -42, 'rgba(17, 17, 17, 0.15)', 1.3, -0.24);
   }
 
   function drawLineLayer(gap, speed, color, lw, slant) {
@@ -249,6 +248,7 @@
   }
 
   size();
-  if (reduced) { draw(); } else { window.requestAnimationFrame(loop); }
+  draw();
+  window.requestAnimationFrame(loop);
   window.addEventListener('resize', function () { size(); draw(); });
 })();
