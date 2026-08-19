@@ -288,7 +288,7 @@
   });
 })();
 
-/* ---------- 7. 作品目录封面悬停幻灯（用户 2026-08-20：悬停 1s 后每 0.5s 闪出一张该项目小图） ---------- */
+/* ---------- 7. 作品目录封面悬停幻灯（用户 2026-08-20：悬停 0.5s 后开始卡片模式，每 1s 闪出一张该项目小图） ---------- */
 (function () {
   var cards = Array.prototype.slice.call(document.querySelectorAll('.card-project'));
   if (!cards.length) { return; }
@@ -313,8 +313,8 @@
         interval = setInterval(function () {
           img.src = slides[i % slides.length];
           i++;
-        }, 500);
-      }, 1000);
+        }, 1000);
+      }, 500);
     });
     card.addEventListener('mouseleave', stop);
     card.addEventListener('focusin', stop);
