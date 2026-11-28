@@ -1,288 +1,960 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>朱翰林 · 建筑作品集 ZHU HANLIN — ARCHITECTURE PORTFOLIO</title>
-<meta name="description" content="朱翰林的个人建筑作品集：城市综合体、大学生活动中心、浙东运河博物馆、多功能剧场、高层建筑与城市设计。">
-<link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="朱翰林的跨学科作品集：建筑设计、数字产品、数据与创作。">
+  <title>TRACES OF LIN — 建筑与数字作品</title>
+  <link rel="stylesheet" href="./assets/css/fonts.css">
+  <link rel="stylesheet" href="./assets/css/site.css">
+  <link rel="stylesheet" href="./assets/css/spiral.css">
+  <link rel="stylesheet" href="./assets/css/museum-cinema.css">
+  <script src="./assets/js/site.js" defer></script>
+  <script src="./assets/js/hero-texture.js" defer></script>
+  <script src="./assets/js/entry.js" defer></script>
+  <script src="./assets/js/hero-gl.js" defer></script>
+  <script src="./assets/js/museum-cinema-frames.js" defer></script>
+  <script src="./assets/js/museum-cinema.js" defer></script>
+  <script src="./assets/js/spiral.js" defer></script>
 </head>
-<body id="top">
-<a class="skip-link" href="#main">跳到正文 SKIP TO CONTENT</a>
+<body id="top" class="home-page">
+  <div class="entry-screen" aria-hidden="true">
+    <div class="entry-mark"><span>TL</span></div>
+    <p class="entry-name">TRACES OF LIN</p>
+    <p class="entry-count">0%</p>
+  </div>
+  <a class="skip-link" href="#main"><span class="zh">跳到正文</span><span class="en" lang="en">Skip to content</span></a>
 
-<header class="masthead">
-  <div class="masthead__top">
-    <div class="container masthead__top-row">
-      <span class="label-mono">ARCHITECTURE PORTFOLIO · <span class="zh">建筑作品集</span></span>
-      <div class="masthead__top-right">
-        <button class="lang-switch" type="button" role="switch" aria-checked="false" aria-label="切换至英文 SWITCH TO ENGLISH">
-          <span class="lang-switch__knob" aria-hidden="true"></span>
-          <span class="lang-switch__opt" data-lang="zh" aria-hidden="true">中</span>
-          <span class="lang-switch__opt" data-lang="en" aria-hidden="true">EN</span>
-        </button>
-        <span class="label-mono">QINGDAO · <span data-year>2026</span></span>
+  <header class="site-header" id="site-header">
+    <a class="wordmark" href="#top" aria-label="TRACES OF LIN，回到顶部">TRACES OF LIN</a>
+    <p class="header-discipline"><span class="zh">建筑 × 数字 × 数据</span><span class="en" lang="en">Architecture × Digital × Data</span></p>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a href="#story"><span class="zh">设计线索</span><span class="en" lang="en">Approach</span></a>
+      <button type="button" data-open-layer="index"><span class="zh">作品索引</span><span class="en" lang="en">Index</span><sup>07</sup></button>
+      <button type="button" data-open-layer="about"><span class="zh">关于</span><span class="en" lang="en">About</span></button>
+      <a href="#contact"><span class="zh">联系</span><span class="en" lang="en">Contact</span></a>
+    </nav>
+    <button class="language-toggle" type="button" role="switch" aria-checked="false" aria-label="切换到英文">
+      <span class="language-zh">中</span><span class="language-divider">/</span><span class="language-en">EN</span>
+    </button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="zh">菜单</span><span class="en" lang="en">Menu</span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="移动导航">
+      <a href="#story"><span>01</span><span class="zh">设计线索</span><span class="en" lang="en">Approach</span></a>
+      <button type="button" data-open-layer="index"><span>02</span><span class="zh">作品索引</span><span class="en" lang="en">Index</span></button>
+      <button type="button" data-open-layer="about"><span>03</span><span class="zh">关于我</span><span class="en" lang="en">About</span></button>
+      <a href="#contact"><span>04</span><span class="zh">联系</span><span class="en" lang="en">Contact</span></a>
+    </nav>
+  </div>
+
+  <main id="main" data-motion-sequence>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-meta">
+        <p>PORTFOLIO / 2021—2026</p>
+        <p><span class="zh">建筑与数字作品</span><span class="en" lang="en">Architecture &amp; digital products</span></p>
       </div>
-    </div>
-  </div>
-  <div class="container masthead__brand">
-    <p class="masthead__name"><span class="zh">朱翰林的建筑作品集</span></p>
-    <p class="masthead__sub">ZHU HANLIN'S COLLECTION OF ARCHITECTURAL WORKS</p>
-  </div>
-  <nav class="masthead__nav-wrap" aria-label="主导航 MAIN NAVIGATION">
-    <div class="container masthead__nav">
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开菜单 OPEN MENU">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="square" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-      <ul class="nav-list" id="site-nav">
-        <li><a href="index.html" aria-current="page"><span class="zh">首页</span>HOME</a></li>
-        <li><a href="#works"><span class="zh">作品</span>WORKS</a></li>
-        <li><a href="#about"><span class="zh">关于我</span>ABOUT ME</a></li>
-        <li><a href="#contact"><span class="zh">联系</span>CONTACT</a></li>
-      </ul>
-      <span class="label-mono edition-meta">VOL. 1 | <span data-year>2026</span>.08 | NO. 01</span>
-    </div>
-  </nav>
-</header>
+      <h1 class="hero-title" id="hero-title">
+        <span class="hero-name">TRACES OF LIN</span>
+        <span class="hero-themes"><span class="zh">算法 · 情绪 · 城市</span><span class="en" lang="en">Algorithm · Emotion · City</span></span>
+      </h1>
+      <figure class="hero-visual">
+        <a href="./project-01.html" class="project-link" data-project="01" aria-label="查看浙东运河博物馆完整项目">
+          <img src="./assets/images/museum-01-960.webp"
+               srcset="./assets/images/museum-01-640.webp 640w, ./assets/images/museum-01-960.webp 960w, ./assets/images/museum-01-1600.webp 1600w"
+               sizes="(max-width: 767px) calc(100vw - 32px), calc(100vw - 40px)"
+               width="1600" height="848" alt="浙东运河博物馆主效果图：水平建筑体量、水面与波浪屋面" fetchpriority="high">
+          <canvas class="hero-canvas" aria-hidden="true"></canvas>
+          <div class="hero-shade" aria-hidden="true"></div>
+        </a>
+        <figcaption><span>FIG. 1.1</span><span><span class="zh">浙东运河博物馆 · 主效果图</span><span class="en" lang="en">Grand Canal Museum · Main rendering</span></span></figcaption>
+      </figure>
+      <div class="hero-bottom">
+        <p class="hero-statement zh">从运河的波浪，到屏幕里的相遇。<br>在建筑、产品与数据之间，寻找可被感知的秩序。</p>
+        <p class="hero-statement en" lang="en">From the waves of a canal to encounters on a screen.<br>Finding a perceptible order across architecture, products and data.</p>
+        <a class="round-link" href="#story" aria-label="向下阅读设计线索"><span class="zh">向下阅读</span><span class="en" lang="en">Explore</span><span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
 
-<main id="main">
-
-  <!-- 区块 1 · Hero -->
-  <section class="hero sec grid-lines" aria-labelledby="hero-title">
-    <div class="container g12 hero__grid">
-      <div class="c8">
-        <p class="kicker">SELECTED WORKS · 2021 — 2026</p>
-        <div class="hero__title-wrap">
-          <canvas class="hero__mobius" aria-hidden="true"></canvas>
-          <h1 class="hero__title" id="hero-title">
-            <span class="zh"><span class="hero__kw" data-kw="algo" tabindex="0">算法</span> · <span class="hero__kw" data-kw="emo" tabindex="0">情绪</span> · <span class="hero__kw" data-kw="city" tabindex="0">城市</span></span>
-            <span class="hero__en"><span class="hero__kw" data-kw="algo" tabindex="0">ALGORITHM</span> · <span class="hero__kw" data-kw="emo" tabindex="0">EMOTION</span> · <span class="hero__kw" data-kw="city" tabindex="0">CITY</span></span>
-          </h1>
+    <section class="story" id="story" aria-labelledby="story-title">
+      <header class="story-intro">
+        <p class="section-index">01 / DESIGN THREADS</p>
+        <h2 id="story-title"><span class="zh">三个词，<br>一种持续的追问。</span><span class="en" lang="en">Three words.<br>One continuing question.</span></h2>
+        <div class="story-lead">
+          <p class="zh">形态如何生成，情绪如何被空间承接，设计又如何回应城市？从课程设计到独立产品，这条线索贯穿朱翰林的作品。</p>
+          <p class="en" lang="en">How does form emerge, how can space hold emotion, and how does design answer a city? These questions connect Zhu Hanlin's studio work and independent products.</p>
         </div>
-        <p class="hero__intro drop-cap zh">六个项目，围绕三个词展开。<span class="intro-kw" data-kw="algo">「算法」——活动中心的泰森多边形、剧场的超图蛛网、高层的蚁群路径与博物馆的波浪纹理，形态皆由算法生成；</span><span class="intro-kw" data-kw="emo">「情绪」——城市综合体直面年轻人的情绪困境，以中庭、下沉广场与空中观景台重造相遇；</span><span class="intro-kw" data-kw="city">「城市」——从绍兴柯桥的运河遗产、山东科技大学的校园门户，到青岛黄岛的飞行器停靠网络，设计始终与城市对话。</span></p>
-        <p class="hero__intro-en" lang="en">Six projects, three words. <span class="intro-kw" data-kw="algo">ALGORITHM — the student centre's Tyson polygons, the theatre's hypergraph spider-web, the high-rise's ant-colony paths and the museum's wave textures: forms generated by algorithms. </span><span class="intro-kw" data-kw="emo">EMOTION — the urban complex faces the emotional plight of the young, rebuilding encounters through atrium, sunken plaza and sky terrace. </span><span class="intro-kw" data-kw="city">CITY — from the canal heritage of Shaoxing Keqiao and the campus gateway of SDUST to the aircraft docking network of Qingdao Huangdao, the design keeps conversing with the city.</span></p>
-      </div>
-      <aside class="c4 hero__aside">
-        <figure>
-          <a href="images/portrait.png" data-lightbox="portrait" data-caption="FIG. 0.1 — 头像 PORTRAIT" aria-label="放大查看头像 ENLARGE PORTRAIT">
-            <span class="frame-img aspect-1x1"><img src="images/portrait.png" alt="朱翰林的肖像照片" class="img-newsprint portrait-img"></span>
-          </a>
-          <figcaption class="fig-caption">FIG. 0.1 — <span class="zh">头像</span> PORTRAIT</figcaption>
-        </figure>
-        <dl class="table-mono hero__facts">
-          <div><dt><span class="zh">学习年限</span> YEARS</dt><dd>05 <span class="zh">年</span></dd></div>
-          <div><dt><span class="zh">作品数量</span> PROJECTS</dt><dd>06 <span class="zh">个</span></dd></div>
-          <div><dt><span class="zh">语言</span> LANGUAGES</dt><dd>02 <span class="zh">种</span></dd></div>
-        </dl>
-      </aside>
-    </div>
-  </section>
-
-  <!-- 区块 2 · Ticker 跑马灯 -->
-  <div class="ticker" aria-label="作品滚动播报 WORKS TICKER">
-    <div class="ticker__track">
-      <div class="ticker__group">
-        <span class="ticker__badge">2026 EDITION</span>
-        <span><span class="zh">浙东运河博物馆</span> GRAND CANAL MUSEUM</span><span class="ticker__sep">✦</span>
-        <span><span class="zh">大学生活动中心</span> STUDENT CENTRE</span><span class="ticker__sep">✦</span>
-        <span><span class="zh">城市综合体</span> URBAN COMPLEX</span><span class="ticker__sep">✦</span>
-        <span><span class="zh">多功能剧场</span> THEATRE</span><span class="ticker__sep">✦</span>
-        <span><span class="zh">高层建筑</span> HIGH-RISE</span><span class="ticker__sep">✦</span>
-        <span><span class="zh">城市设计</span> URBAN DESIGN</span><span class="ticker__sep">✦</span>
-      </div>
-      <div class="ticker__group" aria-hidden="true">
-        <span class="ticker__badge">2026 EDITION</span>
-        <span><span class="zh">浙东运河博物馆</span> GRAND CANAL MUSEUM</span><span class="ticker__sep">✦</span>
-        <span><span class="zh">大学生活动中心</span> STUDENT CENTRE</span><span class="ticker__sep">✦</span>
-        <span><span class="zh">城市综合体</span> URBAN COMPLEX</span><span class="ticker__sep">✦</span>
-        <span><span class="zh">多功能剧场</span> THEATRE</span><span class="ticker__sep">✦</span>
-        <span><span class="zh">高层建筑</span> HIGH-RISE</span><span class="ticker__sep">✦</span>
-        <span><span class="zh">城市设计</span> URBAN DESIGN</span><span class="ticker__sep">✦</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 区块 3 · 作品目录 -->
-  <section class="sec" id="works" aria-labelledby="works-title">
-    <div class="container">
-      <header class="sec-head">
-        <div>
-          <p class="kicker">01 — INDEX OF WORKS</p>
-          <h2 class="h2" id="works-title"><span class="zh">作品目录</span> <span class="h2__en">SELECTED WORKS</span></h2>
-        </div>
-        <p class="label-mono sec-head__meta">6 PROJECTS · 2021 — 2026</p>
       </header>
-      <div class="g12 rules works">
-        <a class="c6 card-project hard-shadow-hover" href="project-01.html">
-          <span class="card-project__img"><img src="images/project-01/cover-01.jpg" alt="浙东运河博物馆设计 主效果图" loading="lazy" class="img-newsprint"></span>
-          <span class="card-project__info">
-            <span class="label-mono">FIG. 1.1</span>
-            <span class="card-project__title"><span class="zh">浙东运河博物馆设计</span></span>
-            <span class="card-project__title-en">GRAND CANAL MUSEUM</span>
-            <span class="label-mono card-project__meta zh">2023 · 文化建筑 · 绍兴柯桥</span>
-            <span class="btn-link"><span class="zh">阅读全文</span> READ MORE →</span>
-          </span>
-        </a>
-        <a class="c6 card-project hard-shadow-hover" href="project-02.html">
-          <span class="card-project__img"><img src="images/project-02/cover-01.jpg" alt="大学生活动中心设计 主效果图" loading="lazy" class="img-newsprint"></span>
-          <span class="card-project__info">
-            <span class="label-mono">FIG. 2.1</span>
-            <span class="card-project__title"><span class="zh">大学生活动中心设计</span></span>
-            <span class="card-project__title-en">STUDENT CENTRE</span>
-            <span class="label-mono card-project__meta zh">2023 · 公共建筑</span>
-            <span class="btn-link"><span class="zh">阅读全文</span> READ MORE →</span>
-          </span>
-        </a>
-        <a class="c12 card-project card-project--full hard-shadow-hover" href="project-03.html">
-          <span class="card-project__img"><img src="images/project-03/cover-01.jpg" alt="城市综合体设计 主效果图" loading="lazy" class="img-newsprint"></span>
-          <span class="card-project__info">
-            <span class="label-mono">FIG. 3.1</span>
-            <span class="card-project__title"><span class="zh">城市综合体设计</span></span>
-            <span class="card-project__title-en">URBAN COMPLEX DESIGN</span>
-            <span class="label-mono card-project__meta zh">2024 · 城市综合体</span>
-            <span class="btn-link"><span class="zh">阅读全文</span> READ MORE →</span>
-          </span>
-        </a>
-        <a class="c12 card-project card-project--full hard-shadow-hover" href="project-04.html">
-          <span class="card-project__img"><img src="images/project-04/cover-01.jpg" alt="多功能剧场设计 主效果图" loading="lazy" class="img-newsprint"></span>
-          <span class="card-project__info">
-            <span class="label-mono">FIG. 4.1</span>
-            <span class="card-project__title"><span class="zh">多功能剧场设计</span></span>
-            <span class="card-project__title-en">MULTIFUNCTIONAL THEATRE</span>
-            <span class="label-mono card-project__meta zh">2022 · 观演建筑 · 临沂</span>
-            <span class="btn-link"><span class="zh">阅读全文</span> READ MORE →</span>
-          </span>
-        </a>
-        <a class="c6 card-project hard-shadow-hover" href="project-05.html">
-          <span class="card-project__img"><img src="images/project-05/cover-01.jpg" alt="高层建筑设计 主效果图" loading="lazy" class="img-newsprint"></span>
-          <span class="card-project__info">
-            <span class="label-mono">FIG. 5.1</span>
-            <span class="card-project__title"><span class="zh">高层建筑设计</span></span>
-            <span class="card-project__title-en">HIGH-RISE DESIGN</span>
-            <span class="label-mono card-project__meta zh">2023 · 高层建筑 · 青岛</span>
-            <span class="btn-link"><span class="zh">阅读全文</span> READ MORE →</span>
-          </span>
-        </a>
-        <a class="c6 card-project hard-shadow-hover" href="project-06.html">
-          <span class="card-project__img"><img src="images/project-06/cover-01.jpg" alt="城市设计 主效果图" loading="lazy" class="img-newsprint"></span>
-          <span class="card-project__info">
-            <span class="label-mono">FIG. 6.1</span>
-            <span class="card-project__title"><span class="zh">城市设计</span></span>
-            <span class="card-project__title-en">URBAN DESIGN</span>
-            <span class="label-mono card-project__meta zh">2024 · 城市设计 · 青岛黄岛</span>
-            <span class="btn-link"><span class="zh">阅读全文</span> READ MORE →</span>
-          </span>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- 区块 4 · 反转黑底 · 关于我 -->
-  <section class="invert-block sec grid-lines" id="about" aria-labelledby="about-title">
-    <div class="container g12">
-      <div class="c5">
-        <p class="kicker kicker--red">02 — PROFILE</p>
-        <h2 class="h2" id="about-title"><span class="zh">关于我</span> <span class="h2__en">ABOUT ME</span></h2>
-        <p class="zh">朱翰林，山东科技大学建筑学专业本科毕业（2021 — 2026），现为新西兰奥克兰理工大学（AUT）数据分析专业在读研究生（Master of Analytics），「Hi学长！」App 开发者、露曦零号（杭州）科技有限公司执行董事。自驱力强、求知欲旺盛，执行力与自主学习能力出色；具备扎实的建筑理论与设计基础，兼具跨学科知识与技术能力。热衷持续学习与创新，期待在建筑、设计与数据的交叉领域不断成长。</p>
-        <p lang="en">Zhu Hanlin holds a bachelor's degree in Architecture from Shandong University of Science and Technology (2021 — 2026) and is currently a postgraduate student in the Master of Analytics programme at Auckland University of Technology (AUT), New Zealand. He is the developer of the Hi Senior! app and Executive Director of Luxi Linghao (Hangzhou) Technology Co., Ltd. Highly motivated and intellectually curious, with strong execution skills and self-learning ability, he possesses a solid foundation in architectural theory and design, combined with interdisciplinary knowledge and technical proficiency. Passionate about continuous learning, innovation, and professional growth at the intersection of architecture, design and data.</p>
+      <div class="theme-lines" aria-label="三个设计主题">
+        <article><span>01</span><h3>ALGORITHM</h3><p class="zh">泰森多边形、超图蛛网、蚁群路径与波浪纹理——形态不是装饰，而是生成过程的结果。</p><p class="en" lang="en">Voronoi polygons, hypergraph webs, ant-colony paths and wave textures — form as the result of a generative process.</p></article>
+        <article><span>02</span><h3>EMOTION</h3><p class="zh">从中庭、下沉广场与空中观景台，到一次被认真回答的咨询——为相遇留出位置。</p><p class="en" lang="en">From atriums and sunken plazas to a question answered with care — making room for encounters.</p></article>
+        <article><span>03</span><h3>CITY</h3><p class="zh">运河遗产、校园门户与低空交通网络——每个项目都从它与城市的关系开始。</p><p class="en" lang="en">Canal heritage, campus gateways and low-altitude networks — every project begins with its relationship to the city.</p></article>
       </div>
-      <div class="c7 steps">
-        <div class="step">
-          <p class="step__num" aria-hidden="true">01</p>
-          <div>
-            <h3><span class="zh">教育</span> <em>EDUCATION</em></h3>
-            <p class="zh">奥克兰理工大学（AUT）· 数据分析 硕士在读 · 2026.09 — 2028.03（预计）<br>山东科技大学 · 建筑学 本科 · 2021.09 — 2026.06</p>
-            <p lang="en">Auckland University of Technology (AUT), New Zealand · Master of Analytics · Sep 2026 — Mar 2028 (expected)<br>Shandong University of Science and Technology · Bachelor of Architecture · Sep 2021 — Jun 2026</p>
-          </div>
-        </div>
-        <div class="step">
-          <p class="step__num" aria-hidden="true">02</p>
-          <div>
-            <h3><span class="zh">经历</span> <em>EXPERIENCE</em></h3>
-            <p class="zh">创新创业协会干事（2021.09 — 2022.12）：策划并执行多场校园创新创业活动，统筹 900 余名学生与 12 位资深教授参与；全国「三下乡」暑期社会实践（2023、2024）；参与学术研究与跨学科建筑项目。2026.09 正式独立开发「Hi学长！」App；2026.10.23 创立露曦零号（杭州）科技有限公司，任执行董事。</p>
-            <p lang="en">Student Officer, Innovation &amp; Entrepreneurship Association (Sep 2021 — Dec 2022): planned and executed campus-wide events, coordinating over 900 students and 12 senior professors. National "Three Going to the Countryside" social practice (2023, 2024); academic research and interdisciplinary projects. Began independently developing the Hi Senior! app in Sep 2026; founded Luxi Linghao (Hangzhou) Technology Co., Ltd. on 23 Oct 2026, serving as Executive Director.</p>
-          </div>
-        </div>
-        <div class="step">
-          <p class="step__num" aria-hidden="true">03</p>
-          <div>
-            <h3><span class="zh">技能</span> <em>SKILLS</em></h3>
-            <p class="zh">建筑设计、三维建模、渲染与数字化可视化全流程。语言：中文母语 · PTE 学术英语 60 分。</p>
-            <p lang="en">Architectural design, 3D modelling, rendering and digital visualisation. Language: Chinese (native) · PTE Academic 60 (Overall).</p>
-            <p class="chips">
-              <span class="chip">RHINO</span><span class="chip">SKETCHUP</span><span class="chip">CAD</span><span class="chip">PHOTOSHOP</span><span class="chip">ILLUSTRATOR</span><span class="chip">INDESIGN</span><span class="chip">D5</span><span class="chip">V-RAY</span><span class="chip">LUMION</span>
-            </p>
-          </div>
-        </div>
-        <div class="step">
-          <p class="step__num" aria-hidden="true">04</p>
-          <div>
-            <h3><span class="zh">获奖</span> <em>AWARDS</em></h3>
-            <p class="zh">全国 BIM 毕业设计创新大赛一等奖（第十届）、二等奖（第十一届）；全国数字媒体技术与创意作品大赛三等奖；米兰设计周中国展三等奖（省级，2025）；山东省建筑设计竞赛优秀奖（2024）；发表论文《城市公共服务设施对房价的影响——基于地理加权回归模型的研究》。</p>
-            <p lang="en">First Prize (10th Ed.) &amp; Second Prize (11th Ed.), National BIM Graduation Design Competition; Third Prize, National Digital Media Technology and Creative Works Competition; Third Prize (Provincial), Milan Design Week China Exhibition (2025); Merit Award, Shandong Architectural Design Competition (2024); published paper: <em>Impact of Urban Public Service Facilities on Housing Prices — A Study Based on Geographically Weighted Regression Model</em>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container about__cta">
-      <a class="btn btn-outline btn-outline--light" href="resume-zh.pdf" download data-resume><span class="zh">下载简历</span> DOWNLOAD RESUME ↓</a>
-    </div>
-  </section>
 
-  <!-- 区块 5 · 联系 -->
-  <section class="sec" id="contact" aria-labelledby="contact-title">
-    <div class="container">
-      <header class="sec-head">
-        <div>
-          <p class="kicker">03 — CONTACT</p>
-          <h2 class="h2" id="contact-title"><span class="zh">取得联系</span> <span class="h2__en">GET IN TOUCH</span></h2>
+      <div class="museum-story" data-museum-story>
+        <div class="story-sticky" data-cinema-copy>
+          <p class="section-index cinema-meta"><span class="cinema-line" data-cinema-line data-cinema-whole><span class="cinema-half cinema-half--left">PROJECT</span><span class="cinema-half cinema-half--right"> 01</span></span><span class="cinema-line" data-cinema-line data-cinema-whole><span class="cinema-half cinema-half--left">20</span><span class="cinema-half cinema-half--right">23</span></span><span class="cinema-line" data-cinema-line data-cinema-whole><span class="cinema-half cinema-half--left"><span class="zh">文化</span><span class="en" lang="en">CULT</span></span><span class="cinema-half cinema-half--right"><span class="zh">建筑</span><span class="en" lang="en">URAL</span></span></span><span class="cinema-line" data-cinema-line data-cinema-whole><span class="cinema-half cinema-half--left"><span class="zh">绍兴</span><span class="en" lang="en">KE</span></span><span class="cinema-half cinema-half--right"><span class="zh">柯桥</span><span class="en" lang="en">QIAO</span></span></span></p>
+          <h3>
+            <span class="zh"><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">水之</span><span class="cinema-half cinema-half--right">上，</span></span><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">古纤道</span><span class="cinema-half cinema-half--right">之上。</span></span></span>
+            <span class="en" lang="en"><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">Upon the </span><span class="cinema-half cinema-half--right">water.</span></span><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">Upon the </span><span class="cinema-half cinema-half--right">towpath.</span></span></span>
+          </h3>
+          <div class="cinema-description">
+            <p class="zh"><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">浙东运河博物馆将</span><span class="cinema-half cinema-half--right">场地与建筑融为同一个意象。</span></span><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">参数控制波浪纹理的</span><span class="cinema-half cinema-half--right">高度与密度，再将其流动到曲面，</span></span><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">让屋面</span><span class="cinema-half cinema-half--right">与运河对话。</span></span></p>
+            <p class="en cinema-description-wide" lang="en"><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">The Grand Canal Museum </span><span class="cinema-half cinema-half--right">merges site and building into one image.</span></span><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">Parameters tune the height and density </span><span class="cinema-half cinema-half--right">of wave textures before they flow onto the curved shell,</span></span><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">bringing the roof </span><span class="cinema-half cinema-half--right">into dialogue with the canal.</span></span></p>
+            <p class="en cinema-description-compact" lang="en"><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">The Grand Canal </span><span class="cinema-half cinema-half--right">Museum merges site</span></span><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">and building </span><span class="cinema-half cinema-half--right">into one image.</span></span><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">Parameters tune </span><span class="cinema-half cinema-half--right">the height and density</span></span><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">of wave textures </span><span class="cinema-half cinema-half--right">before they flow</span></span><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">onto the curved shell, </span><span class="cinema-half cinema-half--right">bringing the roof</span></span><span class="cinema-line" data-cinema-line><span class="cinema-half cinema-half--left">into dialogue </span><span class="cinema-half cinema-half--right">with the canal.</span></span></p>
+          </div>
+          <a class="text-link project-link cinema-cta" href="./project-01.html" data-project="01"><span class="zh cinema-line" data-cinema-line data-cinema-whole><span class="cinema-half cinema-half--left">查看完整</span><span class="cinema-half cinema-half--right">项目</span></span><span class="en cinema-line" lang="en" data-cinema-line data-cinema-whole><span class="cinema-half cinema-half--left">View full </span><span class="cinema-half cinema-half--right">project</span></span><span aria-hidden="true">↗</span></a>
         </div>
-        <p class="label-mono sec-head__meta zh">合作 · 实习 · 交流</p>
+        <div class="story-figures">
+          <figure class="story-figure story-figure--panorama museum-static-figure">
+            <a class="project-link" href="./project-01.html" data-project="01" aria-label="查看浙东运河博物馆完整项目">
+              <img src="./assets/images/museum-01-640.webp" srcset="./assets/images/museum-01-640.webp 640w, ./assets/images/museum-01-960.webp 960w" sizes="(max-width: 767px) calc(100vw - 32px), 64vw" width="960" height="510" alt="浙东运河博物馆完整主效果图：水平建筑体量、水面与波浪屋面" loading="lazy">
+            </a><figcaption>FIG. 1.1 — <span class="zh">主效果图与连续结构叙事</span><span class="en" lang="en">Main rendering and structural sequence</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="spiral-gallery" id="architecture-in-motion" aria-labelledby="spiral-title" data-spiral-gallery>
+      <h2 class="spiral-sr" id="spiral-title"><span class="zh">运动中的建筑</span><span class="en" lang="en">Architecture in motion</span></h2>
+      <div class="spiral-stage" data-spiral-stage aria-hidden="true">
+        <div class="museum-cinema" data-museum-cinema>
+          <div class="cinema-flight" data-cinema-flight>
+            <img class="cinema-image" data-cinema-image src="./assets/images/museum-01-640.webp" srcset="./assets/images/museum-01-640.webp 640w, ./assets/images/museum-01-960.webp 960w" sizes="100vw" data-cinema-src="./assets/images/museum-cinema-cutout-1200.webp" width="1200" height="636" alt="" decoding="async">
+            <svg class="cinema-svg" data-cinema-svg viewBox="0 0 1600 848" preserveAspectRatio="xMidYMid meet" focusable="false"></svg>
+          </div>
+        </div>
+        <div class="spiral-world" data-spiral-world>
+          <figure class="spiral-tile" data-spiral-tile data-spiral-project="01"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/museum-01-960.webp"><img src="./assets/images/museum-01-640.webp" width="960" height="510" alt="" decoding="async"></picture></figure>
+          <figure class="spiral-tile" data-spiral-tile data-spiral-project="02"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/selection-01-960.webp"><img src="./assets/images/selection-01-640.webp" width="960" height="924" alt="" decoding="async"></picture></figure>
+          <figure class="spiral-tile" data-spiral-tile data-spiral-project="03"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/selection-02-home-960.webp"><img src="./assets/images/selection-02-640.webp" width="960" height="548" alt="" decoding="async"></picture></figure>
+          <figure class="spiral-tile" data-spiral-tile data-spiral-project="04"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/theatre-01-960.webp"><img src="./assets/images/theatre-01-640.webp" width="1600" height="756" alt="" decoding="async"></picture></figure>
+          <figure class="spiral-tile" data-spiral-tile data-spiral-project="05"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/highrise-01-home-960.webp"><img src="./assets/images/highrise-01-640.webp" width="1600" height="1614" alt="" decoding="async"></picture></figure>
+          <figure class="spiral-tile" data-spiral-tile data-spiral-project="06"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/urban-09-home-960.webp"><img src="./assets/images/urban-09-640.webp" width="1600" height="1544" alt="" decoding="async"></picture></figure>
+        </div>
+      </div>
+      <header class="spiral-static-header">
+        <p class="section-index">ARCHITECTURE IN MOTION / 06 PROJECTS</p>
+        <h3><span class="zh">换一个角度，<br>继续观看空间。</span><span class="en" lang="en">Another angle.<br>Another way to see space.</span></h3>
       </header>
-      <div class="g12">
-        <div class="c8">
-          <dl class="table-mono contact__table">
-            <div><dt><span class="zh">邮箱</span> EMAIL</dt><dd><a href="mailto:853673373@qq.com">853673373@qq.com</a></dd></div>
-            <div><dt><span class="zh">电话</span> PHONE</dt><dd><a href="tel:+8619370657379">193-7065-7379</a></dd></div>
-            <div><dt><span class="zh">微信</span> WECHAT</dt><dd>Awarmsummerevening</dd></div>
-          </dl>
-          <a class="btn btn-primary" href="mailto:853673373@qq.com"><span class="zh">发送邮件</span> SEND EMAIL →</a>
-        </div>
-        <div class="c4 contact__social">
-          <a class="icon-box" href="mailto:853673373@qq.com" aria-label="发送邮件 SEND EMAIL">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <span><span class="zh">邮箱</span> EMAIL</span>
+      <ol class="spiral-static">
+        <li><figure><a class="project-link" href="./project-01.html" data-project="01"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/museum-01-960.webp"><img src="./assets/images/museum-01-640.webp" width="960" height="510" alt="浙东运河博物馆完整主效果图" loading="lazy" decoding="async"></picture><figcaption><span>01</span><span><span class="zh">浙东运河博物馆 · 主效果图</span><span class="en" lang="en">Grand Canal Museum · Rendering</span></span></figcaption></a></figure></li>
+        <li><figure><a class="project-link" href="./project-02.html" data-project="02"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/selection-01-960.webp"><img src="./assets/images/selection-01-640.webp" width="960" height="924" alt="大学生活动中心设计逻辑图" loading="lazy" decoding="async"></picture><figcaption><span>02</span><span><span class="zh">活动中心 · 设计逻辑</span><span class="en" lang="en">Activity Centre · Logic</span></span></figcaption></a></figure></li>
+        <li><figure><a class="project-link" href="./project-03.html" data-project="03"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/selection-02-home-960.webp"><img src="./assets/images/selection-02-640.webp" width="960" height="548" alt="城市综合体设计主效果图" loading="lazy" decoding="async"></picture><figcaption><span>03</span><span><span class="zh">城市综合体 · 主效果图</span><span class="en" lang="en">Urban Complex · Rendering</span></span></figcaption></a></figure></li>
+        <li><figure><a class="project-link" href="./project-04.html" data-project="04"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/theatre-01-960.webp"><img src="./assets/images/theatre-01-640.webp" width="1600" height="756" alt="多功能剧场设计主效果图" loading="lazy" decoding="async"></picture><figcaption><span>04</span><span><span class="zh">多功能剧场 · 主效果图</span><span class="en" lang="en">Theatre · Rendering</span></span></figcaption></a></figure></li>
+        <li><figure><a class="project-link" href="./project-05.html" data-project="05"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/highrise-01-home-960.webp"><img src="./assets/images/highrise-01-640.webp" width="1600" height="1614" alt="高层建筑设计主效果图" loading="lazy" decoding="async"></picture><figcaption><span>05</span><span><span class="zh">高层建筑 · 主效果图</span><span class="en" lang="en">High-rise · Rendering</span></span></figcaption></a></figure></li>
+        <li><figure><a class="project-link" href="./project-06.html" data-project="06"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/urban-09-home-960.webp"><img src="./assets/images/urban-09-640.webp" width="1600" height="1544" alt="城市设计低空触点街景效果图" loading="lazy" decoding="async"></picture><figcaption><span>06</span><span><span class="zh">城市设计 · 街景效果</span><span class="en" lang="en">Urban Design · Street View</span></span></figcaption></a></figure></li>
+      </ol>
+    </section>
+
+    <section class="collection" id="works" aria-labelledby="collection-title">
+      <header class="section-heading">
+        <p class="section-index">02 / SELECTED ARCHITECTURE</p>
+        <h2 id="collection-title"><span class="zh">建筑选集</span><span class="en" lang="en">Selected architecture</span></h2>
+        <button class="text-link" type="button" data-open-layer="index"><span class="zh">全部 07 项</span><span class="en" lang="en">All 07 works</span><span aria-hidden="true">↗</span></button>
+      </header>
+      <div class="collection-grid">
+        <article class="collection-card collection-card--one">
+          <a href="./project-01.html" class="project-link" data-project="01">
+            <div class="collection-image"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/museum-01-960.webp"><img src="./assets/images/museum-01-640.webp" width="960" height="510" alt="浙东运河博物馆完整主效果图" loading="lazy"></picture></div>
+            <div class="collection-info"><span>01</span><h3><span class="zh">浙东运河博物馆</span><span class="en" lang="en">Grand Canal Museum</span></h3><p>2023 · <span class="zh">文化建筑 · 绍兴柯桥</span><span class="en" lang="en">Cultural · Keqiao, Shaoxing</span></p></div>
           </a>
-          <a class="icon-box" href="tel:+8619370657379" aria-label="拨打电话 CALL">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span><span class="zh">电话</span> PHONE</span>
+        </article>
+        <article class="collection-card collection-card--two">
+          <a href="./project-02.html" class="project-link" data-project="02">
+            <div class="collection-image"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/selection-01-960.webp"><img src="./assets/images/selection-01-640.webp" width="960" height="924" alt="大学生活动中心设计逻辑图" loading="lazy"></picture></div>
+            <div class="collection-info"><span>02</span><h3><span class="zh">大学生活动中心</span><span class="en" lang="en">Student Activity Centre</span></h3><p><span class="zh">公共建筑 · 校园</span><span class="en" lang="en">Public architecture · Campus</span></p></div>
           </a>
+        </article>
+        <article class="collection-card collection-card--three">
+          <a href="./project-03.html" class="project-link" data-project="03">
+            <div class="collection-image"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/selection-02-home-960.webp"><img src="./assets/images/selection-02-640.webp" width="960" height="548" alt="城市综合体设计主效果图" loading="lazy"></picture></div>
+            <div class="collection-info"><span>03</span><h3><span class="zh">城市综合体</span><span class="en" lang="en">Urban Complex</span></h3><p><span class="zh">城市综合体 · 课程设计</span><span class="en" lang="en">Urban complex · Studio project</span></p></div>
+          </a>
+        </article>
+        <article class="collection-card collection-card--four">
+          <a href="./project-04.html" class="project-link" data-project="04">
+            <div class="collection-image"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/theatre-01-960.webp"><img src="./assets/images/theatre-01-640.webp" width="1600" height="756" alt="多功能剧场设计主效果图" loading="lazy"></picture></div>
+            <div class="collection-info"><span>04</span><h3><span class="zh">多功能剧场</span><span class="en" lang="en">Multifunctional Theatre</span></h3><p><span class="zh">观演建筑 · 临沂</span><span class="en" lang="en">Theatre · Linyi</span></p></div>
+          </a>
+        </article>
+        <article class="collection-card collection-card--five">
+          <a href="./project-05.html" class="project-link" data-project="05">
+            <div class="collection-image"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/highrise-01-home-960.webp"><img src="./assets/images/highrise-01-640.webp" width="1600" height="1614" alt="高层建筑设计主效果图" loading="lazy"></picture></div>
+            <div class="collection-info"><span>05</span><h3><span class="zh">高层建筑</span><span class="en" lang="en">High-rise Design</span></h3><p><span class="zh">高层建筑 · 青岛</span><span class="en" lang="en">High-rise · Qingdao</span></p></div>
+          </a>
+        </article>
+        <article class="collection-card collection-card--six">
+          <a href="./project-06.html" class="project-link" data-project="06">
+            <div class="collection-image"><picture><source media="(min-width: 768px) and (pointer: fine)" srcset="./assets/images/urban-09-home-960.webp"><img src="./assets/images/urban-09-640.webp" width="1600" height="1544" alt="城市设计低空触点街景效果图" loading="lazy"></picture></div>
+            <div class="collection-info"><span>06</span><h3><span class="zh">城市设计</span><span class="en" lang="en">Urban Design</span></h3><p><span class="zh">城市设计 · 青岛</span><span class="en" lang="en">Urban design · Qingdao</span></p></div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="digital" id="digital" aria-labelledby="digital-title" tabindex="-1">
+      <header class="section-heading section-heading--dark">
+        <p class="section-index">03 / DIGITAL OBJECTS</p>
+        <h2 id="digital-title"><span class="zh">屏幕里的日常</span><span class="en" lang="en">Digital, daily</span></h2>
+        <p><span class="zh">数字产品 · 基本介绍</span><span class="en" lang="en">Digital product · Brief introduction</span></p>
+      </header>
+      <article class="digital-product digital-product--brief">
+        <div class="digital-copy">
+          <p class="product-number">D.01 / IOS APP</p>
+          <h3><span class="zh">Hi学长！</span><span class="en" lang="en">Hi Senior!</span></h3>
+          <p class="zh">连接学弟学妹与认证学长学姐的付费咨询应用。</p>
+          <p class="en" lang="en">A paid consultation app connecting students with verified senior peers.</p>
         </div>
+      </article>
+    </section>
+
+    <section class="about-teaser" aria-labelledby="about-teaser-title">
+      <p class="section-index">04 / BETWEEN DISCIPLINES</p>
+      <h2 id="about-teaser-title"><span class="zh">建筑训练给予尺度，<br>数据研究提供另一种观察。</span><span class="en" lang="en">Architectural training gives scale.<br>Analytics offers another way of seeing.</span></h2>
+      <button class="round-link" type="button" data-open-layer="about"><span class="zh">认识朱翰林</span><span class="en" lang="en">About Hanlin</span><span aria-hidden="true">↗</span></button>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-top">
+      <p><span class="zh">合作、实习，或一次关于设计的交流。</span><span class="en" lang="en">Collaboration, internships, or a conversation about design.</span></p>
+      <a href="mailto:service@hixuezhang.cn">service@hixuezhang.cn ↗</a>
+    </div>
+    <div class="footer-contact">
+      <p><span>WECHAT</span><span>Awarmsummerevening</span></p>
+      <button type="button" data-open-layer="about"><span class="zh">关于我</span><span class="en" lang="en">About me</span> ↗</button>
+      <button type="button" data-open-layer="index"><span class="zh">作品索引</span><span class="en" lang="en">Work index</span> ↗</button>
+    </div>
+    <a class="footer-name" href="#top">TRACES OF LIN</a>
+    <div class="footer-base"><span>© 2026 ZHU HANLIN</span><span><span class="zh">建筑 × 数字 × 数据</span><span class="en" lang="en">Architecture × Digital × Data</span></span><a href="#top"><span class="zh">回到顶部</span><span class="en" lang="en">Back to top</span> ↑</a></div>
+  </footer>
+
+  <dialog class="panel-dialog info-dialog" id="index-dialog" aria-labelledby="index-dialog-title">
+    <div class="info-panel">
+      <header class="panel-header"><p>WORK INDEX / 07</p><button type="button" class="panel-close" data-close-dialog aria-label="关闭作品索引"><span class="zh">关闭</span><span class="en" lang="en">Close</span> ×</button></header>
+      <h2 id="index-dialog-title"><span class="zh">作品索引</span><span class="en" lang="en">Index of works</span></h2>
+      <ol class="work-index-list">
+        <li><a href="./project-01.html" class="project-link" data-project="01"><span>01</span><strong><span class="zh">浙东运河博物馆设计</span><span class="en" lang="en">Grand Canal Museum</span></strong><span>2023 · CULTURAL</span><span>↗</span></a></li>
+        <li><a href="./project-02.html" class="project-link" data-project="02"><span>02</span><strong><span class="zh">大学生活动中心设计</span><span class="en" lang="en">Student Activity Centre</span></strong><span><span class="zh">公共建筑 · 校园</span><span class="en" lang="en">PUBLIC · CAMPUS</span></span><span>↗</span></a></li>
+        <li><a href="./project-03.html" class="project-link" data-project="03"><span>03</span><strong><span class="zh">城市综合体设计</span><span class="en" lang="en">Urban Complex Design</span></strong><span><span class="zh">城市综合体 · 课程设计</span><span class="en" lang="en">URBAN COMPLEX · STUDIO</span></span><span>↗</span></a></li>
+        <li><a href="./project-04.html" class="project-link" data-project="04"><span>04</span><strong><span class="zh">多功能剧场设计</span><span class="en" lang="en">Multifunctional Theatre</span></strong><span><span class="zh">观演建筑 · 临沂</span><span class="en" lang="en">THEATRE · LINYI</span></span><span>↗</span></a></li>
+        <li><a href="./project-05.html" class="project-link" data-project="05"><span>05</span><strong><span class="zh">高层建筑设计</span><span class="en" lang="en">High-rise Design</span></strong><span><span class="zh">高层建筑 · 青岛</span><span class="en" lang="en">HIGH-RISE · QINGDAO</span></span><span>↗</span></a></li>
+        <li><a href="./project-06.html" class="project-link" data-project="06"><span>06</span><strong><span class="zh">城市设计</span><span class="en" lang="en">Urban Design</span></strong><span><span class="zh">城市设计 · 青岛</span><span class="en" lang="en">URBAN DESIGN · QINGDAO</span></span><span>↗</span></a></li>
+        <li><a href="#digital" data-close-and-target="digital"><span>D.01</span><strong><span class="zh">Hi学长！</span><span class="en" lang="en">Hi Senior!</span></strong><span>IOS APP</span><span>↓</span></a></li>
+      </ol>
+    </div>
+  </dialog>
+
+  <dialog class="panel-dialog info-dialog" id="about-dialog" aria-labelledby="about-dialog-title">
+    <div class="info-panel about-panel">
+      <header class="panel-header"><p>PROFILE / ZHU HANLIN</p><button type="button" class="panel-close" data-close-dialog aria-label="关闭关于我"><span class="zh">关闭</span><span class="en" lang="en">Close</span> ×</button></header>
+      <div class="about-heading"><p class="section-index">ARCHITECTURE / ANALYTICS / PRODUCT</p><h2 id="about-dialog-title"><span class="zh">朱翰林</span><span class="en" lang="en">Zhu Hanlin</span></h2></div>
+      <p class="about-intro zh">山东科技大学建筑学专业本科毕业（2021—2026），现为新西兰奥克兰理工大学（AUT）数据分析专业在读研究生（Master of Analytics）。「Hi学长！」App 开发者、露曦零号（杭州）科技有限公司执行董事。</p>
+      <p class="about-intro en" lang="en">Zhu Hanlin holds a bachelor's degree in Architecture from Shandong University of Science and Technology (2021—2026) and is currently a Master of Analytics postgraduate at Auckland University of Technology (AUT), New Zealand. Developer of the Hi Senior! app and Executive Director of Luxi Linghao (Hangzhou) Technology Co., Ltd.</p>
+      <div class="about-grid">
+        <details open><summary><span>01</span><span class="zh">教育</span><span class="en" lang="en">Education</span></summary><div><p class="zh">奥克兰理工大学（AUT）· 数据分析硕士在读<br>2026.09—2028.03（预计）</p><p class="en" lang="en">Auckland University of Technology · Master of Analytics<br>Sep 2026—Mar 2028 (expected)</p><p class="zh">山东科技大学 · 建筑学本科<br>2021.09—2026.06</p><p class="en" lang="en">Shandong University of Science and Technology · Bachelor of Architecture<br>Sep 2021—Jun 2026</p></div></details>
+        <details><summary><span>02</span><span class="zh">经历</span><span class="en" lang="en">Experience</span></summary><div><p class="zh">2026.09 正式独立开发「Hi学长！」App。<br>2026.10.23 创立露曦零号（杭州）科技有限公司，任执行董事。</p><p class="en" lang="en">Began independently developing Hi Senior! in Sep 2026. Founded Luxi Linghao (Hangzhou) Technology Co., Ltd. on 23 Oct 2026, serving as Executive Director.</p><p class="zh">创新创业协会干事（2021.09—2022.12）：策划校园活动，统筹 900 余名学生与 12 位资深教授参与。全国「三下乡」暑期社会实践（2023、2024）。</p><p class="en" lang="en">Student Officer, Innovation &amp; Entrepreneurship Association (2021—2022): campus events involving over 900 students and 12 senior professors. National rural social practice (2023, 2024).</p></div></details>
+        <details><summary><span>03</span><span class="zh">技能</span><span class="en" lang="en">Skills</span></summary><div><p class="zh">建筑设计、三维建模、渲染与数字化可视化全流程。中文母语 · PTE 学术英语 60 分。</p><p class="en" lang="en">Architectural design, 3D modelling, rendering and digital visualisation. Chinese (native) · PTE Academic 60.</p><p class="skill-list">RHINO / SKETCHUP / CAD / PHOTOSHOP / ILLUSTRATOR / INDESIGN / D5 / V-RAY / LUMION</p></div></details>
+        <details><summary><span>04</span><span class="zh">获奖与研究</span><span class="en" lang="en">Awards &amp; research</span></summary><div><p class="zh">全国 BIM 毕业设计创新大赛一等奖（第十届）、二等奖（第十一届）；全国数字媒体技术与创意作品大赛三等奖；米兰设计周中国展三等奖（省级，2025）；山东省建筑设计竞赛优秀奖（2024）。</p><p class="en" lang="en">First Prize (10th) and Second Prize (11th), National BIM Graduation Design Competition; Third Prize, National Digital Media Technology and Creative Works Competition; Provincial Third Prize, Milan Design Week China Exhibition (2025); Merit Award, Shandong Architectural Design Competition (2024).</p><p class="zh">论文《城市公共服务设施对房价的影响——基于地理加权回归模型的研究》。</p><p class="en" lang="en">Paper: Impact of Urban Public Service Facilities on Housing Prices — A Study Based on Geographically Weighted Regression Model.</p></div></details>
       </div>
     </div>
-  </section>
+  </dialog>
 
-</main>
+  <!-- PROJECT_TEMPLATES_START -->
+  <template id="project-01-source">
+<article class="project-article" data-project-article="01">
+      <header class="project-header">
+        <a class="project-close" href="./index.html#works" data-project-close aria-label="关闭项目并返回首页"><span aria-hidden="true">←</span><span class="zh">返回作品目录</span><span class="en" lang="en">Back to index</span></a>
+        <p>PROJECT 01 / 2023</p>
+        <h1><span class="zh">浙东运河博物馆</span><span class="en" lang="en">Grand Canal Museum</span></h1>
+        <p class="project-subtitle"><span class="zh">水之上，古纤道之上。</span><span class="en" lang="en">Upon the water, upon the ancient towpath.</span></p>
+      </header>
+      <div class="project-layout">
+        <aside class="project-meta">
+          <dl><div><dt>DESIGN</dt><dd>朱翰林 ZHU HANLIN</dd></div><div><dt>YEAR</dt><dd>2023</dd></div><div><dt>TYPE</dt><dd><span class="zh">文化建筑</span><span class="en" lang="en">Cultural</span></dd></div><div><dt>LOCATION</dt><dd><span class="zh">绍兴柯桥</span><span class="en" lang="en">Keqiao, Shaoxing</span></dd></div><div><dt>STATUS</dt><dd><span class="zh">课程设计</span><span class="en" lang="en">Studio</span></dd></div></dl>
+          <nav class="figure-nav" aria-label="14 张项目图片">
+            <p>IMAGES / 14</p>
+            <ol>
+              <li><button type="button" data-figure-target="1">01</button></li><li><button type="button" data-figure-target="2">02</button></li><li><button type="button" data-figure-target="3">03</button></li><li><button type="button" data-figure-target="4">04</button></li><li><button type="button" data-figure-target="5">05</button></li><li><button type="button" data-figure-target="6">06</button></li><li><button type="button" data-figure-target="7">07</button></li><li><button type="button" data-figure-target="8">08</button></li><li><button type="button" data-figure-target="9">09</button></li><li><button type="button" data-figure-target="10">10</button></li><li><button type="button" data-figure-target="11">11</button></li><li><button type="button" data-figure-target="12">12</button></li><li><button type="button" data-figure-target="13">13</button></li><li><button type="button" data-figure-target="14">14</button></li>
+            </ol>
+          </nav>
+        </aside>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="sep-stars" aria-hidden="true">✦ ✦ ✦</div>
-    <div class="footer__grid">
-      <nav class="footer__nav" aria-label="页脚导航 FOOTER NAVIGATION">
-        <a href="index.html"><span class="zh">首页</span>HOME</a>
-        <a href="#works"><span class="zh">作品</span>WORKS</a>
-        <a href="#about"><span class="zh">关于我</span>ABOUT ME</a>
-        <a href="#contact"><span class="zh">联系</span>CONTACT</a>
-      </nav>
-      <a class="btn-link" href="#top">↑ <span class="zh">回到顶部</span> BACK TO TOP</a>
-      <div class="footer__meta edition-meta">
-        <p>EDITION: VOL 1.0 | PRINTED IN QINGDAO</p>
-        <p>© <span data-year>2026</span> 朱翰林 ZHU HANLIN · LAST UPDATED 2026.08</p>
+        <div class="project-track">
+          <section id="rendering" class="project-section" aria-labelledby="rendering-title">
+            <div class="project-section-heading"><span>02</span><h2 id="rendering-title"><span class="zh">主效果图</span><span class="en" lang="en">Main rendering</span></h2></div>
+            <p class="zh">博物馆沿河岸展开，水平体量与水面对话，屋面壳体的波浪纹理回应水面的光影。</p><p class="en" lang="en">The museum extends along the canal. Its horizontal mass meets the water, while the wave-textured shell responds to shifting light and reflections.</p>
+            <figure class="project-figure" data-figure="1" id="figure-01"><a class="image-button" href="./assets/images/museum-01-1600.webp" data-lightbox-src="./assets/images/museum-01-1600.webp" data-caption-zh="FIG. 1.1 — 主效果图" data-caption-en="FIG. 1.1 — Main rendering"><img src="./assets/images/museum-01-1600.webp" width="1600" height="848" alt="浙东运河博物馆主效果图" fetchpriority="high"></a><figcaption>FIG. 1.1 — <span class="zh">主效果图</span><span class="en" lang="en">Main rendering</span></figcaption></figure>
+          </section>
+
+          <section id="design-logic" class="project-section" aria-labelledby="design-logic-title">
+            <div class="project-section-heading"><span>03</span><h2 id="design-logic-title"><span class="zh">设计逻辑</span><span class="en" lang="en">Design logic</span></h2></div>
+            <p class="zh">将场地与建筑融为「水」的意象：无论身处场地还是建筑之中，游览都如行走在古纤道之上。</p><p class="en" lang="en">Site and building share the image of water: whether outside or inside, the visit reads as a walk along the ancient towpath.</p>
+            <figure class="project-figure" data-figure="2" id="figure-02"><a class="image-button" href="./assets/images/museum-02-1600.webp" data-lightbox-src="./assets/images/museum-02-1600.webp" data-caption-zh="FIG. 1.2 — 设计逻辑（一）" data-caption-en="FIG. 1.2 — Design logic I"><img src="./assets/images/museum-02-1600.webp" width="1600" height="2198" alt="设计逻辑图一" loading="lazy" decoding="async"></a><figcaption>FIG. 1.2 — <span class="zh">设计逻辑（一）</span><span class="en" lang="en">Design logic I</span></figcaption></figure>
+            <figure class="project-figure" data-figure="3" id="figure-03"><a class="image-button" href="./assets/images/museum-03-1600.webp" data-lightbox-src="./assets/images/museum-03-1600.webp" data-caption-zh="FIG. 1.3 — 设计逻辑（二）" data-caption-en="FIG. 1.3 — Design logic II"><img src="./assets/images/museum-03-1600.webp" width="1600" height="324" alt="设计逻辑图二" loading="lazy" decoding="async"></a><figcaption>FIG. 1.3 — <span class="zh">设计逻辑（二）</span><span class="en" lang="en">Design logic II</span></figcaption></figure>
+          </section>
+
+          <section id="general-layout" class="project-section" aria-labelledby="general-layout-title">
+            <div class="project-section-heading"><span>04</span><h2 id="general-layout-title"><span class="zh">总平面与纹理生成</span><span class="en" lang="en">Plan &amp; wave texture</span></h2></div>
+            <p class="zh">平面与立面从「水」的意象出发。参数调节波浪纹理的突出高度与密度，再将纹理整体流动到建筑曲面。</p><p class="en" lang="en">Plan and elevation follow the image of water. Parameters tune the protrusion height and density of the wave texture before it flows onto the curved building surface.</p>
+            <figure class="project-figure" data-figure="4" id="figure-04"><a class="image-button" href="./assets/images/museum-04-1600.webp" data-lightbox-src="./assets/images/museum-04-1600.webp" data-caption-zh="FIG. 1.4 — 总平面图" data-caption-en="FIG. 1.4 — General layout"><img src="./assets/images/museum-04-1600.webp" width="1600" height="1506" alt="总平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 1.4 — <span class="zh">总平面图</span><span class="en" lang="en">General layout</span></figcaption></figure>
+            <figure class="project-figure" data-figure="5" id="figure-05"><a class="image-button" href="./assets/images/museum-05-1600.webp" data-lightbox-src="./assets/images/museum-05-1600.webp" data-caption-zh="FIG. 1.5 — 纹理生成" data-caption-en="FIG. 1.5 — Wave texture"><img src="./assets/images/museum-05-1600.webp" width="1600" height="1320" alt="纹理生成图" loading="lazy" decoding="async"></a><figcaption>FIG. 1.5 — <span class="zh">纹理生成</span><span class="en" lang="en">Wave texture</span></figcaption></figure>
+          </section>
+
+          <section id="exploded-view" class="project-section" aria-labelledby="exploded-view-title">
+            <div class="project-section-heading"><span>05</span><h2 id="exploded-view-title"><span class="zh">爆炸结构图</span><span class="en" lang="en">Exploded structure</span></h2></div>
+            <p class="zh">屋面壳体、桁架系统与一层框架系统被分解为三个层次，呈现波浪屋面与结构的构造关系。</p><p class="en" lang="en">Roof shell, truss system and first-floor framework are separated into three layers, revealing how the wave-textured roof meets its structure.</p>
+            <figure class="project-figure" data-figure="6" id="figure-06"><a class="image-button" href="./assets/images/museum-06-1600.webp" data-lightbox-src="./assets/images/museum-06-1600.webp" data-caption-zh="FIG. 1.6 — 爆炸结构图" data-caption-en="FIG. 1.6 — Exploded structure"><img src="./assets/images/museum-06-1600.webp" width="1600" height="2790" alt="爆炸结构图" loading="lazy" decoding="async"></a><figcaption>FIG. 1.6 — <span class="zh">爆炸结构图</span><span class="en" lang="en">Exploded structure</span></figcaption></figure>
+          </section>
+
+          <section id="site-analysis" class="project-section" aria-labelledby="site-analysis-title">
+            <div class="project-section-heading"><span>06</span><h2 id="site-analysis-title"><span class="zh">场地分析</span><span class="en" lang="en">Site analysis</span></h2></div>
+            <p class="zh">古纤道沿浙东运河穿越绍兴。设计从柯桥的历史肌理出发，观察坡屋顶、粉墙黛瓦与当代建筑之间的关系。</p><p class="en" lang="en">The ancient towpath crosses Shaoxing along the East Zhejiang Canal. The design reads Keqiao's historic fabric through pitched roofs, white walls and their contemporary translation.</p>
+            <figure class="project-figure" data-figure="7" id="figure-07"><a class="image-button" href="./assets/images/museum-07-1600.webp" data-lightbox-src="./assets/images/museum-07-1600.webp" data-caption-zh="FIG. 1.7 — 场地分析（一）" data-caption-en="FIG. 1.7 — Site analysis I"><img src="./assets/images/museum-07-1600.webp" width="1600" height="1138" alt="场地分析图一：柯桥历史肌理" loading="lazy" decoding="async"></a><figcaption>FIG. 1.7 — <span class="zh">场地分析（一）</span><span class="en" lang="en">Site analysis I</span></figcaption></figure>
+            <figure class="project-figure" data-figure="8" id="figure-08"><a class="image-button" href="./assets/images/museum-08-1600.webp" data-lightbox-src="./assets/images/museum-08-1600.webp" data-caption-zh="FIG. 1.8 — 场地分析（二）" data-caption-en="FIG. 1.8 — Site analysis II"><img src="./assets/images/museum-08-1600.webp" width="1600" height="1288" alt="场地分析图二：古纤道发展历史" loading="lazy" decoding="async"></a><figcaption>FIG. 1.8 — <span class="zh">场地分析（二）</span><span class="en" lang="en">Site analysis II</span></figcaption></figure>
+          </section>
+
+          <section id="plans" class="project-section" aria-labelledby="plans-title">
+            <div class="project-section-heading"><span>07</span><h2 id="plans-title"><span class="zh">一层平面与效果图</span><span class="en" lang="en">Ground floor &amp; rendering</span></h2></div>
+            <p class="zh">门厅、展厅与研究室沿展线布置；展厅效果图呈现展陈空间的比例与氛围。</p><p class="en" lang="en">Lobby, galleries and research rooms follow the exhibition route; the gallery rendering presents the proportion and atmosphere of the exhibition space.</p>
+            <figure class="project-figure" data-figure="9" id="figure-09"><a class="image-button" href="./assets/images/museum-09-1600.webp" data-lightbox-src="./assets/images/museum-09-1600.webp" data-caption-zh="FIG. 1.9 — 一层平面" data-caption-en="FIG. 1.9 — Ground floor plan"><img src="./assets/images/museum-09-1600.webp" width="1600" height="1492" alt="一层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 1.9 — <span class="zh">一层平面</span><span class="en" lang="en">Ground floor plan</span></figcaption></figure>
+            <figure class="project-figure" data-figure="10" id="figure-10"><a class="image-button" href="./assets/images/museum-10-1600.webp" data-lightbox-src="./assets/images/museum-10-1600.webp" data-caption-zh="FIG. 1.10 — 展厅效果图" data-caption-en="FIG. 1.10 — Gallery rendering"><img src="./assets/images/museum-10-1600.webp" width="1600" height="442" alt="展厅效果图" loading="lazy" decoding="async"></a><figcaption>FIG. 1.10 — <span class="zh">展厅效果图</span><span class="en" lang="en">Gallery rendering</span></figcaption></figure>
+          </section>
+
+          <section id="renderings" class="project-section" aria-labelledby="renderings-title">
+            <div class="project-section-heading"><span>08</span><h2 id="renderings-title"><span class="zh">地下一层与二层平面</span><span class="en" lang="en">Lower &amp; second floor</span></h2></div>
+            <p class="zh">临时展厅、数据库与藏品库位于地下；二层围绕中庭组织永久展陈与公共空间。</p><p class="en" lang="en">Temporary galleries, database and collection storage sit below ground; permanent galleries and public space gather around the second-floor atrium.</p>
+            <figure class="project-figure" data-figure="11" id="figure-11"><a class="image-button" href="./assets/images/museum-11-1600.webp" data-lightbox-src="./assets/images/museum-11-1600.webp" data-caption-zh="FIG. 1.11 — 地下一层与二层平面" data-caption-en="FIG. 1.11 — Lower &amp; second floor"><img src="./assets/images/museum-11-1600.webp" width="1600" height="1762" alt="地下一层与二层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 1.11 — <span class="zh">地下一层与二层平面</span><span class="en" lang="en">Lower &amp; second floor</span></figcaption></figure>
+          </section>
+
+          <section id="sections-view" class="project-section" aria-labelledby="sections-view-title">
+            <div class="project-section-heading"><span>09</span><h2 id="sections-view-title"><span class="zh">剖面图</span><span class="en" lang="en">Section</span></h2></div>
+            <p class="zh">从河面到屋面壳体，滨水步道、通高展厅与天窗形成逐级抬升的垂直序列。</p><p class="en" lang="en">From water level to roof shell, the waterfront walk, double-height galleries and skylights form a rising vertical sequence.</p>
+            <figure class="project-figure" data-figure="12" id="figure-12"><a class="image-button" href="./assets/images/museum-12-1600.webp" data-lightbox-src="./assets/images/museum-12-1600.webp" data-caption-zh="FIG. 1.12 — 剖面图" data-caption-en="FIG. 1.12 — Section"><img src="./assets/images/museum-12-1600.webp" width="1600" height="1650" alt="剖面图" loading="lazy" decoding="async"></a><figcaption>FIG. 1.12 — <span class="zh">剖面图</span><span class="en" lang="en">Section</span></figcaption></figure>
+          </section>
+
+          <section id="details" class="project-section" aria-labelledby="details-title">
+            <div class="project-section-heading"><span>10</span><h2 id="details-title"><span class="zh">西立面与北立面</span><span class="en" lang="en">West &amp; north elevations</span></h2></div>
+            <p class="zh">立面呈现屋面壳体的收束，建筑在此回望古纤道与运河。</p><p class="en" lang="en">The elevations show the gathering roof shell, where the building turns back towards the towpath and the canal.</p>
+            <figure class="project-figure" data-figure="13" id="figure-13"><a class="image-button" href="./assets/images/museum-13-1600.webp" data-lightbox-src="./assets/images/museum-13-1600.webp" data-caption-zh="FIG. 1.13 — 西立面" data-caption-en="FIG. 1.13 — West elevation"><img src="./assets/images/museum-13-1600.webp" width="1600" height="856" alt="西立面图" loading="lazy" decoding="async"></a><figcaption>FIG. 1.13 — <span class="zh">西立面</span><span class="en" lang="en">West elevation</span></figcaption></figure>
+            <figure class="project-figure" data-figure="14" id="figure-14"><a class="image-button" href="./assets/images/museum-14-1600.webp" data-lightbox-src="./assets/images/museum-14-1600.webp" data-caption-zh="FIG. 1.14 — 北立面" data-caption-en="FIG. 1.14 — North elevation"><img src="./assets/images/museum-14-1600.webp" width="1600" height="869" alt="北立面图" loading="lazy" decoding="async"></a><figcaption>FIG. 1.14 — <span class="zh">北立面</span><span class="en" lang="en">North elevation</span></figcaption></figure>
+          </section>
+        </div>
+
+        <aside class="project-info">
+          <section id="abstract" class="project-section project-abstract" aria-labelledby="abstract-title">
+            <div class="project-section-heading"><span>01</span><h2 id="abstract-title"><span class="zh">设计说明</span><span class="en" lang="en">Design statement</span></h2></div>
+            <p class="zh">场地位于浙东运河绍兴柯桥段，古纤道穿城而过。设计让游览如在「水之上」，立面壳体则以平面之水的移动为生成逻辑，最终形成与运河对话的屋面。</p><p class="en" lang="en">The site lies on the Keqiao section of the East Zhejiang Canal, where the ancient towpath threads through the town. The visit reads as a walk upon the water; the shell grows from the movement of a water plan, forming a roof in dialogue with the canal.</p>
+          </section>
+          <nav class="chapter-nav" aria-label="项目十章目录">
+            <p>CONTENTS / 10</p>
+            <ol>
+              <li><a href="./project-01.html#abstract" data-chapter="abstract"><span>01</span><span class="zh">设计说明</span><span class="en" lang="en">Statement</span></a></li>
+              <li><a href="./project-01.html#rendering" data-chapter="rendering"><span>02</span><span class="zh">主效果图</span><span class="en" lang="en">Rendering</span></a></li>
+              <li><a href="./project-01.html#design-logic" data-chapter="design-logic"><span>03</span><span class="zh">设计逻辑</span><span class="en" lang="en">Design logic</span></a></li>
+              <li><a href="./project-01.html#general-layout" data-chapter="general-layout"><span>04</span><span class="zh">总平面与纹理</span><span class="en" lang="en">Plan &amp; texture</span></a></li>
+              <li><a href="./project-01.html#exploded-view" data-chapter="exploded-view"><span>05</span><span class="zh">爆炸结构</span><span class="en" lang="en">Structure</span></a></li>
+              <li><a href="./project-01.html#site-analysis" data-chapter="site-analysis"><span>06</span><span class="zh">场地分析</span><span class="en" lang="en">Site analysis</span></a></li>
+              <li><a href="./project-01.html#plans" data-chapter="plans"><span>07</span><span class="zh">一层平面与效果图</span><span class="en" lang="en">Ground floor</span></a></li>
+              <li><a href="./project-01.html#renderings" data-chapter="renderings"><span>08</span><span class="zh">地下与二层平面</span><span class="en" lang="en">Other floors</span></a></li>
+              <li><a href="./project-01.html#sections-view" data-chapter="sections-view"><span>09</span><span class="zh">剖面图</span><span class="en" lang="en">Section</span></a></li>
+              <li><a href="./project-01.html#details" data-chapter="details"><span>10</span><span class="zh">西立面与北立面</span><span class="en" lang="en">Elevations</span></a></li>
+            </ol>
+          </nav>
+          <div class="project-jump"><button type="button" data-figure-step="-1"><span class="zh">上一张</span><span class="en" lang="en">Previous</span></button><button type="button" data-figure-step="1"><span class="zh">下一张图</span><span class="en" lang="en">Next image</span></button></div>
+        </aside>
       </div>
-    </div>
-  </div>
-</footer>
+      <nav class="project-pager" aria-label="上一项与下一项作品"><a class="project-link project-pager-link" href="./project-06.html" data-project="06"><span class="project-pager-label">← <span class="zh">上一项</span><span class="en" lang="en">Previous</span></span><strong><span class="zh">城市设计</span><span class="en" lang="en">Urban Design</span></strong></a><a class="project-link project-pager-link" href="./project-02.html" data-project="02"><span class="project-pager-label"><span class="zh">下一项</span><span class="en" lang="en">Next</span> →</span><strong><span class="zh">大学生活动中心</span><span class="en" lang="en">Student Activity Centre</span></strong></a></nav>
+      <nav class="mobile-project-bar" aria-label="项目图片操作"><button type="button" data-figure-step="-1"><span class="zh">上一张</span><span class="en" lang="en">Previous</span></button><a class="project-close" href="./index.html#works" data-project-close><span class="zh">目录</span><span class="en" lang="en">Index</span></a><button type="button" data-figure-step="1"><span class="zh">下一张</span><span class="en" lang="en">Next</span></button></nav>
+    </article>
+  </template>
 
-<script src="js/main.js"></script>
+  <template id="project-02-source">
+    <article class="project-article" data-project-article="02">
+      <header class="project-header">
+        <a class="project-close" href="./index.html#works" data-project-close aria-label="关闭项目并返回首页"><span aria-hidden="true">←</span><span class="zh">返回作品目录</span><span class="en" lang="en">Back to index</span></a>
+        <p>PROJECT 02</p>
+        <h1><span class="zh">大学生活动中心</span><span class="en" lang="en">Student Activity Centre</span></h1>
+        <p class="project-subtitle"><span class="zh">泰森多边形与校园活动路径。</span><span class="en" lang="en">Voronoi cells shaped by campus movement.</span></p>
+      </header>
+      <div class="project-layout">
+        <aside class="project-meta">
+          <dl><div><dt>DESIGN</dt><dd>朱翰林 ZHU HANLIN</dd></div><div><dt>TYPE</dt><dd><span class="zh">公共建筑</span><span class="en" lang="en">Public</span></dd></div><div><dt>LOCATION</dt><dd><span class="zh">校园</span><span class="en" lang="en">Campus</span></dd></div><div><dt>STATUS</dt><dd><span class="zh">课程设计</span><span class="en" lang="en">Studio</span></dd></div></dl>
+          <nav class="figure-nav" aria-label="6 张项目图片">
+            <p>IMAGES / 6</p>
+            <ol><li><button type="button" data-figure-target="1">01</button></li><li><button type="button" data-figure-target="2">02</button></li><li><button type="button" data-figure-target="3">03</button></li><li><button type="button" data-figure-target="4">04</button></li><li><button type="button" data-figure-target="5">05</button></li><li><button type="button" data-figure-target="6">06</button></li></ol>
+          </nav>
+        </aside>
+
+        <div class="project-track">
+          <section id="rendering" class="project-section" aria-labelledby="02-rendering-title">
+            <div class="project-section-heading"><span>02</span><h2 id="02-rendering-title"><span class="zh">主效果图</span><span class="en" lang="en">MAIN RENDERING</span></h2></div>
+            <p class="zh">由泰森多边形细胞生成的建筑主体在校园中展开，通透的界面让各类活动可见、可达。</p>
+            <p class="en" lang="en">The main volume, generated from Voronoi cells, opens into the campus; transparent edges keep its activities visible and accessible.</p>
+            <figure class="project-figure" data-figure="1" id="figure-01"><a class="image-button" href="./assets/images/activity-01-1600.webp" data-lightbox-src="./assets/images/activity-01-1600.webp" data-caption-zh="FIG. 2.1 — 主效果图" data-caption-en="FIG. 2.1 — MAIN RENDERING"><img src="./assets/images/activity-01-960.webp" srcset="./assets/images/activity-01-640.webp 640w, ./assets/images/activity-01-960.webp 960w, ./assets/images/activity-01-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1782" style="aspect-ratio: 1600 / 1782" alt="大学生活动中心设计主效果图" fetchpriority="high"></a><figcaption>FIG. 2.1 — <span class="zh">主效果图</span><span class="en" lang="en">MAIN RENDERING</span></figcaption></figure>
+          </section>
+
+          <section id="design-logic" class="project-section" aria-labelledby="02-design-logic-title">
+            <div class="project-section-heading"><span>03</span><h2 id="02-design-logic-title"><span class="zh">设计逻辑</span><span class="en" lang="en">DESIGN LOGIC</span></h2></div>
+            <p class="zh">泰森多边形的密度依据：建筑主体根据功能需求，建立每个细胞在 300–500 ㎡ 密度的泰森多边形；建筑小品则根据人体室外活动尺度，建立每个细胞在 5–25 ㎡ 密度的泰森多边形。</p>
+            <p class="en" lang="en">Density rules of the Tyson polygon: for the main volume, cells are sized by function at 300–500 m²; for outdoor pieces, cells follow the scale of human outdoor activity at 5–25 m².</p>
+            <figure class="project-figure" data-figure="2" id="figure-02"><a class="image-button" href="./assets/images/activity-02-1600.webp" data-lightbox-src="./assets/images/activity-02-1600.webp" data-caption-zh="FIG. 2.2 — 设计逻辑" data-caption-en="FIG. 2.2 — DESIGN LOGIC"><img src="./assets/images/activity-02-960.webp" srcset="./assets/images/activity-02-640.webp 640w, ./assets/images/activity-02-960.webp 960w, ./assets/images/activity-02-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1536" style="aspect-ratio: 1600 / 1536" alt="设计逻辑图" loading="lazy" decoding="async"></a><figcaption>FIG. 2.2 — <span class="zh">设计逻辑</span><span class="en" lang="en">DESIGN LOGIC</span></figcaption></figure>
+          </section>
+
+          <section id="massing" class="project-section" aria-labelledby="02-massing-title">
+            <div class="project-section-heading"><span>04</span><h2 id="02-massing-title"><span class="zh">体块与爆炸结构</span><span class="en" lang="en">Massing &amp; Exploded Structure</span></h2></div>
+            <p class="zh">体块沿流线逐步削减，形成与场地和活动路径呼应的最终体量；爆炸图进一步分解多边形骨架、面层、主体材料与最终体块的关系。</p>
+            <p class="en" lang="en">The mass is cut back along movement lines to answer the site and its activity paths. The exploded view then separates the polygonal skeleton, surfaces, primary building materials and final volume.</p>
+            <figure class="project-figure" data-figure="3" id="figure-03"><a class="image-button" href="./assets/images/activity-03-977.webp" data-lightbox-src="./assets/images/activity-03-977.webp" data-caption-zh="FIG. 2.3 — 爆炸图" data-caption-en="FIG. 2.3 — Exploded View"><img src="./assets/images/activity-03-960.webp" srcset="./assets/images/activity-03-640.webp 640w, ./assets/images/activity-03-960.webp 960w, ./assets/images/activity-03-977.webp 977w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="977" height="3000" style="aspect-ratio: 977 / 3000" alt="大学生活动中心爆炸图：多边形骨架、面层、主体材料与最终体块" loading="lazy" decoding="async"></a><figcaption>FIG. 2.3 — <span class="zh">爆炸图</span><span class="en" lang="en">Exploded View</span></figcaption></figure>
+          </section>
+
+          <section id="renderings" class="project-section" aria-labelledby="02-renderings-title">
+            <div class="project-section-heading"><span>05</span><h2 id="02-renderings-title"><span class="zh">室内外效果图</span><span class="en" lang="en">INDOOR &amp; OUTDOOR RENDERINGS</span></h2></div>
+            <p class="zh">由多边形细胞生成的空间在不同场景中的氛围：大台阶与架空通道把学生引入建筑，室内外活动彼此渗透。</p>
+            <p class="en" lang="en">Spaces generated from polygonal cells in different scenes: wide steps and the elevated passage draw students in, letting indoor and outdoor life interpenetrate.</p>
+            <figure class="project-figure" data-figure="4" id="figure-04"><a class="image-button" href="./assets/images/activity-04-1600.webp" data-lightbox-src="./assets/images/activity-04-1600.webp" data-caption-zh="FIG. 2.4 — 室内外效果图（一）" data-caption-en="FIG. 2.4 — INDOOR &amp; OUTDOOR RENDERINGS I"><img src="./assets/images/activity-04-960.webp" srcset="./assets/images/activity-04-640.webp 640w, ./assets/images/activity-04-960.webp 960w, ./assets/images/activity-04-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1098" style="aspect-ratio: 1600 / 1098" alt="室内外效果图一" loading="lazy" decoding="async"></a><figcaption>FIG. 2.4 — <span class="zh">室内外效果图（一）</span><span class="en" lang="en">INDOOR &amp; OUTDOOR RENDERINGS I</span></figcaption></figure>
+            <figure class="project-figure" data-figure="5" id="figure-05"><a class="image-button" href="./assets/images/activity-05-1600.webp" data-lightbox-src="./assets/images/activity-05-1600.webp" data-caption-zh="FIG. 2.5 — 室内外效果图（二）" data-caption-en="FIG. 2.5 — INDOOR &amp; OUTDOOR RENDERINGS II"><img src="./assets/images/activity-05-960.webp" srcset="./assets/images/activity-05-640.webp 640w, ./assets/images/activity-05-960.webp 960w, ./assets/images/activity-05-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="918" style="aspect-ratio: 1600 / 918" alt="室内外效果图二" loading="lazy" decoding="async"></a><figcaption>FIG. 2.5 — <span class="zh">室内外效果图（二）</span><span class="en" lang="en">INDOOR &amp; OUTDOOR RENDERINGS II</span></figcaption></figure>
+            <figure class="project-figure" data-figure="6" id="figure-06"><a class="image-button" href="./assets/images/activity-06-1600.webp" data-lightbox-src="./assets/images/activity-06-1600.webp" data-caption-zh="FIG. 2.6 — 室内外效果图（三）" data-caption-en="FIG. 2.6 — INDOOR &amp; OUTDOOR RENDERINGS III"><img src="./assets/images/activity-06-960.webp" srcset="./assets/images/activity-06-640.webp 640w, ./assets/images/activity-06-960.webp 960w, ./assets/images/activity-06-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="910" style="aspect-ratio: 1600 / 910" alt="室内外效果图三" loading="lazy" decoding="async"></a><figcaption>FIG. 2.6 — <span class="zh">室内外效果图（三）</span><span class="en" lang="en">INDOOR &amp; OUTDOOR RENDERINGS III</span></figcaption></figure>
+          </section>
+        </div>
+
+        <aside class="project-info">
+          <section id="abstract" class="project-section project-abstract" aria-labelledby="02-abstract-title">
+            <div class="project-section-heading"><span>01</span><h2 id="02-abstract-title"><span class="zh">设计说明</span><span class="en" lang="en">Design statement</span></h2></div>
+            <p class="zh">活动中心的生成逻辑取自泰森多边形：建筑主体依据功能需求形成 300–500 ㎡ 的细胞，建筑小品依据人体室外活动尺度形成约 5–25 ㎡ 的细胞。在此基础上沿流线逐步削减体块，使多边形的秩序与校园活动的路径相互塑造。</p><p class="en" lang="en">The centre is generated from Tyson (Voronoi) polygons: cells of the main volume are sized by function at 300–500 m² each, while outdoor pieces follow the scale of human activity at about 5–25 m² per cell. The mass is then cut back along flow lines, so that polygonal order and campus movement shape one another.</p>
+          </section>
+          <nav class="chapter-nav" aria-label="项目5章目录">
+            <p>CONTENTS / 5</p>
+            <ol>
+              <li><a href="./project-02.html#abstract" data-chapter="abstract"><span>01</span><span class="zh">设计说明</span><span class="en" lang="en">Statement</span></a></li>
+              <li><a href="./project-02.html#rendering" data-chapter="rendering"><span>02</span><span class="zh">主效果图</span><span class="en" lang="en">MAIN RENDERING</span></a></li>
+              <li><a href="./project-02.html#design-logic" data-chapter="design-logic"><span>03</span><span class="zh">设计逻辑</span><span class="en" lang="en">DESIGN LOGIC</span></a></li>
+              <li><a href="./project-02.html#massing" data-chapter="massing"><span>04</span><span class="zh">体块与爆炸结构</span><span class="en" lang="en">Massing &amp; Exploded Structure</span></a></li>
+              <li><a href="./project-02.html#renderings" data-chapter="renderings"><span>05</span><span class="zh">室内外效果图</span><span class="en" lang="en">INDOOR &amp; OUTDOOR RENDERINGS</span></a></li>
+            </ol>
+          </nav>
+          <div class="project-jump"><button type="button" data-figure-step="-1"><span class="zh">上一张</span><span class="en" lang="en">Previous</span></button><button type="button" data-figure-step="1"><span class="zh">下一张图</span><span class="en" lang="en">Next image</span></button></div>
+        </aside>
+      </div>
+      <nav class="project-pager" aria-label="上一项与下一项作品"><a class="project-link project-pager-link" href="./project-01.html" data-project="01"><span class="project-pager-label">← <span class="zh">上一项</span><span class="en" lang="en">Previous</span></span><strong><span class="zh">浙东运河博物馆</span><span class="en" lang="en">Grand Canal Museum</span></strong></a><a class="project-link project-pager-link" href="./project-03.html" data-project="03"><span class="project-pager-label"><span class="zh">下一项</span><span class="en" lang="en">Next</span> →</span><strong><span class="zh">城市综合体</span><span class="en" lang="en">Urban Complex</span></strong></a></nav>
+      <nav class="mobile-project-bar" aria-label="项目图片操作"><button type="button" data-figure-step="-1"><span class="zh">上一张</span><span class="en" lang="en">Previous</span></button><a class="project-close" href="./index.html#works" data-project-close><span class="zh">目录</span><span class="en" lang="en">Index</span></a><button type="button" data-figure-step="1"><span class="zh">下一张</span><span class="en" lang="en">Next</span></button></nav>
+    </article>
+  </template>
+
+  <template id="project-03-source">
+    <article class="project-article" data-project-article="03">
+      <header class="project-header">
+        <a class="project-close" href="./index.html#works" data-project-close aria-label="关闭项目并返回首页"><span aria-hidden="true">←</span><span class="zh">返回作品目录</span><span class="en" lang="en">Back to index</span></a>
+        <p>PROJECT 03</p>
+        <h1><span class="zh">城市综合体</span><span class="en" lang="en">Urban Complex</span></h1>
+        <p class="project-subtitle"><span class="zh">挽救失落的情绪：中庭、下沉广场与空中观景台。</span><span class="en" lang="en">Saving Lost Emotions: atrium, sunken plaza and sky terrace.</span></p>
+      </header>
+      <div class="project-layout">
+        <aside class="project-meta">
+          <dl><div><dt>DESIGN</dt><dd>朱翰林 ZHU HANLIN</dd></div><div><dt>TYPE</dt><dd><span class="zh">城市综合体</span><span class="en" lang="en">Urban Complex</span></dd></div><div><dt>STATUS</dt><dd><span class="zh">课程设计</span><span class="en" lang="en">Studio</span></dd></div></dl>
+          <nav class="figure-nav" aria-label="26 张项目图片">
+            <p>IMAGES / 26</p>
+            <ol><li><button type="button" data-figure-target="1">01</button></li><li><button type="button" data-figure-target="2">02</button></li><li><button type="button" data-figure-target="3">03</button></li><li><button type="button" data-figure-target="4">04</button></li><li><button type="button" data-figure-target="5">05</button></li><li><button type="button" data-figure-target="6">06</button></li><li><button type="button" data-figure-target="7">07</button></li><li><button type="button" data-figure-target="8">08</button></li><li><button type="button" data-figure-target="9">09</button></li><li><button type="button" data-figure-target="10">10</button></li><li><button type="button" data-figure-target="11">11</button></li><li><button type="button" data-figure-target="12">12</button></li><li><button type="button" data-figure-target="13">13</button></li><li><button type="button" data-figure-target="14">14</button></li><li><button type="button" data-figure-target="15">15</button></li><li><button type="button" data-figure-target="16">16</button></li><li><button type="button" data-figure-target="17">17</button></li><li><button type="button" data-figure-target="18">18</button></li><li><button type="button" data-figure-target="19">19</button></li><li><button type="button" data-figure-target="20">20</button></li><li><button type="button" data-figure-target="21">21</button></li><li><button type="button" data-figure-target="22">22</button></li><li><button type="button" data-figure-target="23">23</button></li><li><button type="button" data-figure-target="24">24</button></li><li><button type="button" data-figure-target="25">25</button></li><li><button type="button" data-figure-target="26">26</button></li></ol>
+          </nav>
+        </aside>
+
+        <div class="project-track">
+          <section id="rendering" class="project-section" aria-labelledby="03-rendering-title">
+            <div class="project-section-heading"><span>02</span><h2 id="03-rendering-title"><span class="zh">主效果图</span><span class="en" lang="en">MAIN RENDERING</span></h2></div>
+            <p class="zh">综合体全景：塔楼与裙房以开敞的姿态回应城市，中庭与下沉广场共同构成中央公共空间的视觉与活动核心。</p>
+            <p class="en" lang="en">An overview of the complex: towers and podium open towards the city, while the atrium and sunken plaza form the visual and social centre of the shared public space.</p>
+            <figure class="project-figure" data-figure="1" id="figure-01"><a class="image-button" href="./assets/images/complex-01-1600.webp" data-lightbox-src="./assets/images/complex-01-1600.webp" data-caption-zh="FIG. 3.1 — 主效果图" data-caption-en="FIG. 3.1 — MAIN RENDERING"><img src="./assets/images/complex-01-960.webp" srcset="./assets/images/complex-01-640.webp 640w, ./assets/images/complex-01-960.webp 960w, ./assets/images/complex-01-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="892" style="aspect-ratio: 1600 / 892" alt="城市综合体设计主效果图" fetchpriority="high"></a><figcaption>FIG. 3.1 — <span class="zh">主效果图</span><span class="en" lang="en">MAIN RENDERING</span></figcaption></figure>
+          </section>
+
+          <section id="masterplan" class="project-section" aria-labelledby="03-masterplan-title">
+            <div class="project-section-heading"><span>03</span><h2 id="03-masterplan-title"><span class="zh">总平面</span><span class="en" lang="en">MASTERPLAN</span></h2></div>
+            <p class="zh">总平面图与场地放大图：建筑向场地四个方向开放出入口，把城市人流引入中庭。</p>
+            <p class="en" lang="en">General layout and enlarged site plan: the building opens entrances on all four sides, drawing city movement into the atrium.</p>
+            <figure class="project-figure" data-figure="2" id="figure-02"><a class="image-button" href="./assets/images/complex-02-1600.webp" data-lightbox-src="./assets/images/complex-02-1600.webp" data-caption-zh="FIG. 3.2 — 总平面图" data-caption-en="FIG. 3.2 — GENERAL LAYOUT"><img src="./assets/images/complex-02-960.webp" srcset="./assets/images/complex-02-640.webp 640w, ./assets/images/complex-02-960.webp 960w, ./assets/images/complex-02-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1162" style="aspect-ratio: 1600 / 1162" alt="总平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.2 — <span class="zh">总平面图</span><span class="en" lang="en">GENERAL LAYOUT</span></figcaption></figure>
+            <figure class="project-figure" data-figure="3" id="figure-03"><a class="image-button" href="./assets/images/complex-03-1600.webp" data-lightbox-src="./assets/images/complex-03-1600.webp" data-caption-zh="FIG. 3.3 — 场地放大图" data-caption-en="FIG. 3.3 — ENLARGED SITE PLAN"><img src="./assets/images/complex-03-960.webp" srcset="./assets/images/complex-03-640.webp 640w, ./assets/images/complex-03-960.webp 960w, ./assets/images/complex-03-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1588" style="aspect-ratio: 1600 / 1588" alt="场地放大图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.3 — <span class="zh">场地放大图</span><span class="en" lang="en">ENLARGED SITE PLAN</span></figcaption></figure>
+          </section>
+
+          <section id="massing" class="project-section" aria-labelledby="03-massing-title">
+            <div class="project-section-heading"><span>04</span><h2 id="03-massing-title"><span class="zh">体块生成</span><span class="en" lang="en">MASSING</span></h2></div>
+            <p class="zh">体块生成图按四个阶段记录设计过程：四向开放出入口、局部架空一层、拆分各层楼板，并继续发展不断变化的中庭空间。</p>
+            <p class="en" lang="en">Four recorded stages trace the massing process: entrances open in four directions, part of the ground floor is lifted, individual floor plates are separated, and the changing atrium space is developed further.</p>
+            <figure class="project-figure" data-figure="4" id="figure-04"><a class="image-button" href="./assets/images/complex-04-1600.webp" data-lightbox-src="./assets/images/complex-04-1600.webp" data-caption-zh="FIG. 3.4 — 体块生成" data-caption-en="FIG. 3.4 — MASSING"><img src="./assets/images/complex-04-960.webp" srcset="./assets/images/complex-04-640.webp 640w, ./assets/images/complex-04-960.webp 960w, ./assets/images/complex-04-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="364" style="aspect-ratio: 1600 / 364" alt="体块生成分析图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.4 — <span class="zh">体块生成</span><span class="en" lang="en">MASSING</span></figcaption></figure>
+          </section>
+
+          <section id="sunken" class="project-section" aria-labelledby="03-sunken-title">
+            <div class="project-section-heading"><span>05</span><h2 id="03-sunken-title"><span class="zh">下沉广场与人物画像</span><span class="en" lang="en">SUNKEN PLAZA &amp; PORTRAITS</span></h2></div>
+            <p class="zh">下沉示意图：地下空间的引入其实也是为了迎合中庭空间的需要——中央下沉广场的出现进一步界定中庭边界，同时下沉的边界更容易让身处其中的游客视线向中央集中。人物画像记录了年轻人的情绪现状：焦虑与抑郁、人际关系的缺失、商业在贩卖焦虑。</p>
+            <p class="en" lang="en">Sinking diagram: the underground level serves the atrium — the central sunken plaza further defines its boundary, while the lowered edge gathers every visitor&#39;s sight towards the centre. Character portraits record the emotional state of the young: anxiety and depression, missing human ties, and commerce selling anxiety.</p>
+            <figure class="project-figure" data-figure="5" id="figure-05"><a class="image-button" href="./assets/images/complex-05-1600.webp" data-lightbox-src="./assets/images/complex-05-1600.webp" data-caption-zh="FIG. 3.5 — 下沉示意图" data-caption-en="FIG. 3.5 — SINKING DIAGRAM"><img src="./assets/images/complex-05-960.webp" srcset="./assets/images/complex-05-640.webp 640w, ./assets/images/complex-05-960.webp 960w, ./assets/images/complex-05-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="620" style="aspect-ratio: 1600 / 620" alt="下沉示意图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.5 — <span class="zh">下沉示意图</span><span class="en" lang="en">SINKING DIAGRAM</span></figcaption></figure>
+            <figure class="project-figure" data-figure="6" id="figure-06"><a class="image-button" href="./assets/images/complex-06-1600.webp" data-lightbox-src="./assets/images/complex-06-1600.webp" data-caption-zh="FIG. 3.6 — 人物画像" data-caption-en="FIG. 3.6 — CHARACTER PORTRAITS"><img src="./assets/images/complex-06-960.webp" srcset="./assets/images/complex-06-640.webp 640w, ./assets/images/complex-06-960.webp 960w, ./assets/images/complex-06-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1022" style="aspect-ratio: 1600 / 1022" alt="人物画像" loading="lazy" decoding="async"></a><figcaption>FIG. 3.6 — <span class="zh">人物画像</span><span class="en" lang="en">CHARACTER PORTRAITS</span></figcaption></figure>
+            <figure class="project-figure" data-figure="7" id="figure-07"><a class="image-button" href="./assets/images/complex-07-1600.webp" data-lightbox-src="./assets/images/complex-07-1600.webp" data-caption-zh="FIG. 3.7 — 下沉效果图（一）" data-caption-en="FIG. 3.7 — SUNKEN PLAZA RENDERING I"><img src="./assets/images/complex-07-960.webp" srcset="./assets/images/complex-07-640.webp 640w, ./assets/images/complex-07-960.webp 960w, ./assets/images/complex-07-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1084" style="aspect-ratio: 1600 / 1084" alt="下沉效果图一" loading="lazy" decoding="async"></a><figcaption>FIG. 3.7 — <span class="zh">下沉效果图（一）</span><span class="en" lang="en">SUNKEN PLAZA RENDERING I</span></figcaption></figure>
+            <figure class="project-figure" data-figure="8" id="figure-08"><a class="image-button" href="./assets/images/complex-08-1600.webp" data-lightbox-src="./assets/images/complex-08-1600.webp" data-caption-zh="FIG. 3.8 — 下沉效果图（二）" data-caption-en="FIG. 3.8 — SUNKEN PLAZA RENDERING II"><img src="./assets/images/complex-08-960.webp" srcset="./assets/images/complex-08-640.webp 640w, ./assets/images/complex-08-960.webp 960w, ./assets/images/complex-08-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1222" style="aspect-ratio: 1600 / 1222" alt="下沉效果图二" loading="lazy" decoding="async"></a><figcaption>FIG. 3.8 — <span class="zh">下沉效果图（二）</span><span class="en" lang="en">SUNKEN PLAZA RENDERING II</span></figcaption></figure>
+            <figure class="project-figure" data-figure="9" id="figure-09"><a class="image-button" href="./assets/images/complex-09-1600.webp" data-lightbox-src="./assets/images/complex-09-1600.webp" data-caption-zh="FIG. 3.9 — 下沉效果图（三）" data-caption-en="FIG. 3.9 — SUNKEN PLAZA RENDERING III"><img src="./assets/images/complex-09-960.webp" srcset="./assets/images/complex-09-640.webp 640w, ./assets/images/complex-09-960.webp 960w, ./assets/images/complex-09-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1192" style="aspect-ratio: 1600 / 1192" alt="下沉效果图三" loading="lazy" decoding="async"></a><figcaption>FIG. 3.9 — <span class="zh">下沉效果图（三）</span><span class="en" lang="en">SUNKEN PLAZA RENDERING III</span></figcaption></figure>
+          </section>
+
+          <section id="plans" class="project-section" aria-labelledby="03-plans-title">
+            <div class="project-section-heading"><span>06</span><h2 id="03-plans-title"><span class="zh">各层平面图</span><span class="en" lang="en">FLOOR PLANS</span></h2></div>
+            <p class="zh">各层平面图（1:600）：负二层包含停车与设备用房，负一层包含超市；一层至三层的商业动线围绕中庭展开，三层还标有影院。不规则体块之间形成平台与连桥。</p>
+            <p class="en" lang="en">Floor plans (1:600): basement two contains parking and plant rooms, and basement one contains a supermarket. Retail circulation wraps around the atrium from ground to third floor, with a cinema marked on level three. Platforms and bridges connect the irregular blocks.</p>
+            <figure class="project-figure" data-figure="10" id="figure-10"><a class="image-button" href="./assets/images/complex-10-1600.webp" data-lightbox-src="./assets/images/complex-10-1600.webp" data-caption-zh="FIG. 3.10 — 负二层平面图" data-caption-en="FIG. 3.10 — BASEMENT 2 PLAN"><img src="./assets/images/complex-10-960.webp" srcset="./assets/images/complex-10-640.webp 640w, ./assets/images/complex-10-960.webp 960w, ./assets/images/complex-10-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="924" style="aspect-ratio: 1600 / 924" alt="负二层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.10 — <span class="zh">负二层平面图</span><span class="en" lang="en">BASEMENT 2 PLAN</span></figcaption></figure>
+            <figure class="project-figure" data-figure="11" id="figure-11"><a class="image-button" href="./assets/images/complex-11-1600.webp" data-lightbox-src="./assets/images/complex-11-1600.webp" data-caption-zh="FIG. 3.11 — 负一层平面图" data-caption-en="FIG. 3.11 — BASEMENT 1 PLAN"><img src="./assets/images/complex-11-960.webp" srcset="./assets/images/complex-11-640.webp 640w, ./assets/images/complex-11-960.webp 960w, ./assets/images/complex-11-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="872" style="aspect-ratio: 1600 / 872" alt="负一层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.11 — <span class="zh">负一层平面图</span><span class="en" lang="en">BASEMENT 1 PLAN</span></figcaption></figure>
+            <figure class="project-figure" data-figure="12" id="figure-12"><a class="image-button" href="./assets/images/complex-12-1600.webp" data-lightbox-src="./assets/images/complex-12-1600.webp" data-caption-zh="FIG. 3.12 — 一层平面图" data-caption-en="FIG. 3.12 — FIRST FLOOR PLAN"><img src="./assets/images/complex-12-960.webp" srcset="./assets/images/complex-12-640.webp 640w, ./assets/images/complex-12-960.webp 960w, ./assets/images/complex-12-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="898" style="aspect-ratio: 1600 / 898" alt="一层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.12 — <span class="zh">一层平面图</span><span class="en" lang="en">FIRST FLOOR PLAN</span></figcaption></figure>
+            <figure class="project-figure" data-figure="13" id="figure-13"><a class="image-button" href="./assets/images/complex-13-1600.webp" data-lightbox-src="./assets/images/complex-13-1600.webp" data-caption-zh="FIG. 3.13 — 二层平面图" data-caption-en="FIG. 3.13 — SECOND FLOOR PLAN"><img src="./assets/images/complex-13-960.webp" srcset="./assets/images/complex-13-640.webp 640w, ./assets/images/complex-13-960.webp 960w, ./assets/images/complex-13-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="836" style="aspect-ratio: 1600 / 836" alt="二层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.13 — <span class="zh">二层平面图</span><span class="en" lang="en">SECOND FLOOR PLAN</span></figcaption></figure>
+            <figure class="project-figure" data-figure="14" id="figure-14"><a class="image-button" href="./assets/images/complex-14-1600.webp" data-lightbox-src="./assets/images/complex-14-1600.webp" data-caption-zh="FIG. 3.14 — 三层平面图" data-caption-en="FIG. 3.14 — THIRD FLOOR PLAN"><img src="./assets/images/complex-14-960.webp" srcset="./assets/images/complex-14-640.webp 640w, ./assets/images/complex-14-960.webp 960w, ./assets/images/complex-14-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="840" style="aspect-ratio: 1600 / 840" alt="三层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.14 — <span class="zh">三层平面图</span><span class="en" lang="en">THIRD FLOOR PLAN</span></figcaption></figure>
+          </section>
+
+          <section id="fire" class="project-section" aria-labelledby="03-fire-title">
+            <div class="project-section-heading"><span>07</span><h2 id="03-fire-title"><span class="zh">消防分区</span><span class="en" lang="en">FIRE COMPARTMENTS</span></h2></div>
+            <p class="zh">消防分区图（1:600）标示大空间中庭与各功能组团的分区边界及疏散关系。</p>
+            <p class="en" lang="en">The fire compartment plan (1:600) marks compartment boundaries and evacuation relationships between the large atrium and the surrounding functional groups.</p>
+            <figure class="project-figure" data-figure="15" id="figure-15"><a class="image-button" href="./assets/images/complex-15-1600.webp" data-lightbox-src="./assets/images/complex-15-1600.webp" data-caption-zh="FIG. 3.15 — 消防分区图" data-caption-en="FIG. 3.15 — FIRE COMPARTMENT PLAN"><img src="./assets/images/complex-15-960.webp" srcset="./assets/images/complex-15-640.webp 640w, ./assets/images/complex-15-960.webp 960w, ./assets/images/complex-15-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="870" style="aspect-ratio: 1600 / 870" alt="消防分区图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.15 — <span class="zh">消防分区图</span><span class="en" lang="en">FIRE COMPARTMENT PLAN</span></figcaption></figure>
+          </section>
+
+          <section id="standard-floors" class="project-section" aria-labelledby="03-standard-floors-title">
+            <div class="project-section-heading"><span>08</span><h2 id="03-standard-floors-title"><span class="zh">高层标准层平面图</span><span class="en" lang="en">TOWER STANDARD FLOORS</span></h2></div>
+            <p class="zh">高层标准层平面图（1:300）：3–13 层为办公区；14 层为办公与休闲区，15 层为办公、会议与休闲区，16 层标有酒店房间与库房；塔楼首层标有服务台与交通核。</p>
+            <p class="en" lang="en">Tower floor plans (1:300): levels 3–13 are offices; level 14 contains offices and leisure space, level 15 adds meeting rooms, and level 16 marks hotel rooms and storage. The tower ground floor marks a service desk and circulation core.</p>
+            <figure class="project-figure" data-figure="16" id="figure-16"><a class="image-button" href="./assets/images/complex-16-1600.webp" data-lightbox-src="./assets/images/complex-16-1600.webp" data-caption-zh="FIG. 3.16 — 标准层平面图（3–13 层）" data-caption-en="FIG. 3.16 — STANDARD FLOOR (L3–13)"><img src="./assets/images/complex-16-960.webp" srcset="./assets/images/complex-16-640.webp 640w, ./assets/images/complex-16-960.webp 960w, ./assets/images/complex-16-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1566" style="aspect-ratio: 1600 / 1566" alt="3至13层标准层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.16 — <span class="zh">标准层平面图（3–13 层）</span><span class="en" lang="en">STANDARD FLOOR (L3–13)</span></figcaption></figure>
+            <figure class="project-figure" data-figure="17" id="figure-17"><a class="image-button" href="./assets/images/complex-17-1600.webp" data-lightbox-src="./assets/images/complex-17-1600.webp" data-caption-zh="FIG. 3.17 — 14 层平面图" data-caption-en="FIG. 3.17 — 14TH FLOOR PLAN"><img src="./assets/images/complex-17-960.webp" srcset="./assets/images/complex-17-640.webp 640w, ./assets/images/complex-17-960.webp 960w, ./assets/images/complex-17-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1542" style="aspect-ratio: 1600 / 1542" alt="14层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.17 — <span class="zh">14 层平面图</span><span class="en" lang="en">14TH FLOOR PLAN</span></figcaption></figure>
+            <figure class="project-figure" data-figure="18" id="figure-18"><a class="image-button" href="./assets/images/complex-18-1600.webp" data-lightbox-src="./assets/images/complex-18-1600.webp" data-caption-zh="FIG. 3.18 — 15 层平面图" data-caption-en="FIG. 3.18 — 15TH FLOOR PLAN"><img src="./assets/images/complex-18-960.webp" srcset="./assets/images/complex-18-640.webp 640w, ./assets/images/complex-18-960.webp 960w, ./assets/images/complex-18-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1786" style="aspect-ratio: 1600 / 1786" alt="15层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.18 — <span class="zh">15 层平面图</span><span class="en" lang="en">15TH FLOOR PLAN</span></figcaption></figure>
+            <figure class="project-figure" data-figure="19" id="figure-19"><a class="image-button" href="./assets/images/complex-19-1600.webp" data-lightbox-src="./assets/images/complex-19-1600.webp" data-caption-zh="FIG. 3.19 — 16 层平面图" data-caption-en="FIG. 3.19 — 16TH FLOOR PLAN"><img src="./assets/images/complex-19-960.webp" srcset="./assets/images/complex-19-640.webp 640w, ./assets/images/complex-19-960.webp 960w, ./assets/images/complex-19-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1550" style="aspect-ratio: 1600 / 1550" alt="16层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.19 — <span class="zh">16 层平面图</span><span class="en" lang="en">16TH FLOOR PLAN</span></figcaption></figure>
+            <figure class="project-figure" data-figure="20" id="figure-20"><a class="image-button" href="./assets/images/complex-20-1600.webp" data-lightbox-src="./assets/images/complex-20-1600.webp" data-caption-zh="FIG. 3.20 — 首层平面图" data-caption-en="FIG. 3.20 — GROUND FLOOR PLAN"><img src="./assets/images/complex-20-960.webp" srcset="./assets/images/complex-20-640.webp 640w, ./assets/images/complex-20-960.webp 960w, ./assets/images/complex-20-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1820" style="aspect-ratio: 1600 / 1820" alt="首层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.20 — <span class="zh">首层平面图</span><span class="en" lang="en">GROUND FLOOR PLAN</span></figcaption></figure>
+          </section>
+
+          <section id="sky-terrace" class="project-section" aria-labelledby="03-sky-terrace-title">
+            <div class="project-section-heading"><span>09</span><h2 id="03-sky-terrace-title"><span class="zh">高层效果图</span><span class="en" lang="en">SKY TERRACE RENDERINGS</span></h2></div>
+            <p class="zh">两张高层效果图分别呈现塔楼外观与 15–16 层空中观景台，回应「从这里可以看见远方」的设计设想。</p>
+            <p class="en" lang="en">The two high-rise views show the tower exterior and the level 15–16 sky terrace, answering the design idea that &quot;from here one can see far&quot;.</p>
+            <figure class="project-figure" data-figure="21" id="figure-21"><a class="image-button" href="./assets/images/complex-21-1600.webp" data-lightbox-src="./assets/images/complex-21-1600.webp" data-caption-zh="FIG. 3.21 — 高层效果图（一）" data-caption-en="FIG. 3.21 — SKY TERRACE RENDERING I"><img src="./assets/images/complex-21-960.webp" srcset="./assets/images/complex-21-640.webp 640w, ./assets/images/complex-21-960.webp 960w, ./assets/images/complex-21-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1688" style="aspect-ratio: 1600 / 1688" alt="高层效果图一" loading="lazy" decoding="async"></a><figcaption>FIG. 3.21 — <span class="zh">高层效果图（一）</span><span class="en" lang="en">SKY TERRACE RENDERING I</span></figcaption></figure>
+            <figure class="project-figure" data-figure="22" id="figure-22"><a class="image-button" href="./assets/images/complex-22-1600.webp" data-lightbox-src="./assets/images/complex-22-1600.webp" data-caption-zh="FIG. 3.22 — 高层效果图（二）" data-caption-en="FIG. 3.22 — SKY TERRACE RENDERING II"><img src="./assets/images/complex-22-960.webp" srcset="./assets/images/complex-22-640.webp 640w, ./assets/images/complex-22-960.webp 960w, ./assets/images/complex-22-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1116" style="aspect-ratio: 1600 / 1116" alt="高层效果图二" loading="lazy" decoding="async"></a><figcaption>FIG. 3.22 — <span class="zh">高层效果图（二）</span><span class="en" lang="en">SKY TERRACE RENDERING II</span></figcaption></figure>
+          </section>
+
+          <section id="exploded" class="project-section" aria-labelledby="03-exploded-title">
+            <div class="project-section-heading"><span>10</span><h2 id="03-exploded-title"><span class="zh">爆炸图</span><span class="en" lang="en">EXPLODED VIEW</span></h2></div>
+            <p class="zh">爆炸图分解屋顶结构、屋顶玻璃与支架、梁板、二三层空间及不断变化的中庭边界，并呈现一层、地下一层与下沉广场的关系。</p>
+            <p class="en" lang="en">The exploded view separates roof structure, roof glazing and supports, beams and slabs, second- and third-floor space, and the changing atrium boundary, while relating the ground and basement levels to the sunken plaza.</p>
+            <figure class="project-figure" data-figure="23" id="figure-23"><a class="image-button" href="./assets/images/complex-23-1600.webp" data-lightbox-src="./assets/images/complex-23-1600.webp" data-caption-zh="FIG. 3.23 — 爆炸图" data-caption-en="FIG. 3.23 — EXPLODED VIEW"><img src="./assets/images/complex-23-960.webp" srcset="./assets/images/complex-23-640.webp 640w, ./assets/images/complex-23-960.webp 960w, ./assets/images/complex-23-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="2140" style="aspect-ratio: 1600 / 2140" alt="爆炸图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.23 — <span class="zh">爆炸图</span><span class="en" lang="en">EXPLODED VIEW</span></figcaption></figure>
+          </section>
+
+          <section id="elevations" class="project-section" aria-labelledby="03-elevations-title">
+            <div class="project-section-heading"><span>11</span><h2 id="03-elevations-title"><span class="zh">立面图与剖面透视</span><span class="en" lang="en">ELEVATIONS &amp; SECTIONAL PERSPECTIVE</span></h2></div>
+            <p class="zh">西立面、南立面效果图与剖透视图：不断变化的中庭边界与挑空的一层、下沉广场与中庭结合，呈现空间的整体逻辑。</p>
+            <p class="en" lang="en">West and south elevation views with a sectional perspective: the changing atrium boundary, the lifted ground floor and the sunken plaza reveal the spatial logic as a whole.</p>
+            <figure class="project-figure" data-figure="24" id="figure-24"><a class="image-button" href="./assets/images/complex-24-1600.webp" data-lightbox-src="./assets/images/complex-24-1600.webp" data-caption-zh="FIG. 3.24 — 西立面效果图" data-caption-en="FIG. 3.24 — WEST ELEVATION VIEW"><img src="./assets/images/complex-24-960.webp" srcset="./assets/images/complex-24-640.webp 640w, ./assets/images/complex-24-960.webp 960w, ./assets/images/complex-24-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="786" style="aspect-ratio: 1600 / 786" alt="西立面效果图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.24 — <span class="zh">西立面效果图</span><span class="en" lang="en">WEST ELEVATION VIEW</span></figcaption></figure>
+            <figure class="project-figure" data-figure="25" id="figure-25"><a class="image-button" href="./assets/images/complex-25-1600.webp" data-lightbox-src="./assets/images/complex-25-1600.webp" data-caption-zh="FIG. 3.25 — 南立面效果图" data-caption-en="FIG. 3.25 — SOUTH ELEVATION VIEW"><img src="./assets/images/complex-25-960.webp" srcset="./assets/images/complex-25-640.webp 640w, ./assets/images/complex-25-960.webp 960w, ./assets/images/complex-25-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="846" style="aspect-ratio: 1600 / 846" alt="南立面效果图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.25 — <span class="zh">南立面效果图</span><span class="en" lang="en">SOUTH ELEVATION VIEW</span></figcaption></figure>
+            <figure class="project-figure" data-figure="26" id="figure-26"><a class="image-button" href="./assets/images/complex-26-1600.webp" data-lightbox-src="./assets/images/complex-26-1600.webp" data-caption-zh="FIG. 3.26 — 1-1 剖透视图" data-caption-en="FIG. 3.26 — 1-1 Sectional Perspective"><img src="./assets/images/complex-26-960.webp" srcset="./assets/images/complex-26-640.webp 640w, ./assets/images/complex-26-960.webp 960w, ./assets/images/complex-26-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="786" style="aspect-ratio: 1600 / 786" alt="城市综合体 1-1 剖透视图" loading="lazy" decoding="async"></a><figcaption>FIG. 3.26 — <span class="zh">1-1 剖透视图</span><span class="en" lang="en">1-1 Sectional Perspective</span></figcaption></figure>
+          </section>
+        </div>
+
+        <aside class="project-info">
+          <section id="abstract" class="project-section project-abstract" aria-labelledby="03-abstract-title">
+            <div class="project-section-heading"><span>01</span><h2 id="03-abstract-title"><span class="zh">设计说明</span><span class="en" lang="en">Design statement</span></h2></div>
+            <p class="zh">本设计以「挽救失落的情绪」（Saving Lost Emotions）为课程设计主题，从青年焦虑、人际疏离与商业焦虑的叙事出发。场地四个方向开放出入口，一层局部架空还给城市；中庭引入不规则体块并拆分各层楼板，形成不断变化的中央空间。下沉广场进一步界定中庭边界，塔楼之上的空中观景台则回应「从这里可以看见远方」的设想。</p><p class="en" lang="en">Titled &quot;Saving Lost Emotions&quot;, this studio project begins with a narrative of youth anxiety, thinning human ties and commercialised anxiety. Entrances open on all four sides, while part of the ground floor is lifted and returned to the city. Irregular blocks enter the atrium and individual floor plates are separated to create a changing central space. A sunken plaza defines the atrium edge, and a sky terrace answers the idea that &quot;from here one can see far&quot;.</p>
+          </section>
+          <nav class="chapter-nav" aria-label="项目11章目录">
+            <p>CONTENTS / 11</p>
+            <ol>
+              <li><a href="./project-03.html#abstract" data-chapter="abstract"><span>01</span><span class="zh">设计说明</span><span class="en" lang="en">Statement</span></a></li>
+              <li><a href="./project-03.html#rendering" data-chapter="rendering"><span>02</span><span class="zh">主效果图</span><span class="en" lang="en">MAIN RENDERING</span></a></li>
+              <li><a href="./project-03.html#masterplan" data-chapter="masterplan"><span>03</span><span class="zh">总平面</span><span class="en" lang="en">MASTERPLAN</span></a></li>
+              <li><a href="./project-03.html#massing" data-chapter="massing"><span>04</span><span class="zh">体块生成</span><span class="en" lang="en">MASSING</span></a></li>
+              <li><a href="./project-03.html#sunken" data-chapter="sunken"><span>05</span><span class="zh">下沉广场与人物画像</span><span class="en" lang="en">SUNKEN PLAZA &amp; PORTRAITS</span></a></li>
+              <li><a href="./project-03.html#plans" data-chapter="plans"><span>06</span><span class="zh">各层平面图</span><span class="en" lang="en">FLOOR PLANS</span></a></li>
+              <li><a href="./project-03.html#fire" data-chapter="fire"><span>07</span><span class="zh">消防分区</span><span class="en" lang="en">FIRE COMPARTMENTS</span></a></li>
+              <li><a href="./project-03.html#standard-floors" data-chapter="standard-floors"><span>08</span><span class="zh">高层标准层平面图</span><span class="en" lang="en">TOWER STANDARD FLOORS</span></a></li>
+              <li><a href="./project-03.html#sky-terrace" data-chapter="sky-terrace"><span>09</span><span class="zh">高层效果图</span><span class="en" lang="en">SKY TERRACE RENDERINGS</span></a></li>
+              <li><a href="./project-03.html#exploded" data-chapter="exploded"><span>10</span><span class="zh">爆炸图</span><span class="en" lang="en">EXPLODED VIEW</span></a></li>
+              <li><a href="./project-03.html#elevations" data-chapter="elevations"><span>11</span><span class="zh">立面图与剖面透视</span><span class="en" lang="en">ELEVATIONS &amp; SECTIONAL PERSPECTIVE</span></a></li>
+            </ol>
+          </nav>
+          <div class="project-jump"><button type="button" data-figure-step="-1"><span class="zh">上一张</span><span class="en" lang="en">Previous</span></button><button type="button" data-figure-step="1"><span class="zh">下一张图</span><span class="en" lang="en">Next image</span></button></div>
+        </aside>
+      </div>
+      <nav class="project-pager" aria-label="上一项与下一项作品"><a class="project-link project-pager-link" href="./project-02.html" data-project="02"><span class="project-pager-label">← <span class="zh">上一项</span><span class="en" lang="en">Previous</span></span><strong><span class="zh">大学生活动中心</span><span class="en" lang="en">Student Activity Centre</span></strong></a><a class="project-link project-pager-link" href="./project-04.html" data-project="04"><span class="project-pager-label"><span class="zh">下一项</span><span class="en" lang="en">Next</span> →</span><strong><span class="zh">多功能剧场</span><span class="en" lang="en">Multifunctional Theatre</span></strong></a></nav>
+      <nav class="mobile-project-bar" aria-label="项目图片操作"><button type="button" data-figure-step="-1"><span class="zh">上一张</span><span class="en" lang="en">Previous</span></button><a class="project-close" href="./index.html#works" data-project-close><span class="zh">目录</span><span class="en" lang="en">Index</span></a><button type="button" data-figure-step="1"><span class="zh">下一张</span><span class="en" lang="en">Next</span></button></nav>
+    </article>
+  </template>
+
+  <template id="project-04-source">
+    <article class="project-article" data-project-article="04">
+      <header class="project-header">
+        <a class="project-close" href="./index.html#works" data-project-close aria-label="关闭项目并返回首页"><span aria-hidden="true">←</span><span class="zh">返回作品目录</span><span class="en" lang="en">Back to index</span></a>
+        <p>PROJECT 04</p>
+        <h1><span class="zh">多功能剧场</span><span class="en" lang="en">Multifunctional Theatre</span></h1>
+        <p class="project-subtitle"><span class="zh">超图蛛网与悬索结构生成观演空间。</span><span class="en" lang="en">Hypergraph webs and suspension structure shape a performance space.</span></p>
+      </header>
+      <div class="project-layout">
+        <aside class="project-meta">
+          <dl><div><dt>DESIGN</dt><dd>朱翰林 ZHU HANLIN</dd></div><div><dt>TYPE</dt><dd><span class="zh">观演建筑</span><span class="en" lang="en">Theatre</span></dd></div><div><dt>LOCATION</dt><dd><span class="zh">临沂市河东区</span><span class="en" lang="en">Hedong, Linyi</span></dd></div><div><dt>STATUS</dt><dd><span class="zh">课程设计</span><span class="en" lang="en">Studio</span></dd></div></dl>
+          <nav class="figure-nav" aria-label="14 张项目图片">
+            <p>IMAGES / 14</p>
+            <ol><li><button type="button" data-figure-target="1">01</button></li><li><button type="button" data-figure-target="2">02</button></li><li><button type="button" data-figure-target="3">03</button></li><li><button type="button" data-figure-target="4">04</button></li><li><button type="button" data-figure-target="5">05</button></li><li><button type="button" data-figure-target="6">06</button></li><li><button type="button" data-figure-target="7">07</button></li><li><button type="button" data-figure-target="8">08</button></li><li><button type="button" data-figure-target="9">09</button></li><li><button type="button" data-figure-target="10">10</button></li><li><button type="button" data-figure-target="11">11</button></li><li><button type="button" data-figure-target="12">12</button></li><li><button type="button" data-figure-target="13">13</button></li><li><button type="button" data-figure-target="14">14</button></li></ol>
+          </nav>
+        </aside>
+
+        <div class="project-track">
+          <section id="rendering" class="project-section" aria-labelledby="04-rendering-title">
+            <div class="project-section-heading"><span>02</span><h2 id="04-rendering-title"><span class="zh">主效果图</span><span class="en" lang="en">MAIN RENDERING</span></h2></div>
+            <p class="zh">主效果图中，蛛网悬索结构包裹剧场主体，在临沂新城的楼群间形成鲜明的城市形象。</p>
+            <p class="en" lang="en">In the main rendering, a spider-web suspension structure wraps the theatre volume, giving it a distinct urban presence among the buildings of new Linyi.</p>
+            <figure class="project-figure" data-figure="1" id="figure-01"><a class="image-button" href="./assets/images/theatre-01-1600.webp" data-lightbox-src="./assets/images/theatre-01-1600.webp" data-caption-zh="FIG. 4.1 — 主效果图" data-caption-en="FIG. 4.1 — MAIN RENDERING"><img src="./assets/images/theatre-01-960.webp" srcset="./assets/images/theatre-01-640.webp 640w, ./assets/images/theatre-01-960.webp 960w, ./assets/images/theatre-01-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="756" style="aspect-ratio: 1600 / 756" alt="多功能剧场设计主效果图" fetchpriority="high"></a><figcaption>FIG. 4.1 — <span class="zh">主效果图</span><span class="en" lang="en">MAIN RENDERING</span></figcaption></figure>
+          </section>
+
+          <section id="venue" class="project-section" aria-labelledby="04-venue-title">
+            <div class="project-section-heading"><span>03</span><h2 id="04-venue-title"><span class="zh">场地与问题</span><span class="en" lang="en">VENUE &amp; ISSUES</span></h2></div>
+            <p class="zh">临沂市河东区是市政府所在区，新城区发展迅速、高楼林立，商业圈和居住小区占据城区，而大型公共文化建筑几乎没有——市民需要一个多功能剧场。总平面与技术经济指标：总用地面积约 10000 ㎡，总建筑面积 8650 ㎡，建筑密度 46%，容积率 0.865，绿化率 10%。</p>
+            <p class="en" lang="en">Hedong District, seat of the Linyi municipal government, is a fast-growing new town crowded with commerce and housing but almost no major public cultural building — citizens need a multifunctional theatre. General layout with technical-economic indices: site area about 10,000 m², GFA 8,650 m², coverage 46%, FAR 0.865, greening 10%.</p>
+            <figure class="project-figure" data-figure="2" id="figure-02"><a class="image-button" href="./assets/images/theatre-02-1600.webp" data-lightbox-src="./assets/images/theatre-02-1600.webp" data-caption-zh="FIG. 4.2 — 场地与问题" data-caption-en="FIG. 4.2 — VENUE &amp; ISSUES"><img src="./assets/images/theatre-02-960.webp" srcset="./assets/images/theatre-02-640.webp 640w, ./assets/images/theatre-02-960.webp 960w, ./assets/images/theatre-02-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="556" style="aspect-ratio: 1600 / 556" alt="场地与问题图" loading="lazy" decoding="async"></a><figcaption>FIG. 4.2 — <span class="zh">场地与问题</span><span class="en" lang="en">VENUE &amp; ISSUES</span></figcaption></figure>
+            <figure class="project-figure" data-figure="3" id="figure-03"><a class="image-button" href="./assets/images/theatre-03-1600.webp" data-lightbox-src="./assets/images/theatre-03-1600.webp" data-caption-zh="FIG. 4.3 — 总平面图" data-caption-en="FIG. 4.3 — GENERAL LAYOUT"><img src="./assets/images/theatre-03-960.webp" srcset="./assets/images/theatre-03-640.webp 640w, ./assets/images/theatre-03-960.webp 960w, ./assets/images/theatre-03-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="926" style="aspect-ratio: 1600 / 926" alt="总平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 4.3 — <span class="zh">总平面图</span><span class="en" lang="en">GENERAL LAYOUT</span></figcaption></figure>
+          </section>
+
+          <section id="logic" class="project-section" aria-labelledby="04-logic-title">
+            <div class="project-section-heading"><span>04</span><h2 id="04-logic-title"><span class="zh">蛛网逻辑</span><span class="en" lang="en">SPIDER-WEB LOGIC</span></h2></div>
+            <p class="zh">「蛛网」逻辑：蜘蛛结网的逻辑用数学语言表达就是寻找中心点的问题。Stephen Wolfram 教授发明了超图演变的算法，设计取其逻辑链之一作为蛛网生成的逻辑——用超图演变的底层逻辑，生成建筑的主要结构。</p>
+            <p class="en" lang="en">The web logic: in mathematical language, web-spinning is the problem of finding a centre. Taking one logic chain from Professor Stephen Wolfram&#39;s hypergraph-evolution algorithm as the generative rule, the underlying logic of hypergraph evolution produces the building&#39;s main structure.</p>
+            <figure class="project-figure" data-figure="4" id="figure-04"><a class="image-button" href="./assets/images/theatre-04-1600.webp" data-lightbox-src="./assets/images/theatre-04-1600.webp" data-caption-zh="FIG. 4.4 — 蛛网逻辑（一）" data-caption-en="FIG. 4.4 — SPIDER-WEB LOGIC I"><img src="./assets/images/theatre-04-960.webp" srcset="./assets/images/theatre-04-640.webp 640w, ./assets/images/theatre-04-960.webp 960w, ./assets/images/theatre-04-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="876" style="aspect-ratio: 1600 / 876" alt="蛛网逻辑图一" loading="lazy" decoding="async"></a><figcaption>FIG. 4.4 — <span class="zh">蛛网逻辑（一）</span><span class="en" lang="en">SPIDER-WEB LOGIC I</span></figcaption></figure>
+            <figure class="project-figure" data-figure="5" id="figure-05"><a class="image-button" href="./assets/images/theatre-05-1600.webp" data-lightbox-src="./assets/images/theatre-05-1600.webp" data-caption-zh="FIG. 4.5 — 蛛网逻辑（二）" data-caption-en="FIG. 4.5 — SPIDER-WEB LOGIC II"><img src="./assets/images/theatre-05-960.webp" srcset="./assets/images/theatre-05-640.webp 640w, ./assets/images/theatre-05-960.webp 960w, ./assets/images/theatre-05-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="622" style="aspect-ratio: 1600 / 622" alt="蛛网逻辑图二" loading="lazy" decoding="async"></a><figcaption>FIG. 4.5 — <span class="zh">蛛网逻辑（二）</span><span class="en" lang="en">SPIDER-WEB LOGIC II</span></figcaption></figure>
+          </section>
+
+          <section id="performance" class="project-section" aria-labelledby="04-performance-title">
+            <div class="project-section-heading"><span>05</span><h2 id="04-performance-title"><span class="zh">悬索结构分析</span><span class="en" lang="en">SUSPENSION STRUCTURE</span></h2></div>
+            <p class="zh">结构组成：斜向支撑柱、侧向拉杆柱，以及屋顶、一层、二层、三层各层「蛛网」悬索。对蛛网进行受力优化，减少集中应力面积——屋顶蛛网与侧向三层蛛网的应力优化分别迭代。</p>
+            <p class="en" lang="en">Structure: diagonal support columns and lateral tie columns carry the web of suspension cables at roof level and on floors one, two and three. The web is force-optimised to reduce concentrated stress areas — roof web and lateral three-layer web are each iteratively refined.</p>
+            <figure class="project-figure" data-figure="6" id="figure-06"><a class="image-button" href="./assets/images/theatre-06-1600.webp" data-lightbox-src="./assets/images/theatre-06-1600.webp" data-caption-zh="FIG. 4.6 — 悬索结构分析" data-caption-en="FIG. 4.6 — SUSPENSION STRUCTURE"><img src="./assets/images/theatre-06-960.webp" srcset="./assets/images/theatre-06-640.webp 640w, ./assets/images/theatre-06-960.webp 960w, ./assets/images/theatre-06-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="748" style="aspect-ratio: 1600 / 748" alt="悬索结构分析图" loading="lazy" decoding="async"></a><figcaption>FIG. 4.6 — <span class="zh">悬索结构分析</span><span class="en" lang="en">SUSPENSION STRUCTURE</span></figcaption></figure>
+          </section>
+
+          <section id="plans" class="project-section" aria-labelledby="04-plans-title">
+            <div class="project-section-heading"><span>06</span><h2 id="04-plans-title"><span class="zh">一层平面图</span><span class="en" lang="en">GROUND FLOOR PLAN</span></h2></div>
+            <p class="zh">一层平面图（1:200）：售票处、衣帽间、医务间与商店临街布置，大小化妆间、道具间与清洗间围绕舞台组织，观众与演职人员流线分离。</p>
+            <p class="en" lang="en">Ground floor plan (1:200): box office, cloakroom, infirmary and shops front the street; make-up rooms, prop and washing rooms wrap the stage. Audience and performer routes stay separate.</p>
+            <figure class="project-figure" data-figure="7" id="figure-07"><a class="image-button" href="./assets/images/theatre-07-1600.webp" data-lightbox-src="./assets/images/theatre-07-1600.webp" data-caption-zh="FIG. 4.7 — 一层平面图" data-caption-en="FIG. 4.7 — GROUND FLOOR PLAN"><img src="./assets/images/theatre-07-960.webp" srcset="./assets/images/theatre-07-640.webp 640w, ./assets/images/theatre-07-960.webp 960w, ./assets/images/theatre-07-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1746" style="aspect-ratio: 1600 / 1746" alt="一层平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 4.7 — <span class="zh">一层平面图</span><span class="en" lang="en">GROUND FLOOR PLAN</span></figcaption></figure>
+          </section>
+
+          <section id="acoustics" class="project-section" aria-labelledby="04-acoustics-title">
+            <div class="project-section-heading"><span>07</span><h2 id="04-acoustics-title"><span class="zh">声学分析</span><span class="en" lang="en">ACOUSTICS</span></h2></div>
+            <p class="zh">声学分析图以反射路径与颜色变化呈现课程设计中的声波模拟过程。</p>
+            <p class="en" lang="en">The acoustic study uses reflection paths and colour changes to present the sound-wave simulation developed for this studio project.</p>
+            <figure class="project-figure" data-figure="8" id="figure-08"><a class="image-button" href="./assets/images/theatre-08-463.webp" data-lightbox-src="./assets/images/theatre-08-463.webp" data-caption-zh="FIG. 4.8 — 声学分析" data-caption-en="FIG. 4.8 — ACOUSTICS"><img src="./assets/images/theatre-08-463.webp" srcset="./assets/images/theatre-08-463.webp 463w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="463" height="3000" style="aspect-ratio: 463 / 3000" alt="声学分析图" loading="lazy" decoding="async"></a><figcaption>FIG. 4.8 — <span class="zh">声学分析</span><span class="en" lang="en">ACOUSTICS</span></figcaption></figure>
+          </section>
+
+          <section id="ramps" class="project-section" aria-labelledby="04-ramps-title">
+            <div class="project-section-heading"><span>08</span><h2 id="04-ramps-title"><span class="zh">二层平面与室内效果图</span><span class="en" lang="en">Second Floor &amp; Interior Renderings</span></h2></div>
+            <p class="zh">二层平面图（1:200）与多张室内效果图共同呈现坡道、檐下空间、通高区域及办公、会议和观演空间之间的联系。</p>
+            <p class="en" lang="en">The second-floor plan (1:200) and interior views present the ramp, sheltered and double-height spaces, and connections between offices, meeting rooms and performance areas.</p>
+            <figure class="project-figure" data-figure="9" id="figure-09"><a class="image-button" href="./assets/images/theatre-09-1600.webp" data-lightbox-src="./assets/images/theatre-09-1600.webp" data-caption-zh="FIG. 4.9 — 二层平面与室内效果图" data-caption-en="FIG. 4.9 — Second Floor &amp; Interior Renderings"><img src="./assets/images/theatre-09-960.webp" srcset="./assets/images/theatre-09-640.webp 640w, ./assets/images/theatre-09-960.webp 960w, ./assets/images/theatre-09-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1462" style="aspect-ratio: 1600 / 1462" alt="多功能剧场二层平面与多张室内效果图" loading="lazy" decoding="async"></a><figcaption>FIG. 4.9 — <span class="zh">二层平面与室内效果图</span><span class="en" lang="en">Second Floor &amp; Interior Renderings</span></figcaption></figure>
+          </section>
+
+          <section id="stage" class="project-section" aria-labelledby="04-stage-title">
+            <div class="project-section-heading"><span>09</span><h2 id="04-stage-title"><span class="zh">幕墙与结构大样</span><span class="en" lang="en">CURTAIN WALL &amp; STRUCTURE</span></h2></div>
+            <p class="zh">点支撑式玻璃幕墙大样与蛛网结构大样（蛛网张拉一体化钢结构详图），展示幕墙与悬索的交接。</p>
+            <p class="en" lang="en">Detail of the point-supported glass curtain wall and the spider tensioning integrated steel structure, showing the junction of glazing and cables.</p>
+            <figure class="project-figure" data-figure="10" id="figure-10"><a class="image-button" href="./assets/images/theatre-10-1600.webp" data-lightbox-src="./assets/images/theatre-10-1600.webp" data-caption-zh="FIG. 4.10 — 幕墙与结构大样" data-caption-en="FIG. 4.10 — CURTAIN WALL &amp; STRUCTURE"><img src="./assets/images/theatre-10-960.webp" srcset="./assets/images/theatre-10-640.webp 640w, ./assets/images/theatre-10-960.webp 960w, ./assets/images/theatre-10-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="924" style="aspect-ratio: 1600 / 924" alt="幕墙与结构大样图" loading="lazy" decoding="async"></a><figcaption>FIG. 4.10 — <span class="zh">幕墙与结构大样</span><span class="en" lang="en">CURTAIN WALL &amp; STRUCTURE</span></figcaption></figure>
+          </section>
+
+          <section id="sections-view" class="project-section" aria-labelledby="04-sections-view-title">
+            <div class="project-section-heading"><span>10</span><h2 id="04-sections-view-title"><span class="zh">剖面图与立面图</span><span class="en" lang="en">SECTION &amp; ELEVATION</span></h2></div>
+            <p class="zh">1-1 剖面图（1:200）：观演厅的升起坡度、檐下坡道空间与蛛网屋盖在剖面上的关系；西立面效果图（1:200）展示幕墙与悬索的交接。</p>
+            <p class="en" lang="en">Section 1-1 (1:200): the auditorium rake, the ramped under-eave space and the web roof read together in section; the west elevation (1:200) shows the junction of glazing and cables.</p>
+            <figure class="project-figure" data-figure="11" id="figure-11"><a class="image-button" href="./assets/images/theatre-11-1600.webp" data-lightbox-src="./assets/images/theatre-11-1600.webp" data-caption-zh="FIG. 4.11 — 剖面图" data-caption-en="FIG. 4.11 — SECTION"><img src="./assets/images/theatre-11-960.webp" srcset="./assets/images/theatre-11-640.webp 640w, ./assets/images/theatre-11-960.webp 960w, ./assets/images/theatre-11-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="684" style="aspect-ratio: 1600 / 684" alt="剖面图" loading="lazy" decoding="async"></a><figcaption>FIG. 4.11 — <span class="zh">剖面图</span><span class="en" lang="en">SECTION</span></figcaption></figure>
+            <figure class="project-figure" data-figure="12" id="figure-12"><a class="image-button" href="./assets/images/theatre-12-1600.webp" data-lightbox-src="./assets/images/theatre-12-1600.webp" data-caption-zh="FIG. 4.12 — 西立面效果图" data-caption-en="FIG. 4.12 — WEST ELEVATION VIEW"><img src="./assets/images/theatre-12-960.webp" srcset="./assets/images/theatre-12-640.webp 640w, ./assets/images/theatre-12-960.webp 960w, ./assets/images/theatre-12-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="594" style="aspect-ratio: 1600 / 594" alt="西立面效果图" loading="lazy" decoding="async"></a><figcaption>FIG. 4.12 — <span class="zh">西立面效果图</span><span class="en" lang="en">WEST ELEVATION VIEW</span></figcaption></figure>
+          </section>
+
+          <section id="renderings" class="project-section" aria-labelledby="04-renderings-title">
+            <div class="project-section-heading"><span>11</span><h2 id="04-renderings-title"><span class="zh">效果图</span><span class="en" lang="en">RENDERINGS</span></h2></div>
+            <p class="zh">两张室外效果图呈现悬索、幕墙与剧场主体在不同视角下的整体关系。</p>
+            <p class="en" lang="en">Two exterior renderings present the overall relationship between suspension cables, curtain walls and the theatre volume from different viewpoints.</p>
+            <figure class="project-figure" data-figure="13" id="figure-13"><a class="image-button" href="./assets/images/theatre-13-1600.webp" data-lightbox-src="./assets/images/theatre-13-1600.webp" data-caption-zh="FIG. 4.13 — 效果图（一）" data-caption-en="FIG. 4.13 — RENDERING I"><img src="./assets/images/theatre-13-960.webp" srcset="./assets/images/theatre-13-640.webp 640w, ./assets/images/theatre-13-960.webp 960w, ./assets/images/theatre-13-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="764" style="aspect-ratio: 1600 / 764" alt="效果图一" loading="lazy" decoding="async"></a><figcaption>FIG. 4.13 — <span class="zh">效果图（一）</span><span class="en" lang="en">RENDERING I</span></figcaption></figure>
+            <figure class="project-figure" data-figure="14" id="figure-14"><a class="image-button" href="./assets/images/theatre-14-1600.webp" data-lightbox-src="./assets/images/theatre-14-1600.webp" data-caption-zh="FIG. 4.14 — 效果图（二）" data-caption-en="FIG. 4.14 — RENDERING II"><img src="./assets/images/theatre-14-960.webp" srcset="./assets/images/theatre-14-640.webp 640w, ./assets/images/theatre-14-960.webp 960w, ./assets/images/theatre-14-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="878" style="aspect-ratio: 1600 / 878" alt="效果图二" loading="lazy" decoding="async"></a><figcaption>FIG. 4.14 — <span class="zh">效果图（二）</span><span class="en" lang="en">RENDERING II</span></figcaption></figure>
+          </section>
+        </div>
+
+        <aside class="project-info">
+          <section id="abstract" class="project-section project-abstract" aria-labelledby="04-abstract-title">
+            <div class="project-section-heading"><span>01</span><h2 id="04-abstract-title"><span class="zh">设计说明</span><span class="en" lang="en">Design statement</span></h2></div>
+            <p class="zh">场地位于临沂市河东区。设计以蛛网寻找中心的数学逻辑生成建筑，并受 Stephen Wolfram 超图演变算法启发；屋顶及一至三层悬索在斜向支撑柱和侧向拉杆柱之间张拉，形成观演空间与结构一体化的课程设计。</p><p class="en" lang="en">The site lies in Hedong District, Linyi. The building is generated through the centre-seeking logic of a spider web and inspired by Stephen Wolfram&#39;s hypergraph evolution. Suspension cables at the roof and levels one to three span between diagonal supports and lateral tie columns, integrating performance space and structure in this studio project.</p>
+          </section>
+          <nav class="chapter-nav" aria-label="项目11章目录">
+            <p>CONTENTS / 11</p>
+            <ol>
+              <li><a href="./project-04.html#abstract" data-chapter="abstract"><span>01</span><span class="zh">设计说明</span><span class="en" lang="en">Statement</span></a></li>
+              <li><a href="./project-04.html#rendering" data-chapter="rendering"><span>02</span><span class="zh">主效果图</span><span class="en" lang="en">MAIN RENDERING</span></a></li>
+              <li><a href="./project-04.html#venue" data-chapter="venue"><span>03</span><span class="zh">场地与问题</span><span class="en" lang="en">VENUE &amp; ISSUES</span></a></li>
+              <li><a href="./project-04.html#logic" data-chapter="logic"><span>04</span><span class="zh">蛛网逻辑</span><span class="en" lang="en">SPIDER-WEB LOGIC</span></a></li>
+              <li><a href="./project-04.html#performance" data-chapter="performance"><span>05</span><span class="zh">悬索结构分析</span><span class="en" lang="en">SUSPENSION STRUCTURE</span></a></li>
+              <li><a href="./project-04.html#plans" data-chapter="plans"><span>06</span><span class="zh">一层平面图</span><span class="en" lang="en">GROUND FLOOR PLAN</span></a></li>
+              <li><a href="./project-04.html#acoustics" data-chapter="acoustics"><span>07</span><span class="zh">声学分析</span><span class="en" lang="en">ACOUSTICS</span></a></li>
+              <li><a href="./project-04.html#ramps" data-chapter="ramps"><span>08</span><span class="zh">二层平面与室内效果图</span><span class="en" lang="en">Second Floor &amp; Interior Renderings</span></a></li>
+              <li><a href="./project-04.html#stage" data-chapter="stage"><span>09</span><span class="zh">幕墙与结构大样</span><span class="en" lang="en">CURTAIN WALL &amp; STRUCTURE</span></a></li>
+              <li><a href="./project-04.html#sections-view" data-chapter="sections-view"><span>10</span><span class="zh">剖面图与立面图</span><span class="en" lang="en">SECTION &amp; ELEVATION</span></a></li>
+              <li><a href="./project-04.html#renderings" data-chapter="renderings"><span>11</span><span class="zh">效果图</span><span class="en" lang="en">RENDERINGS</span></a></li>
+            </ol>
+          </nav>
+          <div class="project-jump"><button type="button" data-figure-step="-1"><span class="zh">上一张</span><span class="en" lang="en">Previous</span></button><button type="button" data-figure-step="1"><span class="zh">下一张图</span><span class="en" lang="en">Next image</span></button></div>
+        </aside>
+      </div>
+      <nav class="project-pager" aria-label="上一项与下一项作品"><a class="project-link project-pager-link" href="./project-03.html" data-project="03"><span class="project-pager-label">← <span class="zh">上一项</span><span class="en" lang="en">Previous</span></span><strong><span class="zh">城市综合体</span><span class="en" lang="en">Urban Complex</span></strong></a><a class="project-link project-pager-link" href="./project-05.html" data-project="05"><span class="project-pager-label"><span class="zh">下一项</span><span class="en" lang="en">Next</span> →</span><strong><span class="zh">高层建筑</span><span class="en" lang="en">High-rise Design</span></strong></a></nav>
+      <nav class="mobile-project-bar" aria-label="项目图片操作"><button type="button" data-figure-step="-1"><span class="zh">上一张</span><span class="en" lang="en">Previous</span></button><a class="project-close" href="./index.html#works" data-project-close><span class="zh">目录</span><span class="en" lang="en">Index</span></a><button type="button" data-figure-step="1"><span class="zh">下一张</span><span class="en" lang="en">Next</span></button></nav>
+    </article>
+  </template>
+
+  <template id="project-05-source">
+    <article class="project-article" data-project-article="05">
+      <header class="project-header">
+        <a class="project-close" href="./index.html#works" data-project-close aria-label="关闭项目并返回首页"><span aria-hidden="true">←</span><span class="zh">返回作品目录</span><span class="en" lang="en">Back to index</span></a>
+        <p>PROJECT 05</p>
+        <h1><span class="zh">高层建筑</span><span class="en" lang="en">High-rise Design</span></h1>
+        <p class="project-subtitle"><span class="zh">蚁群路径、立面筛选与校园门户。</span><span class="en" lang="en">Ant-colony paths, facade selection and a campus gateway.</span></p>
+      </header>
+      <div class="project-layout">
+        <aside class="project-meta">
+          <dl><div><dt>DESIGN</dt><dd>朱翰林 ZHU HANLIN</dd></div><div><dt>TYPE</dt><dd><span class="zh">高层建筑</span><span class="en" lang="en">High-rise</span></dd></div><div><dt>LOCATION</dt><dd><span class="zh">山东科技大学东大门</span><span class="en" lang="en">SDUST East Gate, Qingdao</span></dd></div><div><dt>STATUS</dt><dd><span class="zh">课程设计</span><span class="en" lang="en">Studio</span></dd></div></dl>
+          <nav class="figure-nav" aria-label="12 张项目图片">
+            <p>IMAGES / 12</p>
+            <ol><li><button type="button" data-figure-target="1">01</button></li><li><button type="button" data-figure-target="2">02</button></li><li><button type="button" data-figure-target="3">03</button></li><li><button type="button" data-figure-target="4">04</button></li><li><button type="button" data-figure-target="5">05</button></li><li><button type="button" data-figure-target="6">06</button></li><li><button type="button" data-figure-target="7">07</button></li><li><button type="button" data-figure-target="8">08</button></li><li><button type="button" data-figure-target="9">09</button></li><li><button type="button" data-figure-target="10">10</button></li><li><button type="button" data-figure-target="11">11</button></li><li><button type="button" data-figure-target="12">12</button></li></ol>
+          </nav>
+        </aside>
+
+        <div class="project-track">
+          <section id="rendering" class="project-section" aria-labelledby="05-rendering-title">
+            <div class="project-section-heading"><span>02</span><h2 id="05-rendering-title"><span class="zh">主效果图</span><span class="en" lang="en">MAIN RENDERING</span></h2></div>
+            <p class="zh">「蚁巢」塔楼在山东科技大学东大门区域的城市形象：参数化生成的阳台肌理如蚁巢般附着塔身。</p>
+            <p class="en" lang="en">The &quot;Ant Nest&quot; tower at the east gate of Shandong University of Science and Technology: parametrically generated balcony textures cling to the tower like an ant nest.</p>
+            <figure class="project-figure" data-figure="1" id="figure-01"><a class="image-button" href="./assets/images/highrise-01-1600.webp" data-lightbox-src="./assets/images/highrise-01-1600.webp" data-caption-zh="FIG. 5.1 — 主效果图" data-caption-en="FIG. 5.1 — MAIN RENDERING"><img src="./assets/images/highrise-01-960.webp" srcset="./assets/images/highrise-01-640.webp 640w, ./assets/images/highrise-01-960.webp 960w, ./assets/images/highrise-01-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1614" style="aspect-ratio: 1600 / 1614" alt="高层建筑设计主效果图" fetchpriority="high"></a><figcaption>FIG. 5.1 — <span class="zh">主效果图</span><span class="en" lang="en">MAIN RENDERING</span></figcaption></figure>
+          </section>
+
+          <section id="algorithm" class="project-section" aria-labelledby="05-algorithm-title">
+            <div class="project-section-heading"><span>03</span><h2 id="05-algorithm-title"><span class="zh">算法介绍与裙房生成</span><span class="en" lang="en">ALGORITHM &amp; PODIUM GENERATION</span></h2></div>
+            <p class="zh">PART-1 算法介绍：蚁群算法（ACO）由 Marco Dorigo 于 1992 年在博士论文中提出，灵感来自蚂蚁觅食发现路径的行为。PART-2 裙房生成：蚂蚁随机选择路径，但能感知信息素浓度并倾向高浓度方向行进；较短路径上蚂蚁往返快、信息素积累快，正反馈使群体最终行走在最优路径上。将场地出入口作为出发点、塔楼出入口作为终点（食物），用蚂蚁算法模拟人的行为轨迹，得到不同密度的路径轨迹。</p>
+            <p class="en" lang="en">Part 1, the algorithm: ACO was proposed by Marco Dorigo in his 1992 doctoral thesis, inspired by ants finding paths while foraging. Part 2, podium generation: ants choose routes at random yet sense pheromone and favour the stronger trail; shorter routes accumulate pheromone faster, and positive feedback steers the colony onto the optimal path. Site entrances become starting points and tower entrances the food, so simulated ants trace human movement as path tracks of different densities.</p>
+            <figure class="project-figure" data-figure="2" id="figure-02"><a class="image-button" href="./assets/images/highrise-02-1600.webp" data-lightbox-src="./assets/images/highrise-02-1600.webp" data-caption-zh="FIG. 5.2 — 算法介绍" data-caption-en="FIG. 5.2 — ALGORITHM INTRODUCTION"><img src="./assets/images/highrise-02-960.webp" srcset="./assets/images/highrise-02-640.webp 640w, ./assets/images/highrise-02-960.webp 960w, ./assets/images/highrise-02-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1400" style="aspect-ratio: 1600 / 1400" alt="算法介绍图" loading="lazy" decoding="async"></a><figcaption>FIG. 5.2 — <span class="zh">算法介绍</span><span class="en" lang="en">ALGORITHM INTRODUCTION</span></figcaption></figure>
+            <figure class="project-figure" data-figure="3" id="figure-03"><a class="image-button" href="./assets/images/highrise-03-1600.webp" data-lightbox-src="./assets/images/highrise-03-1600.webp" data-caption-zh="FIG. 5.3 — 裙房生成" data-caption-en="FIG. 5.3 — PODIUM GENERATION"><img src="./assets/images/highrise-03-960.webp" srcset="./assets/images/highrise-03-640.webp 640w, ./assets/images/highrise-03-960.webp 960w, ./assets/images/highrise-03-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1196" style="aspect-ratio: 1600 / 1196" alt="裙房生成图" loading="lazy" decoding="async"></a><figcaption>FIG. 5.3 — <span class="zh">裙房生成</span><span class="en" lang="en">PODIUM GENERATION</span></figcaption></figure>
+          </section>
+
+          <section id="masterplan" class="project-section" aria-labelledby="05-masterplan-title">
+            <div class="project-section-heading"><span>04</span><h2 id="05-masterplan-title"><span class="zh">总平面图</span><span class="en" lang="en">MASTERPLAN</span></h2></div>
+            <p class="zh">总平面图（1:2000）：基地位于山东科技大学东大门区域，总用地面积约 11257 ㎡，总建筑面积 32060 ㎡，建筑密度 72%，绿化率 35.2%。</p>
+            <p class="en" lang="en">Master plan (1:2000): the site sits by the east gate of Shandong University of Science and Technology — site area about 11,257 m², GFA 32,060 m², coverage 72%, greening 35.2%.</p>
+            <figure class="project-figure" data-figure="4" id="figure-04"><a class="image-button" href="./assets/images/highrise-04-1600.webp" data-lightbox-src="./assets/images/highrise-04-1600.webp" data-caption-zh="FIG. 5.4 — 总平面图" data-caption-en="FIG. 5.4 — MASTERPLAN"><img src="./assets/images/highrise-04-960.webp" srcset="./assets/images/highrise-04-640.webp 640w, ./assets/images/highrise-04-960.webp 960w, ./assets/images/highrise-04-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1228" style="aspect-ratio: 1600 / 1228" alt="总平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 5.4 — <span class="zh">总平面图</span><span class="en" lang="en">MASTERPLAN</span></figcaption></figure>
+          </section>
+
+          <section id="tower" class="project-section" aria-labelledby="05-tower-title">
+            <div class="project-section-heading"><span>05</span><h2 id="05-tower-title"><span class="zh">主楼生成</span><span class="en" lang="en">TOWER GENERATION</span></h2></div>
+            <p class="zh">主楼生成以 GH 像素算法记录采光、通风、虚实与借景四项筛选：排除 3-C 列，再排除趋势为 0、1、2、3、7、10 的方案，随后排除 4、5、6、9，最终在 121 个立面方案中选择 13-8。</p>
+            <p class="en" lang="en">The tower study uses a GH pixel algorithm to filter daylight, ventilation, solid-void balance and framed views: column 3-C is excluded, followed by trends 0, 1, 2, 3, 7 and 10, then 4, 5, 6 and 9. Scheme 13-8 is selected from the 121-facade matrix.</p>
+            <figure class="project-figure" data-figure="5" id="figure-05"><a class="image-button" href="./assets/images/highrise-05-1600.webp" data-lightbox-src="./assets/images/highrise-05-1600.webp" data-caption-zh="FIG. 5.5 — 主楼生成（一）" data-caption-en="FIG. 5.5 — TOWER GENERATION I"><img src="./assets/images/highrise-05-960.webp" srcset="./assets/images/highrise-05-640.webp 640w, ./assets/images/highrise-05-960.webp 960w, ./assets/images/highrise-05-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="940" style="aspect-ratio: 1600 / 940" alt="主楼生成图一" loading="lazy" decoding="async"></a><figcaption>FIG. 5.5 — <span class="zh">主楼生成（一）</span><span class="en" lang="en">TOWER GENERATION I</span></figcaption></figure>
+            <figure class="project-figure" data-figure="6" id="figure-06"><a class="image-button" href="./assets/images/highrise-06-1600.webp" data-lightbox-src="./assets/images/highrise-06-1600.webp" data-caption-zh="FIG. 5.6 — 主楼生成（二）" data-caption-en="FIG. 5.6 — TOWER GENERATION II"><img src="./assets/images/highrise-06-960.webp" srcset="./assets/images/highrise-06-640.webp 640w, ./assets/images/highrise-06-960.webp 960w, ./assets/images/highrise-06-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1732" style="aspect-ratio: 1600 / 1732" alt="主楼生成图二" loading="lazy" decoding="async"></a><figcaption>FIG. 5.6 — <span class="zh">主楼生成（二）</span><span class="en" lang="en">TOWER GENERATION II</span></figcaption></figure>
+          </section>
+
+          <section id="plans" class="project-section" aria-labelledby="05-plans-title">
+            <div class="project-section-heading"><span>06</span><h2 id="05-plans-title"><span class="zh">一层平面图与一层大堂效果图</span><span class="en" lang="en">GROUND FLOOR &amp; LOBBY RENDERING</span></h2></div>
+            <p class="zh">一层平面（1:200）：大堂、服务大厅、报告厅、公共展厅与健身房组织在裙房首层，附一层大堂效果图。</p>
+            <p class="en" lang="en">Ground floor plan (1:200): lobby, service hall, lecture hall, public gallery and gym line the podium, with a lobby rendering.</p>
+            <figure class="project-figure" data-figure="7" id="figure-07"><a class="image-button" href="./assets/images/highrise-07-1600.webp" data-lightbox-src="./assets/images/highrise-07-1600.webp" data-caption-zh="FIG. 5.7 — 一层平面图与一层大堂效果图" data-caption-en="FIG. 5.7 — GROUND FLOOR &amp; LOBBY RENDERING"><img src="./assets/images/highrise-07-960.webp" srcset="./assets/images/highrise-07-640.webp 640w, ./assets/images/highrise-07-960.webp 960w, ./assets/images/highrise-07-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="2266" style="aspect-ratio: 1600 / 2266" alt="一层平面图与一层大堂效果图" loading="lazy" decoding="async"></a><figcaption>FIG. 5.7 — <span class="zh">一层平面图与一层大堂效果图</span><span class="en" lang="en">GROUND FLOOR &amp; LOBBY RENDERING</span></figcaption></figure>
+          </section>
+
+          <section id="lower" class="project-section" aria-labelledby="05-lower-title">
+            <div class="project-section-heading"><span>07</span><h2 id="05-lower-title"><span class="zh">地下与二层平面、餐厅及室内设计</span><span class="en" lang="en">Lower &amp; Second Floors, Restaurant &amp; Interiors</span></h2></div>
+            <p class="zh">负一层及二层平面图均为 1:200，图版同时呈现设备用房、办公会议、共享空间、餐厅，以及蚁巢主题在室内设计中的延续。</p>
+            <p class="en" lang="en">The basement and second-floor plans are both 1:200. The board also presents plant rooms, offices and meeting space, shared areas, the restaurant, and the continuation of the ant-nest theme in the interior.</p>
+            <figure class="project-figure" data-figure="8" id="figure-08"><a class="image-button" href="./assets/images/highrise-08-1600.webp" data-lightbox-src="./assets/images/highrise-08-1600.webp" data-caption-zh="FIG. 5.8 — 地下与二层平面、餐厅及室内设计" data-caption-en="FIG. 5.8 — Lower &amp; Second Floors, Restaurant &amp; Interiors"><img src="./assets/images/highrise-08-960.webp" srcset="./assets/images/highrise-08-640.webp 640w, ./assets/images/highrise-08-960.webp 960w, ./assets/images/highrise-08-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="2266" style="aspect-ratio: 1600 / 2266" alt="高层建筑地下与二层平面、餐厅及蚁巢主题室内设计" loading="lazy" decoding="async"></a><figcaption>FIG. 5.8 — <span class="zh">地下与二层平面、餐厅及室内设计</span><span class="en" lang="en">Lower &amp; Second Floors, Restaurant &amp; Interiors</span></figcaption></figure>
+          </section>
+
+          <section id="standard-floors" class="project-section" aria-labelledby="05-standard-floors-title">
+            <div class="project-section-heading"><span>08</span><h2 id="05-standard-floors-title"><span class="zh">塔楼标准层平面图</span><span class="en" lang="en">TOWER STANDARD FLOORS</span></h2></div>
+            <p class="zh">塔楼标准层平面（1:300）：办公单元沿核心筒布置，阳台随参数化立面收分组合。</p>
+            <p class="en" lang="en">Tower standard floor plans (1:300): office units around the core, with balconies tapering and recombining along the parametric facade.</p>
+            <figure class="project-figure" data-figure="9" id="figure-09"><a class="image-button" href="./assets/images/highrise-09-1600.webp" data-lightbox-src="./assets/images/highrise-09-1600.webp" data-caption-zh="FIG. 5.9 — 塔楼标准层平面（一）" data-caption-en="FIG. 5.9 — TOWER STANDARD FLOOR I"><img src="./assets/images/highrise-09-960.webp" srcset="./assets/images/highrise-09-640.webp 640w, ./assets/images/highrise-09-960.webp 960w, ./assets/images/highrise-09-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="582" style="aspect-ratio: 1600 / 582" alt="塔楼标准层平面图一" loading="lazy" decoding="async"></a><figcaption>FIG. 5.9 — <span class="zh">塔楼标准层平面（一）</span><span class="en" lang="en">TOWER STANDARD FLOOR I</span></figcaption></figure>
+            <figure class="project-figure" data-figure="10" id="figure-10"><a class="image-button" href="./assets/images/highrise-10-1600.webp" data-lightbox-src="./assets/images/highrise-10-1600.webp" data-caption-zh="FIG. 5.10 — 塔楼标准层平面（二）" data-caption-en="FIG. 5.10 — TOWER STANDARD FLOOR II"><img src="./assets/images/highrise-10-960.webp" srcset="./assets/images/highrise-10-640.webp 640w, ./assets/images/highrise-10-960.webp 960w, ./assets/images/highrise-10-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="570" style="aspect-ratio: 1600 / 570" alt="塔楼标准层平面图二" loading="lazy" decoding="async"></a><figcaption>FIG. 5.10 — <span class="zh">塔楼标准层平面（二）</span><span class="en" lang="en">TOWER STANDARD FLOOR II</span></figcaption></figure>
+          </section>
+
+          <section id="structure" class="project-section" aria-labelledby="05-structure-title">
+            <div class="project-section-heading"><span>09</span><h2 id="05-structure-title"><span class="zh">节点大样图</span><span class="en" lang="en">NODE DETAIL</span></h2></div>
+            <p class="zh">节点大样（1:20）：展示幕墙与阳台的构造关系。</p>
+            <p class="en" lang="en">Node detail (1:20): how the curtain wall and the balcony meet.</p>
+            <figure class="project-figure" data-figure="11" id="figure-11"><a class="image-button" href="./assets/images/highrise-11-1310.webp" data-lightbox-src="./assets/images/highrise-11-1310.webp" data-caption-zh="FIG. 5.11 — 节点大样图" data-caption-en="FIG. 5.11 — NODE DETAIL"><img src="./assets/images/highrise-11-960.webp" srcset="./assets/images/highrise-11-640.webp 640w, ./assets/images/highrise-11-960.webp 960w, ./assets/images/highrise-11-1310.webp 1310w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1310" height="3000" style="aspect-ratio: 1310 / 3000" alt="节点大样图" loading="lazy" decoding="async"></a><figcaption>FIG. 5.11 — <span class="zh">节点大样图</span><span class="en" lang="en">NODE DETAIL</span></figcaption></figure>
+          </section>
+
+          <section id="sections-view" class="project-section" aria-labelledby="05-sections-view-title">
+            <div class="project-section-heading"><span>10</span><h2 id="05-sections-view-title"><span class="zh">立面与剖面图</span><span class="en" lang="en">ELEVATION &amp; SECTION</span></h2></div>
+            <p class="zh">立面与剖面图：塔楼的竖向秩序与剖面关系，阳台肌理随立面收分变化。</p>
+            <p class="en" lang="en">Elevation and section: the tower&#39;s vertical order in section, with the balcony texture tapering along the facade.</p>
+            <figure class="project-figure" data-figure="12" id="figure-12"><a class="image-button" href="./assets/images/highrise-12-1600.webp" data-lightbox-src="./assets/images/highrise-12-1600.webp" data-caption-zh="FIG. 5.12 — 立面与剖面图" data-caption-en="FIG. 5.12 — ELEVATION &amp; SECTION"><img src="./assets/images/highrise-12-960.webp" srcset="./assets/images/highrise-12-640.webp 640w, ./assets/images/highrise-12-960.webp 960w, ./assets/images/highrise-12-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1264" style="aspect-ratio: 1600 / 1264" alt="立面与剖面图" loading="lazy" decoding="async"></a><figcaption>FIG. 5.12 — <span class="zh">立面与剖面图</span><span class="en" lang="en">ELEVATION &amp; SECTION</span></figcaption></figure>
+          </section>
+        </div>
+
+        <aside class="project-info">
+          <section id="abstract" class="project-section project-abstract" aria-labelledby="05-abstract-title">
+            <div class="project-section-heading"><span>01</span><h2 id="05-abstract-title"><span class="zh">设计说明</span><span class="en" lang="en">Design statement</span></h2></div>
+            <p class="zh">设计以「蚁巢」为题，以蚁群优化算法的路径生成逻辑组织裙房与主楼。11×11 的立面矩阵从采光、通风、虚实与借景四项条件进行筛选，图版另将蚁巢主题延续到室内设计。</p><p class="en" lang="en">Titled &quot;Ant Nest&quot;, the project uses ant-colony path generation to organise podium and tower. An 11×11 facade matrix is filtered through daylight, ventilation, solid-void balance and framed views; the boards also extend the ant-nest theme into the interior.</p>
+          </section>
+          <nav class="chapter-nav" aria-label="项目10章目录">
+            <p>CONTENTS / 10</p>
+            <ol>
+              <li><a href="./project-05.html#abstract" data-chapter="abstract"><span>01</span><span class="zh">设计说明</span><span class="en" lang="en">Statement</span></a></li>
+              <li><a href="./project-05.html#rendering" data-chapter="rendering"><span>02</span><span class="zh">主效果图</span><span class="en" lang="en">MAIN RENDERING</span></a></li>
+              <li><a href="./project-05.html#algorithm" data-chapter="algorithm"><span>03</span><span class="zh">算法介绍与裙房生成</span><span class="en" lang="en">ALGORITHM &amp; PODIUM GENERATION</span></a></li>
+              <li><a href="./project-05.html#masterplan" data-chapter="masterplan"><span>04</span><span class="zh">总平面图</span><span class="en" lang="en">MASTERPLAN</span></a></li>
+              <li><a href="./project-05.html#tower" data-chapter="tower"><span>05</span><span class="zh">主楼生成</span><span class="en" lang="en">TOWER GENERATION</span></a></li>
+              <li><a href="./project-05.html#plans" data-chapter="plans"><span>06</span><span class="zh">一层平面图与一层大堂效果图</span><span class="en" lang="en">GROUND FLOOR &amp; LOBBY RENDERING</span></a></li>
+              <li><a href="./project-05.html#lower" data-chapter="lower"><span>07</span><span class="zh">地下与二层平面、餐厅及室内设计</span><span class="en" lang="en">Lower &amp; Second Floors, Restaurant &amp; Interiors</span></a></li>
+              <li><a href="./project-05.html#standard-floors" data-chapter="standard-floors"><span>08</span><span class="zh">塔楼标准层平面图</span><span class="en" lang="en">TOWER STANDARD FLOORS</span></a></li>
+              <li><a href="./project-05.html#structure" data-chapter="structure"><span>09</span><span class="zh">节点大样图</span><span class="en" lang="en">NODE DETAIL</span></a></li>
+              <li><a href="./project-05.html#sections-view" data-chapter="sections-view"><span>10</span><span class="zh">立面与剖面图</span><span class="en" lang="en">ELEVATION &amp; SECTION</span></a></li>
+            </ol>
+          </nav>
+          <div class="project-jump"><button type="button" data-figure-step="-1"><span class="zh">上一张</span><span class="en" lang="en">Previous</span></button><button type="button" data-figure-step="1"><span class="zh">下一张图</span><span class="en" lang="en">Next image</span></button></div>
+        </aside>
+      </div>
+      <nav class="project-pager" aria-label="上一项与下一项作品"><a class="project-link project-pager-link" href="./project-04.html" data-project="04"><span class="project-pager-label">← <span class="zh">上一项</span><span class="en" lang="en">Previous</span></span><strong><span class="zh">多功能剧场</span><span class="en" lang="en">Multifunctional Theatre</span></strong></a><a class="project-link project-pager-link" href="./project-06.html" data-project="06"><span class="project-pager-label"><span class="zh">下一项</span><span class="en" lang="en">Next</span> →</span><strong><span class="zh">城市设计</span><span class="en" lang="en">Urban Design</span></strong></a></nav>
+      <nav class="mobile-project-bar" aria-label="项目图片操作"><button type="button" data-figure-step="-1"><span class="zh">上一张</span><span class="en" lang="en">Previous</span></button><a class="project-close" href="./index.html#works" data-project-close><span class="zh">目录</span><span class="en" lang="en">Index</span></a><button type="button" data-figure-step="1"><span class="zh">下一张</span><span class="en" lang="en">Next</span></button></nav>
+    </article>
+  </template>
+
+  <template id="project-06-source">
+    <article class="project-article" data-project-article="06">
+      <header class="project-header">
+        <a class="project-close" href="./index.html#works" data-project-close aria-label="关闭项目并返回首页"><span aria-hidden="true">←</span><span class="zh">返回作品目录</span><span class="en" lang="en">Back to index</span></a>
+        <p>PROJECT 06</p>
+        <h1><span class="zh">城市设计</span><span class="en" lang="en">Urban Design</span></h1>
+        <p class="project-subtitle"><span class="zh">低空触点与街道空间的立体织补。</span><span class="en" lang="en">Low-altitude touchpoints stitch new layers into street life.</span></p>
+      </header>
+      <div class="project-layout">
+        <aside class="project-meta">
+          <dl><div><dt>DESIGN</dt><dd>朱翰林 ZHU HANLIN</dd></div><div><dt>TYPE</dt><dd><span class="zh">城市设计</span><span class="en" lang="en">Urban Design</span></dd></div><div><dt>LOCATION</dt><dd><span class="zh">青岛市黄岛区</span><span class="en" lang="en">Huangdao, Qingdao</span></dd></div><div><dt>STATUS</dt><dd><span class="zh">课程设计</span><span class="en" lang="en">Studio</span></dd></div></dl>
+          <nav class="figure-nav" aria-label="12 张项目图片">
+            <p>IMAGES / 12</p>
+            <ol><li><button type="button" data-figure-target="1">01</button></li><li><button type="button" data-figure-target="2">02</button></li><li><button type="button" data-figure-target="3">03</button></li><li><button type="button" data-figure-target="4">04</button></li><li><button type="button" data-figure-target="5">05</button></li><li><button type="button" data-figure-target="6">06</button></li><li><button type="button" data-figure-target="7">07</button></li><li><button type="button" data-figure-target="8">08</button></li><li><button type="button" data-figure-target="9">09</button></li><li><button type="button" data-figure-target="10">10</button></li><li><button type="button" data-figure-target="11">11</button></li><li><button type="button" data-figure-target="12">12</button></li></ol>
+          </nav>
+        </aside>
+
+        <div class="project-track">
+          <section id="concept" class="project-section" aria-labelledby="06-concept-title">
+            <div class="project-section-heading"><span>02</span><h2 id="06-concept-title"><span class="zh">概念图</span><span class="en" lang="en">CONCEPT</span></h2></div>
+            <p class="zh">以低空经济为契机，以飞行器停靠平台为立体媒介，将飞行器停靠与街道空间重构缝合，推动出行观念向新型交通转变。</p>
+            <p class="en" lang="en">Seizing the low-altitude economy, docking platforms become a three-dimensional medium stitching aircraft stopovers into street space, shifting mobility ideas towards new transport.</p>
+            <figure class="project-figure" data-figure="1" id="figure-01"><a class="image-button" href="./assets/images/urban-01-1600.webp" data-lightbox-src="./assets/images/urban-01-1600.webp" data-caption-zh="FIG. 6.1 — 概念图" data-caption-en="FIG. 6.1 — CONCEPT"><img src="./assets/images/urban-01-960.webp" srcset="./assets/images/urban-01-640.webp 640w, ./assets/images/urban-01-960.webp 960w, ./assets/images/urban-01-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="2178" style="aspect-ratio: 1600 / 2178" alt="概念图" fetchpriority="high"></a><figcaption>FIG. 6.1 — <span class="zh">概念图</span><span class="en" lang="en">CONCEPT</span></figcaption></figure>
+          </section>
+
+          <section id="analysis" class="project-section" aria-labelledby="06-analysis-title">
+            <div class="project-section-heading"><span>03</span><h2 id="06-analysis-title"><span class="zh">区位、场地、肌理分析</span><span class="en" lang="en">LOCATION, SITE &amp; FABRIC</span></h2></div>
+            <p class="zh">场地位于青岛黄岛区，四周由黄埔江路、长江路、太行山路与井冈山路围合，占地约 0.8 km²。场地周边建筑密度较低、公共开放空间较多；场地内部建筑密度较高、公共开放空间较少。场地内部道路呈两横两纵分布，将场地分割成 8 个地块，呈网格状街区。</p>
+            <p class="en" lang="en">The site sits in Huangdao, Qingdao, framed by four roads, about 0.8 km². The surroundings are low-density with ample open space, while the interior is denser with less; two horizontal and two vertical roads cut the site into eight grid-like blocks.</p>
+            <figure class="project-figure" data-figure="2" id="figure-02"><a class="image-button" href="./assets/images/urban-02-1060.webp" data-lightbox-src="./assets/images/urban-02-1060.webp" data-caption-zh="FIG. 6.2 — 区位、场地、肌理分析" data-caption-en="FIG. 6.2 — LOCATION, SITE &amp; FABRIC"><img src="./assets/images/urban-02-960.webp" srcset="./assets/images/urban-02-640.webp 640w, ./assets/images/urban-02-960.webp 960w, ./assets/images/urban-02-1060.webp 1060w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1060" height="3000" style="aspect-ratio: 1060 / 3000" alt="区位场地肌理分析图" loading="lazy" decoding="async"></a><figcaption>FIG. 6.2 — <span class="zh">区位、场地、肌理分析</span><span class="en" lang="en">LOCATION, SITE &amp; FABRIC</span></figcaption></figure>
+          </section>
+
+          <section id="contradictions" class="project-section" aria-labelledby="06-contradictions-title">
+            <div class="project-section-heading"><span>04</span><h2 id="06-contradictions-title"><span class="zh">城市矛盾、设计目标、方案策略</span><span class="en" lang="en">CONTRADICTIONS, GOALS &amp; STRATEGY</span></h2></div>
+            <p class="zh">城市矛盾之锁：①公共服务盲区之锁——职住分离加剧通勤压力；②交通效率之锁——商业网点与居住区距离失衡；③情感孤独之锁——城市居民的情感孤独。城市矛盾之匙：①建立城市飞行器停靠网点平台；②网点（线、面）内部增设商业服务设施；③增设娱乐设施。设计目标与方案策略：空中连廊、空中阳台等休闲空间，线下无人配送与线上互动反馈结合。</p>
+            <p class="en" lang="en">The locks: ① blind spots in public service — job-housing separation strains commuting; ② traffic inefficiency — commerce and housing are out of balance; ③ emotional loneliness. The keys: ① a network of city aircraft docking platforms; ② commercial services added inside the network; ③ leisure facilities. Goals and strategy: sky corridors and balconies as leisure space, offline unmanned delivery combined with online interactive feedback.</p>
+            <figure class="project-figure" data-figure="3" id="figure-03"><a class="image-button" href="./assets/images/urban-03-1062.webp" data-lightbox-src="./assets/images/urban-03-1062.webp" data-caption-zh="FIG. 6.3 — 城市矛盾、设计目标、方案策略" data-caption-en="FIG. 6.3 — CONTRADICTIONS, GOALS &amp; STRATEGY"><img src="./assets/images/urban-03-960.webp" srcset="./assets/images/urban-03-640.webp 640w, ./assets/images/urban-03-960.webp 960w, ./assets/images/urban-03-1062.webp 1062w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1062" height="3000" style="aspect-ratio: 1062 / 3000" alt="城市矛盾设计目标方案策略图" loading="lazy" decoding="async"></a><figcaption>FIG. 6.3 — <span class="zh">城市矛盾、设计目标、方案策略</span><span class="en" lang="en">CONTRADICTIONS, GOALS &amp; STRATEGY</span></figcaption></figure>
+          </section>
+
+          <section id="planning" class="project-section" aria-labelledby="06-planning-title">
+            <div class="project-section-heading"><span>05</span><h2 id="06-planning-title"><span class="zh">规划结构、平面生成、模块植入</span><span class="en" lang="en">PLANNING, PLANAR GENERATION &amp; IMPLANTATION</span></h2></div>
+            <p class="zh">规划结构梳理四条交通流线与四大功能区，以路网划分体块并逐步生成基本单元与框架。智慧化模块利用建筑之间的夹缝空间按点位植入，回应城市密度与机动运行。</p>
+            <p class="en" lang="en">The planning structure sorts four traffic flows and four functional zones, using the road network to shape blocks, basic units and frames. Smart modules occupy gaps between buildings at specific points, responding to urban density and mobility.</p>
+            <figure class="project-figure" data-figure="4" id="figure-04"><a class="image-button" href="./assets/images/urban-04-1042.webp" data-lightbox-src="./assets/images/urban-04-1042.webp" data-caption-zh="FIG. 6.4 — 规划结构、平面生成、模块植入" data-caption-en="FIG. 6.4 — PLANNING, PLANAR GENERATION &amp; IMPLANTATION"><img src="./assets/images/urban-04-960.webp" srcset="./assets/images/urban-04-640.webp 640w, ./assets/images/urban-04-960.webp 960w, ./assets/images/urban-04-1042.webp 1042w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1042" height="3000" style="aspect-ratio: 1042 / 3000" alt="规划结构平面生成模块植入图" loading="lazy" decoding="async"></a><figcaption>FIG. 6.4 — <span class="zh">规划结构、平面生成、模块植入</span><span class="en" lang="en">PLANNING, PLANAR GENERATION &amp; IMPLANTATION</span></figcaption></figure>
+          </section>
+
+          <section id="generation" class="project-section" aria-labelledby="06-generation-title">
+            <div class="project-section-heading"><span>06</span><h2 id="06-generation-title"><span class="zh">方案生成与长廊周边关系</span><span class="en" lang="en">SCENARIO &amp; CORRIDOR</span></h2></div>
+            <p class="zh">方案生成：模块化停靠平台介入，勾勒起伏的天际线。长廊与建筑周边关系：在不改变街道现状的最小改动下，在城市各个角落植入飞行器停靠长廊。</p>
+            <p class="en" lang="en">Scenario generation: modular docking platforms intervene, sketching an undulating skyline. Corridor relations: with minimal change to existing streets, aircraft docking corridors are implanted across the city.</p>
+            <figure class="project-figure" data-figure="5" id="figure-05"><a class="image-button" href="./assets/images/urban-05-1051.webp" data-lightbox-src="./assets/images/urban-05-1051.webp" data-caption-zh="FIG. 6.5 — 方案生成与长廊周边关系" data-caption-en="FIG. 6.5 — SCENARIO &amp; CORRIDOR"><img src="./assets/images/urban-05-960.webp" srcset="./assets/images/urban-05-640.webp 640w, ./assets/images/urban-05-960.webp 960w, ./assets/images/urban-05-1051.webp 1051w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1051" height="3000" style="aspect-ratio: 1051 / 3000" alt="方案生成与长廊周边关系图" loading="lazy" decoding="async"></a><figcaption>FIG. 6.5 — <span class="zh">方案生成与长廊周边关系</span><span class="en" lang="en">SCENARIO &amp; CORRIDOR</span></figcaption></figure>
+          </section>
+
+          <section id="masterplan" class="project-section" aria-labelledby="06-masterplan-title">
+            <div class="project-section-heading"><span>07</span><h2 id="06-masterplan-title"><span class="zh">总平面图</span><span class="en" lang="en">MASTERPLAN</span></h2></div>
+            <p class="zh">总平面图：飞行器停靠网点与商业、娱乐设施沿「线、面」展开，重构街道与停靠空间的关系。</p>
+            <p class="en" lang="en">Master plan: docking networks with commercial and leisure facilities unfold along lines and areas, rebuilding the relation between street and stopover space.</p>
+            <figure class="project-figure" data-figure="6" id="figure-06"><a class="image-button" href="./assets/images/urban-06-1600.webp" data-lightbox-src="./assets/images/urban-06-1600.webp" data-caption-zh="FIG. 6.6 — 总平面图" data-caption-en="FIG. 6.6 — MASTERPLAN"><img src="./assets/images/urban-06-960.webp" srcset="./assets/images/urban-06-640.webp 640w, ./assets/images/urban-06-960.webp 960w, ./assets/images/urban-06-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="2158" style="aspect-ratio: 1600 / 2158" alt="总平面图" loading="lazy" decoding="async"></a><figcaption>FIG. 6.6 — <span class="zh">总平面图</span><span class="en" lang="en">MASTERPLAN</span></figcaption></figure>
+          </section>
+
+          <section id="media" class="project-section" aria-labelledby="06-media-title">
+            <div class="project-section-heading"><span>08</span><h2 id="06-media-title"><span class="zh">空间媒介、模块化结构</span><span class="en" lang="en">INTERVENTION &amp; MODULAR STRUCTURE</span></h2></div>
+            <p class="zh">围合、连接、空中快线与屋顶停靠平台构成空间操作的基本动作；图版中的飞行汽车尺寸为 5.6×6×2m，无人机为 1.1×0.6m，并配置应急、维护、候机与起降等模块。</p>
+            <p class="en" lang="en">Enclosure, connection, air express routes and rooftop platforms form the basic spatial moves. The boards specify flying cars at 5.6×6×2 m and drones at 1.1×0.6 m, alongside emergency, maintenance, waiting and take-off-landing modules.</p>
+            <figure class="project-figure" data-figure="7" id="figure-07"><a class="image-button" href="./assets/images/urban-07-1071.webp" data-lightbox-src="./assets/images/urban-07-1071.webp" data-caption-zh="FIG. 6.7 — 空间媒介、模块化结构" data-caption-en="FIG. 6.7 — INTERVENTION &amp; MODULAR STRUCTURE"><img src="./assets/images/urban-07-960.webp" srcset="./assets/images/urban-07-640.webp 640w, ./assets/images/urban-07-960.webp 960w, ./assets/images/urban-07-1071.webp 1071w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1071" height="3000" style="aspect-ratio: 1071 / 3000" alt="空间媒介模块化结构图" loading="lazy" decoding="async"></a><figcaption>FIG. 6.7 — <span class="zh">空间媒介、模块化结构</span><span class="en" lang="en">INTERVENTION &amp; MODULAR STRUCTURE</span></figcaption></figure>
+          </section>
+
+          <section id="seismic" class="project-section" aria-labelledby="06-seismic-title">
+            <div class="project-section-heading"><span>09</span><h2 id="06-seismic-title"><span class="zh">抗震分析</span><span class="en" lang="en">SEISMIC ANALYSIS</span></h2></div>
+            <p class="zh">抗震分析图展示地面变形缝装置、地中梁免震构件及柱脚、肋与柱、主次梁等节点的连接构造。</p>
+            <p class="en" lang="en">The seismic study presents ground movement-joint devices, seismic-isolation components at underground beams, and connection details at column bases, ribs, columns and primary or secondary beams.</p>
+            <figure class="project-figure" data-figure="8" id="figure-08"><a class="image-button" href="./assets/images/urban-08-1519.webp" data-lightbox-src="./assets/images/urban-08-1519.webp" data-caption-zh="FIG. 6.8 — 抗震分析" data-caption-en="FIG. 6.8 — SEISMIC ANALYSIS"><img src="./assets/images/urban-08-960.webp" srcset="./assets/images/urban-08-640.webp 640w, ./assets/images/urban-08-960.webp 960w, ./assets/images/urban-08-1519.webp 1519w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1519" height="3000" style="aspect-ratio: 1519 / 3000" alt="抗震分析图" loading="lazy" decoding="async"></a><figcaption>FIG. 6.8 — <span class="zh">抗震分析</span><span class="en" lang="en">SEISMIC ANALYSIS</span></figcaption></figure>
+          </section>
+
+          <section id="rendering" class="project-section" aria-labelledby="06-rendering-title">
+            <div class="project-section-heading"><span>10</span><h2 id="06-rendering-title"><span class="zh">效果图</span><span class="en" lang="en">RENDERING</span></h2></div>
+            <p class="zh">效果图：低空触点激活的城市新图景。</p>
+            <p class="en" lang="en">Rendering: a new urban vision activated by low-altitude touchpoints.</p>
+            <figure class="project-figure" data-figure="9" id="figure-09"><a class="image-button" href="./assets/images/urban-09-1600.webp" data-lightbox-src="./assets/images/urban-09-1600.webp" data-caption-zh="FIG. 6.9 — 效果图" data-caption-en="FIG. 6.9 — RENDERING"><img src="./assets/images/urban-09-960.webp" srcset="./assets/images/urban-09-640.webp 640w, ./assets/images/urban-09-960.webp 960w, ./assets/images/urban-09-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="1544" style="aspect-ratio: 1600 / 1544" alt="效果图" loading="lazy" decoding="async"></a><figcaption>FIG. 6.9 — <span class="zh">效果图</span><span class="en" lang="en">RENDERING</span></figcaption></figure>
+          </section>
+
+          <section id="performance" class="project-section" aria-labelledby="06-performance-title">
+            <div class="project-section-heading"><span>11</span><h2 id="06-performance-title"><span class="zh">采光、通风、疏散分析</span><span class="en" lang="en">LIGHT, VENTILATION &amp; EVACUATION</span></h2></div>
+            <p class="zh">开放式多层间距用于引入自然光，自然通风与机械通风结合；图版同时标示多层楼梯、疏散通道与标识组织。</p>
+            <p class="en" lang="en">Open multi-level spacing admits natural light, while natural and mechanical ventilation are combined. The board also marks stairs, escape routes and wayfinding across the levels.</p>
+            <figure class="project-figure" data-figure="10" id="figure-10"><a class="image-button" href="./assets/images/urban-10-1600.webp" data-lightbox-src="./assets/images/urban-10-1600.webp" data-caption-zh="FIG. 6.10 — 采光、通风、疏散分析" data-caption-en="FIG. 6.10 — LIGHT, VENTILATION &amp; EVACUATION"><img src="./assets/images/urban-10-960.webp" srcset="./assets/images/urban-10-640.webp 640w, ./assets/images/urban-10-960.webp 960w, ./assets/images/urban-10-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="456" style="aspect-ratio: 1600 / 456" alt="采光通风疏散分析图" loading="lazy" decoding="async"></a><figcaption>FIG. 6.10 — <span class="zh">采光、通风、疏散分析</span><span class="en" lang="en">LIGHT, VENTILATION &amp; EVACUATION</span></figcaption></figure>
+          </section>
+
+          <section id="elevation" class="project-section" aria-labelledby="06-elevation-title">
+            <div class="project-section-heading"><span>12</span><h2 id="06-elevation-title"><span class="zh">城市立面图</span><span class="en" lang="en">URBAN ELEVATION</span></h2></div>
+            <p class="zh">城市立面图（1:1500）：商贸区与居住区之间由 eVTOL 飞行器停靠平台连接，物流与载客系统沿街展开，景观视觉延续。</p>
+            <p class="en" lang="en">Urban elevation (1:1500): eVTOL docking platforms link business and residential areas; logistics and passenger systems run along the street as the landscape view continues.</p>
+            <figure class="project-figure" data-figure="11" id="figure-11"><a class="image-button" href="./assets/images/urban-11-1600.webp" data-lightbox-src="./assets/images/urban-11-1600.webp" data-caption-zh="FIG. 6.11 — 西街道城市立面图" data-caption-en="FIG. 6.11 — West Street Urban Elevation"><img src="./assets/images/urban-11-960.webp" srcset="./assets/images/urban-11-640.webp 640w, ./assets/images/urban-11-960.webp 960w, ./assets/images/urban-11-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="300" style="aspect-ratio: 1600 / 300" alt="西街道城市立面图：eVTOL 停靠平台、物流载客与沿街景观" loading="lazy" decoding="async"></a><figcaption>FIG. 6.11 — <span class="zh">西街道城市立面图</span><span class="en" lang="en">West Street Urban Elevation</span></figcaption></figure>
+          </section>
+
+          <section id="scenes" class="project-section" aria-labelledby="06-scenes-title">
+            <div class="project-section-heading"><span>13</span><h2 id="06-scenes-title"><span class="zh">生活场景效果图</span><span class="en" lang="en">STREET LIFE SCENES</span></h2></div>
+            <p class="zh">办公与社交场所、空中连接通道直达小区、垂直绿化补充城市绿色；街区中植入城市图书馆、边界开放活动广场、城市绿化长廊与街区社交连廊。</p>
+            <p class="en" lang="en">Workplaces and social spaces, air corridors reaching residential areas, vertical greening adding urban green; city libraries, open-edge activity plazas, green corridors and neighbourhood social links are woven into the blocks.</p>
+            <figure class="project-figure" data-figure="12" id="figure-12"><a class="image-button" href="./assets/images/urban-12-1600.webp" data-lightbox-src="./assets/images/urban-12-1600.webp" data-caption-zh="FIG. 6.12 — 生活场景效果图" data-caption-en="FIG. 6.12 — STREET LIFE SCENES"><img src="./assets/images/urban-12-960.webp" srcset="./assets/images/urban-12-640.webp 640w, ./assets/images/urban-12-960.webp 960w, ./assets/images/urban-12-1600.webp 1600w" sizes="(max-width: 767px) calc(100vw - 32px), 44vw" width="1600" height="830" style="aspect-ratio: 1600 / 830" alt="生活场景效果图" loading="lazy" decoding="async"></a><figcaption>FIG. 6.12 — <span class="zh">生活场景效果图</span><span class="en" lang="en">STREET LIFE SCENES</span></figcaption></figure>
+          </section>
+        </div>
+
+        <aside class="project-info">
+          <section id="abstract" class="project-section project-abstract" aria-labelledby="06-abstract-title">
+            <div class="project-section-heading"><span>01</span><h2 id="06-abstract-title"><span class="zh">设计说明</span><span class="en" lang="en">Design statement</span></h2></div>
+            <p class="zh">场地位于山东省青岛市黄岛区，占地约 0.8 km²。设计以「升维交通 · 织补都市：低空触点激活城市新图景」为题，以飞行器停靠平台为立体媒介，利用过街天桥与柱、板、桁架形成长廊式停靠平台，并将停靠、商业服务与娱乐设施织入街道空间。</p><p class="en" lang="en">The approximately 0.8 km² site lies in Huangdao District, Qingdao. Titled around low-altitude touchpoints and urban repair, the project uses aircraft docking platforms as a three-dimensional medium. Overpasses, columns, slabs and trusses form corridor platforms, weaving docking, commercial services and leisure facilities into street space.</p>
+          </section>
+          <nav class="chapter-nav" aria-label="项目13章目录">
+            <p>CONTENTS / 13</p>
+            <ol>
+              <li><a href="./project-06.html#abstract" data-chapter="abstract"><span>01</span><span class="zh">设计说明</span><span class="en" lang="en">Statement</span></a></li>
+              <li><a href="./project-06.html#concept" data-chapter="concept"><span>02</span><span class="zh">概念图</span><span class="en" lang="en">CONCEPT</span></a></li>
+              <li><a href="./project-06.html#analysis" data-chapter="analysis"><span>03</span><span class="zh">区位、场地、肌理分析</span><span class="en" lang="en">LOCATION, SITE &amp; FABRIC</span></a></li>
+              <li><a href="./project-06.html#contradictions" data-chapter="contradictions"><span>04</span><span class="zh">城市矛盾、设计目标、方案策略</span><span class="en" lang="en">CONTRADICTIONS, GOALS &amp; STRATEGY</span></a></li>
+              <li><a href="./project-06.html#planning" data-chapter="planning"><span>05</span><span class="zh">规划结构、平面生成、模块植入</span><span class="en" lang="en">PLANNING, PLANAR GENERATION &amp; IMPLANTATION</span></a></li>
+              <li><a href="./project-06.html#generation" data-chapter="generation"><span>06</span><span class="zh">方案生成与长廊周边关系</span><span class="en" lang="en">SCENARIO &amp; CORRIDOR</span></a></li>
+              <li><a href="./project-06.html#masterplan" data-chapter="masterplan"><span>07</span><span class="zh">总平面图</span><span class="en" lang="en">MASTERPLAN</span></a></li>
+              <li><a href="./project-06.html#media" data-chapter="media"><span>08</span><span class="zh">空间媒介、模块化结构</span><span class="en" lang="en">INTERVENTION &amp; MODULAR STRUCTURE</span></a></li>
+              <li><a href="./project-06.html#seismic" data-chapter="seismic"><span>09</span><span class="zh">抗震分析</span><span class="en" lang="en">SEISMIC ANALYSIS</span></a></li>
+              <li><a href="./project-06.html#rendering" data-chapter="rendering"><span>10</span><span class="zh">效果图</span><span class="en" lang="en">RENDERING</span></a></li>
+              <li><a href="./project-06.html#performance" data-chapter="performance"><span>11</span><span class="zh">采光、通风、疏散分析</span><span class="en" lang="en">LIGHT, VENTILATION &amp; EVACUATION</span></a></li>
+              <li><a href="./project-06.html#elevation" data-chapter="elevation"><span>12</span><span class="zh">城市立面图</span><span class="en" lang="en">URBAN ELEVATION</span></a></li>
+              <li><a href="./project-06.html#scenes" data-chapter="scenes"><span>13</span><span class="zh">生活场景效果图</span><span class="en" lang="en">STREET LIFE SCENES</span></a></li>
+            </ol>
+          </nav>
+          <div class="project-jump"><button type="button" data-figure-step="-1"><span class="zh">上一张</span><span class="en" lang="en">Previous</span></button><button type="button" data-figure-step="1"><span class="zh">下一张图</span><span class="en" lang="en">Next image</span></button></div>
+        </aside>
+      </div>
+      <nav class="project-pager" aria-label="上一项与下一项作品"><a class="project-link project-pager-link" href="./project-05.html" data-project="05"><span class="project-pager-label">← <span class="zh">上一项</span><span class="en" lang="en">Previous</span></span><strong><span class="zh">高层建筑</span><span class="en" lang="en">High-rise Design</span></strong></a><a class="project-link project-pager-link" href="./project-01.html" data-project="01"><span class="project-pager-label"><span class="zh">下一项</span><span class="en" lang="en">Next</span> →</span><strong><span class="zh">浙东运河博物馆</span><span class="en" lang="en">Grand Canal Museum</span></strong></a></nav>
+      <nav class="mobile-project-bar" aria-label="项目图片操作"><button type="button" data-figure-step="-1"><span class="zh">上一张</span><span class="en" lang="en">Previous</span></button><a class="project-close" href="./index.html#works" data-project-close><span class="zh">目录</span><span class="en" lang="en">Index</span></a><button type="button" data-figure-step="1"><span class="zh">下一张</span><span class="en" lang="en">Next</span></button></nav>
+    </article>
+  </template>
+  <!-- PROJECT_TEMPLATES_END -->
+
+  <dialog class="project-dialog" id="project-dialog" aria-label="建筑项目详情"></dialog>
+
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-caption">
+    <div class="lightbox-toolbar"><p id="lightbox-caption"></p><button type="button" class="lightbox-close" aria-label="关闭图片"><span class="zh">关闭</span><span class="en" lang="en">Close</span> ×</button></div>
+    <div class="lightbox-stage"><img id="lightbox-image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt=""></div>
+  </dialog>
 </body>
 </html>

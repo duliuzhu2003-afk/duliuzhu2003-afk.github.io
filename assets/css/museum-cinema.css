@@ -1,0 +1,220 @@
+/* Grand Canal Museum continuous shot. Static reading remains the default. */
+.cinema-line {
+  display: block;
+  white-space: nowrap;
+}
+.en.cinema-line {
+  display: none;
+}
+html.lang-en .en.cinema-line {
+  display: block;
+}
+html.lang-en p.cinema-description-compact {
+  display: none;
+}
+.cinema-half {
+  display: inline-block;
+  white-space: pre;
+  will-change: transform;
+}
+.cinema-description .cinema-line,
+.cinema-cta .cinema-line,
+.story-sticky h3 .cinema-line {
+  white-space: normal;
+}
+.cinema-description .cinema-half,
+.cinema-cta .cinema-half,
+.story-sticky h3 .cinema-half {
+  display: inline;
+  white-space: normal;
+}
+.cinema-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+.cinema-description p {
+  margin: 0;
+}
+.museum-static-figure img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.museum-story.is-enhanced {
+  display: block;
+  position: relative;
+  height: 650vh;
+  min-height: 3200px;
+}
+.museum-story.is-enhanced .story-sticky {
+  position: fixed;
+  z-index: 6;
+  inset: 0;
+  display: none;
+  align-self: stretch;
+  width: auto;
+  height: 100vh;
+  max-width: none;
+  padding: 0 var(--edge);
+  visibility: hidden;
+  pointer-events: none;
+}
+.museum-story.is-cinema-active .story-sticky {
+  display: block;
+  visibility: visible;
+}
+.museum-story.is-enhanced .story-sticky h3 {
+  position: absolute;
+  top: 20%;
+  left: var(--edge);
+  right: var(--edge);
+  margin: 0;
+  font-size: clamp(64px, 7.4vw, 116px);
+  line-height: .98;
+  text-align: center;
+}
+.museum-story.is-enhanced .cinema-line {
+  white-space: nowrap;
+}
+.museum-story.is-enhanced .cinema-half {
+  display: inline-block;
+  white-space: pre;
+}
+.museum-story.is-enhanced .cinema-meta {
+  position: absolute;
+  top: 40px;
+  left: var(--edge);
+  right: var(--edge);
+  justify-content: space-between;
+  margin: 0;
+}
+.museum-story.is-enhanced .cinema-description {
+  position: absolute;
+  left: var(--edge);
+  bottom: 15%;
+  width: min(51vw, 760px);
+  font-size: clamp(13px, 1.05vw, 16px);
+  line-height: 1.8;
+}
+.museum-story.is-enhanced .cinema-cta {
+  position: absolute;
+  right: var(--edge);
+  bottom: 15%;
+  margin: 0;
+}
+.museum-story.is-enhanced .story-figures {
+  position: absolute;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+}
+.museum-story.is-enhanced .museum-static-figure {
+  display: none;
+}
+.museum-cinema {
+  position: absolute;
+  inset: 0;
+  display: none;
+  overflow: hidden;
+}
+.spiral-gallery.is-cinema-active .museum-cinema {
+  display: block;
+}
+.cinema-flight {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: visible;
+  transform-origin: 0 0;
+  will-change: transform, width, height;
+}
+.cinema-image,
+.cinema-svg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  overflow: visible;
+}
+.cinema-image {
+  opacity: 0;
+  will-change: opacity;
+}
+.cinema-svg {
+  opacity: 0;
+  color: #77716d;
+}
+.cinema-svg path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.cinema-svg path.cinema-path--outline {
+  stroke: #514c49;
+  stroke-width: 1.5;
+}
+.has-project .museum-story.is-enhanced .story-sticky,
+.has-layer .museum-story.is-enhanced .story-sticky,
+.has-project .museum-cinema,
+.has-layer .museum-cinema {
+  display: none !important;
+}
+
+@media (max-width: 1100px) and (min-width: 768px) {
+  .museum-story.is-enhanced .cinema-description {
+    width: 65vw;
+    font-size: 12px;
+  }
+  .museum-story.is-enhanced .cinema-cta {
+    bottom: 6%;
+  }
+  html.lang-en p.cinema-description-wide {
+    display: none;
+  }
+  html.lang-en p.cinema-description-compact {
+    display: block;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 768px) {
+  .museum-story.is-enhanced .cinema-cta {
+    bottom: 6%;
+  }
+}
+
+@media (max-width: 767px),
+  (pointer: coarse) {
+  .cinema-meta {
+    gap: 4px 16px;
+  }
+  .cinema-description .cinema-line {
+    display: inline;
+    white-space: normal;
+  }
+  .cinema-cta .cinema-line {
+    white-space: normal;
+  }
+  .cinema-description .cinema-half,
+  .cinema-cta .cinema-half {
+    display: inline;
+    white-space: normal;
+  }
+  .story-sticky h3 .cinema-line {
+    white-space: normal;
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cinema-half {
+    will-change: auto;
+    transform: none !important;
+  }
+}
